@@ -1,0 +1,9 @@
+{
+  "name": "Verifiable Claims 1.0 Data Model Test Suite",
+  "description": "Test Suite for Verifiable Claims 1.0 Data Model",
+  "test": [{
+    "name": "Minimal Credential",
+    "file": "tests-1.0/minimal.jsonld",
+    "valid": true
+  }]
+}
