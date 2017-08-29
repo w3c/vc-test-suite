@@ -1,0 +1,57 @@
+#!/usr/bin/env python3.5
+#
+# The default issuer for the W3C Verifiable Claims test suite.
+import csv
+import json
+from optparse import OptionParser
+import sys
+
+USAGE = """%prog
+
+Runs the Verifiable Claims issuer, which reads input to digitally sign
+from stdin.
+
+************** %prog command line options **************"""
+
+DEFAULTS = \
+{ \
+    'unused': 'unused'
+}
+
+def _parse_options():
+    """Get options from command line and return them."""
+    parser = OptionParser(usage=USAGE)
+    parser.add_option(
+        '-i', '--issuer', action='store', default=None,
+        dest='issuer', help='The URL for the issuer.'
+        ' [%default]')
+    parser.add_option(
+        '-p', '--public-key', action='store', default=None,
+        dest='issuer_public_key', help='The public key JSON-LD file.'
+        ' [%default]')
+    parser.add_option(
+        '-o', '--owner', action='store', default=None,
+        dest='owner', help='The key owner JSON-LD file.'
+        ' [%default]')
+    parser.add_option(
+        '-r', '--private-key', action='store', default=None,
+        dest='issuer_private_key', help='The private key file.'
+        ' [%default]')
+
+    options, args = parser.parse_args()
+    options.args = args
+
+    return options
+
+if __name__ == '__main__':
+    options = _parse_options()
+
+    if not os.path.exists(options.issuer_public_key):
+        print('Error: You must specify a public key file.')
+        sys.exit(1)
+    if not os.path.exists(options.issuer_private_key):
+        print('Error: You must specify a private key file.')
+        sys.exit(1)
+    if not os.path.exists(options.owner):
+        print('Error: You must specify a key owner file.')
+        sys.exit(1)
