@@ -6,7 +6,7 @@ import json
 from optparse import OptionParser
 import sys
 
-USAGE = """%prog FILENAME.csv
+USAGE = """%prog -c test-suite-config.json
 
 Runs the Verifiable Claims test suite.
 
