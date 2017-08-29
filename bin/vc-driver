@@ -1,0 +1,58 @@
+#!/usr/bin/env python3.5
+#
+# The driver for the W3C Verifiable Claims test suite.
+import csv
+import json
+from optparse import OptionParser
+import sys
+
+USAGE = """%prog FILENAME.csv
+
+Runs the Verifiable Claims test suite.
+
+************** %prog command line options **************"""
+
+DEFAULTS = \
+{ \
+    'config': os.path.join( \
+        os.path.dirname(os.path.abspath(__file__)), '..',
+        'vc-data-model-1.0.json'),
+    'issuer': os.path.join( \
+        os.path.dirname(os.path.abspath(__file__)), 'vc-issuer'),
+    'verifier': os.path.join( \
+        os.path.dirname(os.path.abspath(__file__)), 'vc-verifier')
+}
+
+def _parse_options():
+    """Get options from command line and return them."""
+    parser = OptionParser(usage=USAGE)
+    parser.add_option(
+        '-c', '--config', action='store', default=DEFAULTS['config'],
+        dest='config', help='The test suite configuration file.'
+        ' [%default]')
+    parser.add_option(
+        '-i', '--issuer', action='store', default=DEFAULTS['issuer'],
+        dest='config_file', help='The verifiable claims issuer program.'
+        ' [%default]')
+    parser.add_option(
+        '-v', '--verifier', action='store', default=DEFAULTS['verifier'],
+        dest='config_file', help='The verifiable claims verifier program.'
+        ' [%default]')
+
+    options, args = parser.parse_args()
+    options.args = args
+
+    return options
+
+if __name__ == '__main__':
+    options = _parse_options()
+
+    if not os.path.exists(options.config):
+        print('Error: You must specify a valid configuration file.')
+        sys.exit(1)
+    if not os.path.exists(options.issuer):
+        print('Error: You must specify a valid issuer program.')
+        sys.exit(1)
+    if not os.path.exists(options.verifier):
+        print('Error: You must specify a valid verifier program.')
+        sys.exit(1)
