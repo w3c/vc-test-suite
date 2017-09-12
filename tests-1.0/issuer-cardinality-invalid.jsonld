@@ -5,7 +5,6 @@
     "https://dmv.example.gov/issuers/14", 
     "https://dmv.example.gov/issuers/15"
   ],
-  "issued": "2017-01-01T19:73:24Z",
   "claim": {
     "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
     "ageOver": 21
