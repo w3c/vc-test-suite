@@ -1,58 +1,57 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 #
 # The driver for the W3C Verifiable Claims test suite.
 import csv
 import json
-from optparse import OptionParser
+from argparse import ArgumentParser
+import os
 import sys
 
-USAGE = """%prog -c test-suite-config.json
+USAGE = """%(prog)s -c test-suite-config.json
 
 Runs the Verifiable Claims test suite.
 
-************** %prog command line options **************"""
+************** %(prog)s command line options **************"""
 
-DEFAULTS = \
-{ \
-    'config': os.path.join( \
+DEFAULTS = {
+    'config': os.path.join(
         os.path.dirname(os.path.abspath(__file__)), '..',
         'vc-data-model-1.0.json'),
-    'issuer': os.path.join( \
+    'issuer': os.path.join(
         os.path.dirname(os.path.abspath(__file__)), 'vc-issuer'),
-    'verifier': os.path.join( \
+    'verifier': os.path.join(
         os.path.dirname(os.path.abspath(__file__)), 'vc-verifier')
 }
 
-def _parse_options():
+
+def _parse_args():
     """Get options from command line and return them."""
-    parser = OptionParser(usage=USAGE)
-    parser.add_option(
+    parser = ArgumentParser(usage=USAGE)
+    parser.add_argument(
         '-c', '--config', action='store', default=DEFAULTS['config'],
         dest='config', help='The test suite configuration file.'
-        ' [%default]')
-    parser.add_option(
+        ' [%(default)s]')
+    parser.add_argument(
         '-i', '--issuer', action='store', default=DEFAULTS['issuer'],
-        dest='config_file', help='The verifiable claims issuer program.'
-        ' [%default]')
-    parser.add_option(
+        help='The verifiable claims issuer program.'
+        ' [%(default)s]')
+    parser.add_argument(
         '-v', '--verifier', action='store', default=DEFAULTS['verifier'],
-        dest='config_file', help='The verifiable claims verifier program.'
-        ' [%default]')
+        help='The verifiable claims verifier program.'
+        ' [%(default)s]')
 
-    options, args = parser.parse_args()
-    options.args = args
+    return parser.parse_args()
 
-    return options
 
 if __name__ == '__main__':
-    options = _parse_options()
+    args = _parse_args()
 
-    if not os.path.exists(options.config):
+    if not os.path.exists(args.config):
         print('Error: You must specify a valid configuration file.')
         sys.exit(1)
-    if not os.path.exists(options.issuer):
+    if not os.path.exists(args.issuer):
         print('Error: You must specify a valid issuer program.')
         sys.exit(1)
-    if not os.path.exists(options.verifier):
+    if not os.path.exists(args.verifier):
         print('Error: You must specify a valid verifier program.')
         sys.exit(1)
