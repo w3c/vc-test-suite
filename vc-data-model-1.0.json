@@ -2,8 +2,64 @@
   "name": "Verifiable Claims 1.0 Data Model Test Suite",
   "description": "Test Suite for Verifiable Claims 1.0 Data Model",
   "test": [{
-    "name": "Minimal Credential",
-    "file": "tests-1.0/minimal.jsonld",
+    "name": "evidence - cardinality",
+    "file": "tests-1.0/evidence-cardinality-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "evidence - objects",
+    "file": "tests-1.0/evidence-objects-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "evidence - url invalid",
+    "file": "tests-1.0/evidence-url-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "evidence",
+    "file": "tests-1.0/evidence-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "issued - cardinality invalid",
+    "file": "tests-1.0/issued-cardinality-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "issued - invalid",
+    "file": "tests-1.0/issued-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "issued",
+    "file": "tests-1.0/issued-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "issuer - cardinality invalid",
+    "file": "tests-1.0/issuer-cardinality-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "issuer - uri invalid",
+    "file": "tests-1.0/issuer-uri-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "issuer - object id",
+    "file": "tests-1.0/issuer-valid-object.jsonld",
+    "valid": true
+  }, {
+    "name": "issuer",
+    "file": "tests-1.0/issuer-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "minimal",
+    "file": "tests-1.0/minimal-valid.jsonld",
+    "valid": true
+  }, {
+    "name": "revocation - type invalid",
+    "file": "tests-1.0/revocation-type-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "revocation - url invalid",
+    "file": "tests-1.0/revocation-url-invalid.jsonld",
+    "valid": false
+  }, {
+    "name": "revocation",
+    "file": "tests-1.0/revocation-valid.jsonld",
     "valid": true
   }]
 }
