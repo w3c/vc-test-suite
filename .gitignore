@@ -1,0 +1,7 @@
+*.sw[nop]
+*.py[co]
+*~
+.DS_Store
+.project
+.settings
+TAGS
