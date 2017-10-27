@@ -73,16 +73,15 @@ class Test(unittest.TestCase):
         input = open(filepath, mode='rb').read()
 
         # run issuer
-        args = [
+        issuer_args = [
                 self.args.issuer,
-                'issue',
                 '-i', self.entry['issuerUrl'],
                 '-p', self.entry['publicKey'],
                 '-o', self.entry['owner'],
                 '-r', self.entry['privateKey'],
         ]
-        issued = subprocess.run(args, input=input, stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE)
+        issued = subprocess.run(issuer_args, input=input,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         self.assertEqual(issued.returncode, 0, {
             'message': 'bad return code',
             'stdout': issued.stdout,
@@ -91,14 +90,21 @@ class Test(unittest.TestCase):
         self.assertEqual(issued.stderr, b'', 'stderr not empty')
 
         # run verifier
-        verified = subprocess.run(args, input=input, stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE)
-        self.assertEqual(issued.returncode, 0, {
+        verifier_args = [
+                self.args.verifier,
+                '-i', self.entry['issuerUrl'],
+                '-p', self.entry['publicKey'],
+                '-o', self.entry['owner'],
+                '-r', self.entry['privateKey'],
+        ]
+        verified = subprocess.run(verifier_args, input=input,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.assertEqual(verified.returncode, 0, {
             'message': 'bad return code',
-            'stdout': issued.stdout,
-            'stderr': issued.stderr,
+            'stdout': verified.stdout,
+            'stderr': verified.stderr,
         })
-        self.assertEqual(issued.stderr, b'', 'stderr not empty')
+        self.assertEqual(verified.stderr, b'', 'stderr not empty')
 
 
 def suite(args):
