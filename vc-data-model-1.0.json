@@ -1,64 +1,88 @@
 {
   "name": "Verifiable Claims 1.0 Data Model Test Suite",
   "description": "Test Suite for Verifiable Claims 1.0 Data Model",
+  "base": {
+    "default": {
+      "issuerUrl": "https://example.com/issuer",
+      "publicKey": "keys/key-1-public.pem",
+      "owner": "https://example.com/owner",
+      "privateKey": "keys/key-1-private.pem",
+      "skip": false
+    }
+  },
   "test": [{
-    "name": "evidence - cardinality",
+    "name": "evidence (cardinality)",
+    "extend": "default",
     "file": "tests-1.0/evidence-cardinality-valid.jsonld",
     "valid": true
   }, {
-    "name": "evidence - objects",
+    "name": "evidence (objects)",
+    "extend": "default",
     "file": "tests-1.0/evidence-objects-valid.jsonld",
     "valid": true
   }, {
-    "name": "evidence - url invalid",
+    "name": "evidence (url invalid)",
+    "extend": "default",
     "file": "tests-1.0/evidence-url-invalid.jsonld",
     "valid": false
   }, {
     "name": "evidence",
+    "extend": "default",
     "file": "tests-1.0/evidence-valid.jsonld",
     "valid": true
   }, {
-    "name": "issued - cardinality invalid",
+    "name": "issued (cardinality invalid)",
+    "extend": "default",
     "file": "tests-1.0/issued-cardinality-invalid.jsonld",
     "valid": false
   }, {
-    "name": "issued - invalid",
+    "name": "issued (invalid)",
+    "extend": "default",
     "file": "tests-1.0/issued-invalid.jsonld",
     "valid": false
   }, {
     "name": "issued",
+    "extend": "default",
     "file": "tests-1.0/issued-valid.jsonld",
     "valid": true
   }, {
-    "name": "issuer - cardinality invalid",
+    "name": "issuer (cardinality invalid)",
+    "extend": "default",
     "file": "tests-1.0/issuer-cardinality-invalid.jsonld",
     "valid": false
   }, {
-    "name": "issuer - uri invalid",
+    "name": "issuer (uri invalid)",
+    "extend": "default",
     "file": "tests-1.0/issuer-uri-invalid.jsonld",
     "valid": false
   }, {
-    "name": "issuer - object id",
+    "name": "issuer (object id)",
+    "extend": "default",
     "file": "tests-1.0/issuer-valid-object.jsonld",
     "valid": true
   }, {
     "name": "issuer",
+    "extend": "default",
     "file": "tests-1.0/issuer-valid.jsonld",
     "valid": true
   }, {
     "name": "minimal",
+    "extend": "default",
     "file": "tests-1.0/minimal-valid.jsonld",
     "valid": true
   }, {
-    "name": "revocation - type invalid",
+    "name": "revocation (type invalid)",
+    "extend": "default",
     "file": "tests-1.0/revocation-type-invalid.jsonld",
     "valid": false
   }, {
-    "name": "revocation - url invalid",
+    "name": "revocation (url invalid)",
+    "extend": "default",
     "file": "tests-1.0/revocation-url-invalid.jsonld",
     "valid": false
   }, {
     "name": "revocation",
+    "extend": "default",
     "file": "tests-1.0/revocation-valid.jsonld",
     "valid": true
   }]
