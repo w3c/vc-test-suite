@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 #
 # The driver for the W3C Verifiable Claims test suite.
-import csv
-import json
 from argparse import ArgumentParser
+import json
 import os
+import subprocess
 import sys
+import unittest
 
-USAGE = """%(prog)s -c test-suite-config.json
-
+DESCRIPTION = """
 Runs the Verifiable Claims test suite.
-
-************** %(prog)s command line options **************"""
+"""
 
 DEFAULTS = {
     'config': os.path.join(
@@ -26,32 +25,117 @@ DEFAULTS = {
 
 def _parse_args():
     """Get options from command line and return them."""
-    parser = ArgumentParser(usage=USAGE)
+    parser = ArgumentParser(description=DESCRIPTION)
+    parser.add_argument(
+        '--verbose', action='count', default=0,
+        help='Increase output verbosity.'
+        ' [%(default)s]')
     parser.add_argument(
         '-c', '--config', action='store', default=DEFAULTS['config'],
         dest='config', help='The test suite configuration file.'
         ' [%(default)s]')
     parser.add_argument(
         '-i', '--issuer', action='store', default=DEFAULTS['issuer'],
-        help='The verifiable claims issuer program.'
+        dest='issuer', help='The verifiable claims issuer program.'
         ' [%(default)s]')
     parser.add_argument(
         '-v', '--verifier', action='store', default=DEFAULTS['verifier'],
-        help='The verifiable claims verifier program.'
+        dest='verifier', help='The verifiable claims verifier program.'
         ' [%(default)s]')
 
     return parser.parse_args()
+
+
+class Test(unittest.TestCase):
+    def __init__(self, args, configdir, entry):
+        unittest.TestCase.__init__(self)
+        self.args = args
+        self.configdir = configdir
+        self.entry = entry
+
+    def __str__(self):
+        return self.entry['name']
+
+    def runTest(self):
+        # check for skip flag
+        if self.entry.get('skip', False):
+            self.skipTest('disabled with skip flag')
+
+        # check test entry
+        self.assertIn('issuerUrl', self.entry)
+        self.assertIn('publicKey', self.entry)
+        self.assertIn('owner', self.entry)
+        self.assertIn('privateKey', self.entry)
+
+        filepath = self.entry['file']
+        if not os.path.isabs(filepath):
+            filepath = os.path.join(self.configdir, filepath)
+        input = open(filepath, mode='rb').read()
+
+        # run issuer
+        args = [
+                self.args.issuer,
+                'issue',
+                '-i', self.entry['issuerUrl'],
+                '-p', self.entry['publicKey'],
+                '-o', self.entry['owner'],
+                '-r', self.entry['privateKey'],
+        ]
+        issued = subprocess.run(args, input=input, stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE)
+        self.assertEqual(issued.returncode, 0, {
+            'message': 'bad return code',
+            'stdout': issued.stdout,
+            'stderr': issued.stderr,
+        })
+        self.assertEqual(issued.stderr, b'', 'stderr not empty')
+
+        # run verifier
+        verified = subprocess.run(args, input=input, stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE)
+        self.assertEqual(issued.returncode, 0, {
+            'message': 'bad return code',
+            'stdout': issued.stdout,
+            'stderr': issued.stderr,
+        })
+        self.assertEqual(issued.stderr, b'', 'stderr not empty')
+
+
+def suite(args):
+    """Run tests."""
+    # read config
+    with open(args.config) as fp:
+        config = json.load(fp)
+    # get config dir for relative path handling
+    configdir = os.path.dirname(args.config)
+    # create suite
+    suite = unittest.TestSuite()
+    # build all tests
+    for entry in config['test']:
+        # extend with named base config if specified
+        if 'extend' in entry:
+            base = config.get('base', {})[entry['extend']].copy()
+            base.update(entry)
+            entry = base
+        suite.addTest(Test(args, configdir, entry))
+    return suite
 
 
 if __name__ == '__main__':
     args = _parse_args()
 
     if not os.path.exists(args.config):
-        print('Error: You must specify a valid configuration file.')
+        print('Error: You must specify a valid configuration file.',
+                file=sys.stderr)
         sys.exit(1)
     if not os.path.exists(args.issuer):
-        print('Error: You must specify a valid issuer program.')
+        print('Error: You must specify a valid issuer program.',
+                file=sys.stderr)
         sys.exit(1)
     if not os.path.exists(args.verifier):
-        print('Error: You must specify a valid verifier program.')
+        print('Error: You must specify a valid verifier program.',
+                file=sys.stderr)
         sys.exit(1)
+
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(suite(args))

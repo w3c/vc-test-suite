@@ -1,57 +1,56 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 #
-# The default issuer for the W3C Verifiable Claims test suite.
-import csv
-import json
-from optparse import OptionParser
+# The default verifier for the W3C Verifiable Claims test suite.
+from argparse import ArgumentParser
+import os
 import sys
 
-USAGE = """%prog
-
+DESCRIPTION = """
 Runs the Verifiable Claims verifier, which reads input and verifiers that
 the verifiable claim taken from stdin is valid.
+"""
 
-************** %prog command line options **************"""
-
-DEFAULTS = \
-{ \
+DEFAULTS = {
     'unused': 'unused'
 }
 
-def _parse_options():
+
+def _parse_args():
     """Get options from command line and return them."""
-    parser = OptionParser(usage=USAGE)
-    parser.add_option(
-        '-i', '--issuer', action='store', default=None,
+    parser = ArgumentParser(description=DESCRIPTION)
+    parser.add_argument(
+        '-i', '--issuer', action='store', required=True,
         dest='issuer', help='The URL for the issuer.'
-        ' [%default]')
-    parser.add_option(
-        '-p', '--public-key', action='store', default=None,
+        ' [%(default)s]')
+    parser.add_argument(
+        '-p', '--public-key', action='store', required=True,
         dest='issuer_public_key', help='The public key JSON-LD file.'
-        ' [%default]')
-    parser.add_option(
-        '-o', '--owner', action='store', default=None,
-        dest='owner', help='The key owner JSON-LD file.'
-        ' [%default]')
-    parser.add_option(
-        '-r', '--private-key', action='store', default=None,
+        ' [%(default)s]')
+    parser.add_argument(
+        '-o', '--owner', action='store', required=True,
+        dest='owner', help='The key owner URL.'
+        ' [%(default)s]')
+    parser.add_argument(
+        '-r', '--private-key', action='store', required=True,
         dest='issuer_private_key', help='The private key file.'
-        ' [%default]')
+        ' [%(default)s]')
 
-    options, args = parser.parse_args()
-    options.args = args
+    return parser.parse_args()
 
-    return options
+
+def verify(args):
+    """Read stdin and verify credential."""
+    pass
+
 
 if __name__ == '__main__':
-    options = _parse_options()
+    args = _parse_args()
 
-    if not os.path.exists(options.issuer_public_key):
-        print('Error: You must specify a public key file.')
+    if not args.issuer_public_key or not os.path.exists(args.issuer_public_key):
+        print('Error: You must specify a public key file.', file=sys.stderr)
         sys.exit(1)
-    if not os.path.exists(options.issuer_private_key):
-        print('Error: You must specify a private key file.')
+    if not args.issuer_private_key or not os.path.exists(args.issuer_private_key):
+        print('Error: You must specify a private key file.', file=sys.stderr)
         sys.exit(1)
-    if not os.path.exists(options.owner):
-        print('Error: You must specify a key owner file.')
-        sys.exit(1)
+
+    verify(args)
