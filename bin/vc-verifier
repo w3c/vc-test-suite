@@ -40,7 +40,7 @@ def _parse_args():
 
 def verify(args):
     """Read stdin and verify credential."""
-    pass
+    raise NotImplementedError
 
 
 if __name__ == '__main__':

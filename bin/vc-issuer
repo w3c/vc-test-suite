@@ -40,7 +40,7 @@ def _parse_args():
 
 def issue(args):
     """Read stdin and issue credential."""
-    pass
+    raise NotImplementedError
 
 
 if __name__ == '__main__':
