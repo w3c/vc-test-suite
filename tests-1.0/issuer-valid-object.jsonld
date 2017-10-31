@@ -3,7 +3,7 @@
   "id": "https://dmv.example.gov/credentials/3732",
   "type": ["Credential", "ProofOfAgeCredential"],
   "issuer": {
-    "id": "https://dmv.example.gov/issuers/14",
+    "id": "https://dmv.example.gov/issuers/14"
   },
   "claim": {
     "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
