@@ -41,6 +41,11 @@
     "file": "tests-1.0/issued-invalid.jsonld",
     "valid": false
   }, {
+    "name": "issued (date invalid)",
+    "extend": "default",
+    "file": "tests-1.0/issued-date-invalid.jsonld",
+    "valid": false
+  }, {
     "name": "issued",
     "extend": "default",
     "file": "tests-1.0/issued-valid.jsonld",
