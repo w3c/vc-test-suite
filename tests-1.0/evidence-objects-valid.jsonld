@@ -7,8 +7,8 @@
     "ageOver": 21
   },
   "evidence": [{
-    "id": "https://dmv.example.gov/evidence/f2aeec97-fc0d-42bf-8ca7-0548192d4231",
+    "id": "https://dmv.example.gov/evidence/f2aeec97-fc0d-42bf-8ca7-0548192d4231"
   },{
-    "id": "https://dmv.example.gov/evidence/1d755e15-0be8-4677-a7eb-22c172d0d19d",
+    "id": "https://dmv.example.gov/evidence/1d755e15-0be8-4677-a7eb-22c172d0d19d"
   }]
 }
