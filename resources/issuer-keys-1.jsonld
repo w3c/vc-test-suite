@@ -1,0 +1,8 @@
+{
+  "@context": "https://w3id.org/identity/v1",
+  "id": "https://example.com/issuer/keys/1",
+  "type": "CryptographicKey",
+  "owner": "https://example.com/owner",
+  "label": "Signing Key 1",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuXSow2v5TQJYBXi96abN\nv/VGuDaob5HqGIxnD5uxLCkRcr4SpvGkNavTxVzQeiQRQSF7EVtWIrdZM2xAxCGQ\nW+8XlYUvLkJkfG/Z3e8KAxYk7YH2CzaVR0+kTrPduQUtGntgbng19eZRSMGgrEdI\n9kK8GHk75Vp/mojIpXA9pufvipAsdIt1h0ARF0gF1e9mjdC2KJGTcTCm8OU5AH6y\nN37x7F2cGkPL20IOnKqnls0ZV0/ekQ5iJPGdqnWFmHGJHyunRAucJfZxRqYQtJqH\ntAdGymhJNIt+ckq4P7J8H8HtaR5nQT76tZmWPVw1Zq2EQBAUFHsbx051kxrw4dBM\nTQIDAQAB\n-----END PUBLIC KEY-----\n"
+}

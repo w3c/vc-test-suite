@@ -11,6 +11,13 @@
       "skip": false
     }
   },
+  "resources": {
+    "https://example.com/issuer/keys/1": "resources/issuer-keys-1.jsonld",
+    "https://example.com/owner": "resources/owner.jsonld",
+    "https://w3id.org/identity/v1": "contexts/identity-v1.jsonld",
+    "https://w3id.org/security/v1": "contexts/security-v1.jsonld",
+    "https://w3id.org/vc/v1": "contexts/vc-v1.jsonld"
+  },
   "test": [{
     "name": "evidence (cardinality)",
     "extend": "default",
