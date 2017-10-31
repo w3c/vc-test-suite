@@ -7,6 +7,7 @@
       "publicKey": "keys/key-1-public.pem",
       "owner": "https://example.com/owner",
       "privateKey": "keys/key-1-private.pem",
+      "valid": true,
       "skip": false
     }
   },
