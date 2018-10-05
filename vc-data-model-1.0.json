@@ -44,6 +44,11 @@
     "file": "tests-1.0/expires-date-invalid.jsonld",
     "valid": false
   }, {
+    "name": "supports machine readable extensions",
+    "extend": "default",
+    "file": "tests-1.0/extended-valid.jsonld",
+    "valid": true
+  }, {
     "name": "issued (cardinality invalid)",
     "extend": "default",
     "file": "tests-1.0/issued-cardinality-invalid.jsonld",
