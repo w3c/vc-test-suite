@@ -40,11 +40,13 @@
     "valid": true
   }, {
     "name": "expires (date invalid)",
+    "spectext": "Expires MUST be an ISO8601 date",
     "extend": "default",
     "file": "tests-1.0/expires-date-invalid.jsonld",
     "valid": false
   }, {
     "name": "supports machine readable extensions",
+    "spectext": "VC MUST be expressed in standard machine-readable data formats for expressing VCs which can be extended with minimal coordination",
     "extend": "default",
     "file": "tests-1.0/extended-valid.jsonld",
     "valid": true
