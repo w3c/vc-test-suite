@@ -30,46 +30,45 @@
 (define default-options-initial
   (hash-ref (hash-ref data-model-1.0 'base) 'default))
 
-(require linkeddata/pk)
+(define-syntax-rule (with-env body ...)
+  (parameterize ([current-environment-variables
+                  (environment-variables-copy
+                   (current-environment-variables))])
+    (define jsonld-loader-map
+      (string-join (for/list ([(key val) (hash-ref data-model-1.0 'resources)])
+                     (string-append (symbol->string key) "="
+                                    (path->string (build-path parent-dir val))))
+                   ","))
+    (putenv "JSONLD_LOADER_MAP" jsonld-loader-map)
+    body ...))
 
-(define (gen-test-suite tests issuer validator)
-  (define-syntax-rule (with-env body ...)
-    (parameterize ([current-environment-variables
-                    (environment-variables-copy
-                     (current-environment-variables))])
-      (define jsonld-loader-map
-        (string-join (for/list ([(key val) (hash-ref data-model-1.0 'resources)])
-                       (string-append (symbol->string key) "="
-                                      (path->string (build-path parent-dir val))))
-                     ","))
-      (putenv "JSONLD_LOADER_MAP" jsonld-loader-map)
-      body ...))
+(define (run-test test issuer validator)
+  (define test-options
+    (for/fold ([test-options default-options])
+              ([(key val) test])
+      (hash-set test-options key val)))
+  ;; Let's start out with the basic structure from the existing json
+  ;; file and we can refactor later
   (test-suite
-   "Verifiable Claims 1.0 Data Model Test Suite"
-   (for/list ([test tests])
-     (define test-options
-       (for/fold ([test-options default-options])
-                 ([(key val) test])
-         (hash-set test-options key val)))
-     (define input-json
-       (call-with-input-file (build-path parent-dir (hash-ref test-options 'file))
-         read-json))
-     (define-values (issuer-stdout issuer-stderr issuer-exit-code)
-       (with-env
-         (parameterize ([current-custodian (make-custodian)])
-           (match-define (list stdout stdin pid stderr interact)
-             (process* issuer
-                       "-i" (hash-ref test-options 'issuerUrl)
-                       "-r" (path->string (hash-ref test-options 'privateKey))))
-           (write-json input-json stdin)
-           (close-output-port stdin)
-           (interact 'wait)
-           (values (port->string stdout) (port->string stderr)
-                   (interact 'exit-code)))))
-     ;; Let's start out with the basic structure from the existing json
-     ;; file and we can refactor later
-     (test-suite
-      (hash-ref test-options 'name)
+   (hash-ref test-options 'name)
+   (call/ec
+    (λ (return)
+      (define input-json
+        (call-with-input-file (build-path parent-dir (hash-ref test-options 'file))
+          read-json))
+      (define-values (issuer-stdout issuer-stderr issuer-exit-code)
+        (with-env
+          (parameterize ([current-custodian (make-custodian)])
+            (match-define (list stdout stdin pid stderr interact)
+              (process* issuer
+                        "-i" (hash-ref test-options 'issuerUrl)
+                        "-r" (path->string (hash-ref test-options 'privateKey))))
+            (write-json input-json stdin)
+            (close-output-port stdin)
+            (interact 'wait)
+            (values (port->string stdout) (port->string stderr)
+                    (interact 'exit-code)))))
+
       (with-check-info (;; TODO: input-json
                         ['issuer-stdout (string-info issuer-stdout)]
                         ['issuer-stderr (string-info issuer-stderr)]
@@ -79,6 +78,12 @@
                        issuer-exit-code 0)
             (test-false "Issuer should fail (exit status nonzero)"
                         (eqv? issuer-exit-code 0))))))))
+
+(define (gen-test-suite tests issuer validator)
+  (test-suite
+   "Verifiable Claims 1.0 Data Model Test Suite"
+   (for/list ([test tests])
+     (run-test test issuer validator))))
 
 
 #;(struct success ())
