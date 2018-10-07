@@ -6,6 +6,8 @@
          json
          racket/runtime-path)
 
+(require linkeddata/pk)
+
 (define-runtime-path here ".")
 (define-runtime-path parent-dir
   "..")
@@ -42,7 +44,7 @@
     (putenv "JSONLD_LOADER_MAP" jsonld-loader-map)
     body ...))
 
-(define (run-test test issuer validator)
+(define (run-test test issuer verifier)
   (define test-options
     (for/fold ([test-options default-options])
               ([(key val) test])
@@ -73,17 +75,50 @@
                         ['issuer-stdout (string-info issuer-stdout)]
                         ['issuer-stderr (string-info issuer-stderr)]
                         ['issuer-exit-code issuer-exit-code])
-        (if (hash-ref test-options 'issue-valid)
-            (test-eqv? "Issuer should succeed (exit status zero)"
-                       issuer-exit-code 0)
-            (test-false "Issuer should fail (exit status nonzero)"
-                        (eqv? issuer-exit-code 0))))))))
+        (cond
+          ;; Issuer is expected to be valid
+          [(hash-ref test-options 'issue-valid)
+           (test-eqv? "Issuer should succeed (exit status zero)"
+                         issuer-exit-code 0)
+           (when (not (eqv? issuer-exit-code 0))
+             (return (void)))
+           (define-values (verifier-stdout verifier-stderr verifier-exit-code)
+             (with-env
+               (parameterize ([current-custodian (make-custodian)])
+                 (match-define (list stdout stdin pid stderr interact)
+                   (process* (pk 'verifier verifier)
+                             "-i" (hash-ref test-options 'issuerUrl)
+                             "-p" (pk 'publicKey (path->string (hash-ref test-options 'publicKey)))))
+                 (write-json input-json stdin)
+                 (close-output-port stdin)
+                 (interact 'wait)
+                 (values (port->string stdout) (port->string stderr)
+                         (interact 'exit-code)))))
+           (with-check-info (['verifier-stdout (string-info verifier-stdout)]
+                             ['verifier-stderr (string-info verifier-stderr)]
+                             ['verifier-exit-code verifier-exit-code])
+             (cond
+               ;; verifier is expected to validate
+               [(hash-ref test-options 'verify-valid)
+                (test-eqv? "Verifier should succeed (exit status zero)"
+                           verifier-exit-code 0)
+                (when (not (eqv? verifier-exit-code 0))
+                  (return (void)))
+                ;; ... TODO ...
+                ]
+               [else
+                (test-false "Issuer should fail (exit status nonzero)"
+                            (eqv? issuer-exit-code 0))]))]
+          ;; issuer is expected to be invalid
+          [else
+           (test-false "Issuer should fail (exit status nonzero)"
+                       (eqv? issuer-exit-code 0))]))))))
 
-(define (gen-test-suite tests issuer validator)
+(define (gen-test-suite tests issuer verifier)
   (test-suite
-   "Verifiable Claims 1.0 Data Model Test Suite"
+   "Verifiable Claims 1.0 Data Model"
    (for/list ([test tests])
-     (run-test test issuer validator))))
+     (run-test test issuer verifier))))
 
 
 #;(struct success ())
