@@ -86,10 +86,10 @@
              (with-env
                (parameterize ([current-custodian (make-custodian)])
                  (match-define (list stdout stdin pid stderr interact)
-                   (process* (pk 'verifier verifier)
+                   (process* verifier
                              "-i" (hash-ref test-options 'issuerUrl)
-                             "-p" (pk 'publicKey (path->string (hash-ref test-options 'publicKey)))))
-                 (write-json input-json stdin)
+                             "-p" (path->string (hash-ref test-options 'publicKey))))
+                 (write-string issuer-stdout stdin)
                  (close-output-port stdin)
                  (interact 'wait)
                  (values (port->string stdout) (port->string stderr)
