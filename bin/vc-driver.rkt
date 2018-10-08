@@ -80,6 +80,8 @@
           [(hash-ref test-options 'issue-valid)
            (test-eqv? "Issuer should succeed (exit status zero)"
                          issuer-exit-code 0)
+           ;; If we got a nonzero answer on the issuer, we can't do
+           ;; the verifier usefully anyway, so bail out
            (when (not (eqv? issuer-exit-code 0))
              (return (void)))
            (define-values (verifier-stdout verifier-stderr verifier-exit-code)
@@ -102,6 +104,8 @@
                [(hash-ref test-options 'verify-valid)
                 (test-eqv? "Verifier should succeed (exit status zero)"
                            verifier-exit-code 0)
+                ;; If we got a nonzero answer on the verifier, we can't do
+                ;; any additional checks anyway, so bail out
                 (when (not (eqv? verifier-exit-code 0))
                   (return (void)))
                 ;; ... TODO ...
