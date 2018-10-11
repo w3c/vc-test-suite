@@ -20,6 +20,10 @@
   (call-with-input-file (build-path parent-dir "vc-data-model-1.0.json")
     read-json))
 
+;; TODO: Either we should remove this, or remove the one from
+;;   the json file...
+;;   but we do need other tests to be able to supply the locations of their
+;;   own keys, etc so...
 (define default-options
   `#hasheq((issuerUrl . "https://example.com/issuer/keys/1")
            (publicKey . ,(build-path parent-dir "keys" "key-1-public.pem"))
@@ -29,7 +33,7 @@
            (verify-valid . #t)
            (skip . #f)))
 
-(define default-options-initial
+#;(define default-options-initial
   (hash-ref (hash-ref data-model-1.0 'base) 'default))
 
 (define-syntax-rule (with-env body ...)
@@ -44,7 +48,7 @@
     (putenv "JSONLD_LOADER_MAP" jsonld-loader-map)
     body ...))
 
-(define (run-test test issuer verifier)
+(define (run-one-test test issuer verifier)
   (define test-options
     (for/fold ([test-options default-options])
               ([(key val) test])
@@ -122,45 +126,30 @@
   (test-suite
    "Verifiable Claims 1.0 Data Model"
    (for/list ([test tests])
-     (run-test test issuer verifier))))
+     (run-one-test test issuer verifier))))
 
+;;;;;;;;;;;
+;; tests ;;
+;;;;;;;;;;;
 
-#;(struct success ())
-#;(struct failure (message))
+(define (generate-tests data-model-base racket-tests)
+  ;; TODO...?
+  (define (convert-data-model-test test)
+    test)
+  (define data-model-tests
+    (map convert-data-model-test
+         (hash-ref data-model-base 'test)))
+  ;; TODO: Do we want to sort these?
+  (append data-model-tests racket-tests))
 
-#;(define (run-test args config-dir resources entry)
-  (call/ec
-   (λ (return)
-     (when (hash-has-key? entry 'skip)
-       )
-     
+(define racket-tests
+  `(#;#hasheq((file . "tests-1.0/issuer-can-revoke.jsonld")
+            (issue-valid . #t)
+            (verify-valid . #f)
+            (modify-issuer-args . ,add-revocation-issuer-args)
+            (extra-verifier-checks .
+             ,(list foo))
+            )))
 
-     ))
-
-  )
-
-
-#;(define (main)
-  
-  ;; parser.add_argument(
-  ;;     '--verbose', action='count', default=0,
-  ;;     dest='verbosity', help='Increase output verbosity.'
-  ;;     ' [%(default)s]')
-  ;; parser.add_argument(
-  ;;     '-c', '--config', action='store', default=DEFAULTS['config'],
-  ;;     dest='config', help='The test suite configuration file.'
-  ;;     ' [%(default)s]')
-  ;; parser.add_argument(
-  ;;     '-i', '--issuer', action='store', default=DEFAULTS['issuer'],
-  ;;     dest='issuer', help='The verifiable claims issuer program.'
-  ;;     ' [%(default)s]')
-  ;; parser.add_argument(
-  ;;     '-v', '--verifier', action='store', default=DEFAULTS['verifier'],
-  ;;     dest='verifier', help='The verifiable claims verifier program.'
-  ;;     ' [%(default)s]')
-  ;;
-  ;; return parser.parse_args()
-
-  )
-
-
+(define default-tests
+  (generate-tests data-model-1.0 racket-tests))
