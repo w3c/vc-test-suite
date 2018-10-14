@@ -1,5 +1,5 @@
 {
-  "@context": "https://w3id.org/vc/v1",
+  "@context": "https://w3id.org/credentials/v1",
   "id": "https://dmv.example.gov/credentials/3732",
   "type": ["Credential", "ProofOfAgeCredential"],
   "claim": {

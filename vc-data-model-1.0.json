@@ -7,7 +7,8 @@
       "publicKey": "keys/key-1-public.pem",
       "owner": "https://example.com/owner",
       "privateKey": "keys/key-1-private.pem",
-      "valid": true,
+      "issueValid": true,
+      "verifyValid": true,
       "skip": false
     }
   },
@@ -16,99 +17,100 @@
     "https://example.com/owner": "resources/owner.jsonld",
     "https://w3id.org/identity/v1": "contexts/identity-v1.jsonld",
     "https://w3id.org/security/v1": "contexts/security-v1.jsonld",
-    "https://w3id.org/vc/v1": "contexts/vc-v1.jsonld"
+    "https://w3id.org/vc/v1": "contexts/vc-v1.jsonld",
+    "https://w3id.org/credentials/v1": "contexts/credentials-v1.jsonld"
   },
   "test": [{
     "name": "evidence (cardinality)",
     "extend": "default",
     "file": "tests-1.0/evidence-cardinality-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "evidence (objects)",
     "extend": "default",
     "file": "tests-1.0/evidence-objects-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "evidence (url invalid)",
     "extend": "default",
     "file": "tests-1.0/evidence-url-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "evidence",
     "extend": "default",
     "file": "tests-1.0/evidence-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "expires (date invalid)",
     "spectext": "Expires MUST be an ISO8601 date",
     "extend": "default",
     "file": "tests-1.0/expires-date-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "supports machine readable extensions",
     "spectext": "VC MUST be expressed in standard machine-readable data formats for expressing VCs which can be extended with minimal coordination",
     "extend": "default",
     "file": "tests-1.0/extended-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "issued (cardinality invalid)",
     "extend": "default",
     "file": "tests-1.0/issued-cardinality-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "issued (invalid)",
     "extend": "default",
     "file": "tests-1.0/issued-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "issued (date invalid)",
     "extend": "default",
     "file": "tests-1.0/issued-date-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "issued",
     "extend": "default",
     "file": "tests-1.0/issued-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "issuer (cardinality invalid)",
     "extend": "default",
     "file": "tests-1.0/issuer-cardinality-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "issuer (uri invalid)",
     "extend": "default",
     "file": "tests-1.0/issuer-uri-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "issuer (object id)",
     "extend": "default",
     "file": "tests-1.0/issuer-valid-object.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "issuer",
     "extend": "default",
     "file": "tests-1.0/issuer-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "minimal",
     "extend": "default",
     "file": "tests-1.0/minimal-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }, {
     "name": "revocation (type invalid)",
     "extend": "default",
     "file": "tests-1.0/revocation-type-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "revocation (url invalid)",
     "extend": "default",
     "file": "tests-1.0/revocation-url-invalid.jsonld",
-    "valid": false
+    "issueValid": false
   }, {
     "name": "revocation",
     "extend": "default",
     "file": "tests-1.0/revocation-valid.jsonld",
-    "valid": true
+    "issueValid": true
   }]
 }
