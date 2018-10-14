@@ -115,5 +115,29 @@
             'credentialStatus
             #hasheq((id . "https://dmv.example.gov/status/24")
                     (type . "CredentialStatusList2017"))))
+
+;; This one has a revocation list with this item present and
+;; revoked... thus it must not appear
+(define issuer-can-revoke-test
+  (new simple-vc-test%
+       [name "Issuer can revoke VC"]
+       [cred revokeable-cred]
+       [verifier-resources
+        `#hash(("https://dmv.example.gov/status/24"
+                . ,(resource-path "credential-revocation.jsonld")))]
+       [issue-valid? #t]
+       [verify-valid? #f]))
+
+;; This one doesn't have the revocation present, nbd
+(define issuer-no-revocation-test
+  (new simple-vc-test%
+       [name "Issuer non-revocation VC verifies"]
+       [cred revokeable-cred]
+       [verifier-resources
+        `#hash(("https://dmv.example.gov/status/24"
+                . ,(resource-path "credential-empty-revocation.jsonld")))]
+       [issue-valid? #t]
+       [verify-valid? #t]))
+
 (define racket-tests
-  (list))
+  (list issuer-can-revoke-test issuer-no-revocation-test))
