@@ -4,38 +4,17 @@
          rackunit/text-ui
          rackunit/gui
          json
-         racket/runtime-path)
+         racket/runtime-path
+         "racket-tests.rkt")
 
 (require linkeddata/pk)
 
-(define-runtime-path here ".")
 (define-runtime-path parent-dir
   "..")
-(define tests-dir (build-path parent-dir "tests-1.0"))
-(define resources-dir (build-path parent-dir "resources"))
-(define keys-dir (build-path parent-dir "keys"))
-(define contexts-dir (build-path parent-dir "contexts"))
 
 (define data-model-1.0
   (call-with-input-file (build-path parent-dir "vc-data-model-1.0.json")
     read-json))
-
-;; TODO: Either we should remove this, or remove the one from
-;;   the json file...
-;;   but we do need other tests to be able to supply the locations of their
-;;   own keys, etc so...
-(define default-options
-  `#hasheq((issuerUrl . "https://example.com/issuer/keys/1")
-           (publicKey . ,(build-path parent-dir "keys" "key-1-public.pem"))
-           (owner . "https://example.com/owner")
-           (privateKey . ,(build-path parent-dir "keys" "key-1-private.pem"))
-           (issue-valid . #t)
-           (verify-valid . #t)
-           (skip . #f)))
-
-#;(define default-options-initial
-  (hash-ref (hash-ref data-model-1.0 'base) 'default))
-
 (define-syntax-rule (with-env body ...)
   (parameterize ([current-environment-variables
                   (environment-variables-copy
@@ -49,26 +28,21 @@
     body ...))
 
 (define (run-one-test test issuer verifier)
-  (define test-options
-    (for/fold ([test-options default-options])
-              ([(key val) test])
-      (hash-set test-options key val)))
   ;; Let's start out with the basic structure from the existing json
   ;; file and we can refactor later
   (test-suite
-   (hash-ref test-options 'name)
+   (send test get-name)
    (call/ec
     (λ (return)
       (define input-json
-        (call-with-input-file (build-path parent-dir (hash-ref test-options 'file))
-          read-json))
+        (send test get-cred))
       (define-values (issuer-stdout issuer-stderr issuer-exit-code)
         (with-env
           (parameterize ([current-custodian (make-custodian)])
             (match-define (list stdout stdin pid stderr interact)
               (process* issuer
-                        "-i" (hash-ref test-options 'issuerUrl)
-                        "-r" (path->string (hash-ref test-options 'privateKey))))
+                        "-i" (send test get-issuer-url)
+                        "-r" (send test get-private-key)))
             (write-json input-json stdin)
             (close-output-port stdin)
             (interact 'wait)
@@ -81,7 +55,7 @@
                         ['issuer-exit-code issuer-exit-code])
         (cond
           ;; Issuer is expected to be valid
-          [(hash-ref test-options 'issue-valid)
+          [(send test get-issue-valid?)
            (test-eqv? "Issuer should succeed (exit status zero)"
                          issuer-exit-code 0)
            ;; If we got a nonzero answer on the issuer, we can't do
@@ -93,8 +67,8 @@
                (parameterize ([current-custodian (make-custodian)])
                  (match-define (list stdout stdin pid stderr interact)
                    (process* verifier
-                             "-i" (hash-ref test-options 'issuerUrl)
-                             "-p" (path->string (hash-ref test-options 'publicKey))))
+                             "-i" (send test get-issuer-url)
+                             "-p" (path->string (send test get-public-key))))
                  (write-string issuer-stdout stdin)
                  (close-output-port stdin)
                  (interact 'wait)
@@ -105,7 +79,7 @@
                              ['verifier-exit-code verifier-exit-code])
              (cond
                ;; verifier is expected to validate
-               [(hash-ref test-options 'verify-valid)
+               [(send test get-verify-valid?)
                 (test-eqv? "Verifier should succeed (exit status zero)"
                            verifier-exit-code 0)
                 ;; If we got a nonzero answer on the verifier, we can't do
@@ -133,23 +107,63 @@
 ;;;;;;;;;;;
 
 (define (generate-tests data-model-base racket-tests)
-  ;; TODO...?
   (define (convert-data-model-test test)
-    test)
+    ;; TODO: handle Python script stuff
+    (new json-vc-test%
+         [js-doc test]))
   (define data-model-tests
     (map convert-data-model-test
          (hash-ref data-model-base 'test)))
   ;; TODO: Do we want to sort these?
   (append data-model-tests racket-tests))
 
-(define racket-tests
-  `(#;#hasheq((file . "tests-1.0/issuer-can-revoke.jsonld")
-            (issue-valid . #t)
-            (verify-valid . #f)
-            (modify-issuer-args . ,add-revocation-issuer-args)
-            (extra-verifier-checks .
-             ,(list foo))
-            )))
-
 (define default-tests
   (generate-tests data-model-1.0 racket-tests))
+
+(define (test-suite->json-core test-suite)
+  (define fold-results
+    (fold-test-results
+     ;; Handle each result.  If it's
+     (lambda (result seed)
+       (match seed
+         [(vector result-data suite-names)
+          (vector 
+           (match suite-names
+             [(list _ ... this-suite top-suite)
+              (if (test-success? result)
+                  result-data
+                  ;; If the result is a failure, we mark the whole
+                  ;; corresponding suite as such
+                  (hash-set result-data this-suite #f))])
+           suite-names)]))
+     (vector #hash() ; result data, a hashmap of "name" => passing?
+             '())    ; names of how many layers deep in the test suite we are
+     test-suite
+     ;; On the way down we cons on how many levels deep we are in terms of
+     ;; these suites
+     #:fdown
+     (lambda (name seed)
+       (match seed
+         [(vector result-data suite-names)
+          (if (= (length suite-names) 1)
+              (vector ;; test is passing until it isn't
+               (hash-set result-data name #t)
+               (cons name suite-names))
+              (vector result-data (cons name suite-names)))]))
+     ;; On the way back up we pop off a level of suites
+     #:fup
+     (lambda (name seed)
+       (match seed
+         [(vector result-data suite-names)
+          (vector result-data (cdr suite-names))]))))
+  (match fold-results
+    [(vector test-results _)
+     (for/fold ([json #hasheq()])
+               ([(suite-name suite-val) test-results])
+       (hash-set json (string->symbol suite-name) suite-val))]))
+
+
+#;(test/gui
+   (gen-test-suite default-tests
+                   (string->path "/home/cwebber/devel/vc-js/bin/vc-js-issuer")
+                   (string->path "/home/cwebber/devel/vc-js/bin/vc-js-verifier")))
