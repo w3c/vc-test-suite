@@ -155,5 +155,31 @@
        [issue-valid? #t]
        [verify-valid? #t]))
 
+(define valid-proof-suite
+  (new simple-vc-test%
+       [name "Proof uses known proof suite"]
+       [cred minimal-cred]
+       [issue-valid? #t]
+       [verify-valid? 'skip]
+       [issuer-checks
+        (list
+         (lambda (issued)
+           (define proof
+             (or (hash-ref issued 'proof #f)
+                 (hash-ref issued 'signature)))
+           (define proof-type
+             (match (or (hash-ref proof 'type #f)
+                        (hash-ref proof '@type #f))
+               [(list val) val]
+               [val val]))
+           (test-not-false
+            "Proof type is member of known proof suites"
+            (member proof-type
+                    ;; Extend this as more proof suites are supported
+                    '("RsaSignature2018"
+                      "Ed25519Signature2018"
+                      "LinkedDataSignature2015")))))]))
+
 (define racket-tests
-  (list issuer-can-revoke-test issuer-no-revocation-test))
+  (list issuer-can-revoke-test issuer-no-revocation-test
+        valid-proof-suite))
