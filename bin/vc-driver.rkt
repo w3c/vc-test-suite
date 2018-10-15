@@ -48,7 +48,9 @@
             (interact 'wait)
             (values (port->string stdout) (port->string stderr)
                     (interact 'exit-code)))))
-
+      ;; Run extra issuer logic
+      (send test run-issuer-checks issuer-stdout)
+      ;; Now run verifier checks
       (with-check-info (;; TODO: input-json
                         ['issuer-stdout (string-info issuer-stdout)]
                         ['issuer-stderr (string-info issuer-stderr)]
@@ -57,7 +59,7 @@
           ;; Issuer is expected to be valid
           [(send test get-issue-valid?)
            (test-eqv? "Issuer should succeed (exit status zero)"
-                         issuer-exit-code 0)
+                      issuer-exit-code 0)
            ;; If we got a nonzero answer on the issuer, we can't do
            ;; the verifier usefully anyway, so bail out.
            ;; Also, we support skipping verification step.
@@ -76,6 +78,7 @@
                  (interact 'wait)
                  (values (port->string stdout) (port->string stderr)
                          (interact 'exit-code)))))
+           ;; Finally, let's see if the exit status was what we expected
            (with-check-info (['verifier-stdout (string-info verifier-stdout)]
                              ['verifier-stderr (string-info verifier-stderr)]
                              ['verifier-exit-code verifier-exit-code])
@@ -86,8 +89,9 @@
                            verifier-exit-code 0)
                 ;; If we got a nonzero answer on the verifier, we can't do
                 ;; any additional checks anyway, so bail out
-                (when (not (eqv? verifier-exit-code 0))
-                  (return (void)))]
+                ;; TODO: Well we aren't doing additional tests yet so...
+                #;(when (not (eqv? verifier-exit-code 0))
+                    (return (void)))]
                [else
                 (test-false "Issuer should fail (exit status nonzero)"
                             (eqv? issuer-exit-code 0))]))]
