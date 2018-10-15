@@ -53,7 +53,8 @@
       "https://example.com/owner")
 
     ;; ok these ones we actually init
-    (init-field name cred
+    (init-field name
+                [cred minimal-cred]
                 [issue-valid? #t] [verify-valid? #t]
                 [issuer-args '()] [verifier-args '()]
                 [issuer-resources #hash()] [verifier-resources #hash()])
@@ -141,7 +142,6 @@
        [verifier-resources
         `#hash(("https://dmv.example.gov/status/24"
                 . ,(resource-path "credential-revocation.jsonld")))]
-       [issue-valid? #t]
        [verify-valid? #f]))
 
 ;; This one doesn't have the revocation present, nbd
@@ -151,22 +151,32 @@
        [cred revokeable-cred]
        [verifier-resources
         `#hash(("https://dmv.example.gov/status/24"
-                . ,(resource-path "credential-empty-revocation.jsonld")))]
-       [issue-valid? #t]
-       [verify-valid? #t]))
+                . ,(resource-path "credential-empty-revocation.jsonld")))]))
 
-(define valid-proof-suite
+(define has-proof
   (new simple-vc-test%
-       [name "Proof uses known proof suite"]
-       [cred minimal-cred]
-       [issue-valid? #t]
+       [name "Provides proof"]
        [verify-valid? 'skip]
        [issuer-checks
         (list
          (lambda (issued)
-           (define proof
-             (or (hash-ref issued 'proof #f)
-                 (hash-ref issued 'signature)))
+           (test-not-false
+            "Proof field is present"
+            (or (hash-ref issued 'proof #f)
+                (hash-ref issued 'signature #f)))))]))
+
+(define (get-proof issued)
+  (or (hash-ref issued 'proof #f)
+      (hash-ref issued 'signature)))
+
+(define valid-proof-suite
+  (new simple-vc-test%
+       [name "Proof uses known proof suite"]
+       [verify-valid? 'skip]
+       [issuer-checks
+        (list
+         (lambda (issued)
+           (define proof (get-proof issued))
            (define proof-type
              (match (or (hash-ref proof 'type #f)
                         (hash-ref proof '@type #f))
@@ -182,4 +192,5 @@
 
 (define racket-tests
   (list issuer-can-revoke-test issuer-no-revocation-test
+        has-proof
         valid-proof-suite))
