@@ -18,7 +18,7 @@
   (call-with-input-file (build-path parent-dir "tests-1.0" filename)
     read-json))
 
-(define minimal-valid-cred
+(define minimal-cred
   (load-test-cred "minimal-valid.jsonld"))
 
 (define vc-test<%>
@@ -111,7 +111,7 @@
       'TODO)))
 
 (define revokeable-cred
-  (hash-set minimal-valid-cred
+  (hash-set minimal-cred
             'credentialStatus
             #hasheq((id . "https://dmv.example.gov/status/24")
                     (type . "CredentialStatusList2017"))))
