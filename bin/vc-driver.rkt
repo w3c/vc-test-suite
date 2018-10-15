@@ -59,8 +59,10 @@
            (test-eqv? "Issuer should succeed (exit status zero)"
                          issuer-exit-code 0)
            ;; If we got a nonzero answer on the issuer, we can't do
-           ;; the verifier usefully anyway, so bail out
-           (when (not (eqv? issuer-exit-code 0))
+           ;; the verifier usefully anyway, so bail out.
+           ;; Also, we support skipping verification step.
+           (when (or (not (eqv? issuer-exit-code 0))
+                     (eq? (send test get-verify-valid?) 'skip))
              (return (void)))
            (define-values (verifier-stdout verifier-stderr verifier-exit-code)
              (with-env
@@ -74,24 +76,21 @@
                  (interact 'wait)
                  (values (port->string stdout) (port->string stderr)
                          (interact 'exit-code)))))
-           (unless (eq? (send test get-verify-valid?) 'skip)
-             (with-check-info (['verifier-stdout (string-info verifier-stdout)]
-                               ['verifier-stderr (string-info verifier-stderr)]
-                               ['verifier-exit-code verifier-exit-code])
-               (cond
-                 ;; verifier is expected to validate
-                 [(send test get-verify-valid?)
-                  (test-eqv? "Verifier should succeed (exit status zero)"
-                             verifier-exit-code 0)
-                  ;; If we got a nonzero answer on the verifier, we can't do
-                  ;; any additional checks anyway, so bail out
-                  (when (not (eqv? verifier-exit-code 0))
-                    (return (void)))
-                  ;; ... TODO ...
-                  ]
-                 [else
-                  (test-false "Issuer should fail (exit status nonzero)"
-                              (eqv? issuer-exit-code 0))])))]
+           (with-check-info (['verifier-stdout (string-info verifier-stdout)]
+                             ['verifier-stderr (string-info verifier-stderr)]
+                             ['verifier-exit-code verifier-exit-code])
+             (cond
+               ;; verifier is expected to validate
+               [(send test get-verify-valid?)
+                (test-eqv? "Verifier should succeed (exit status zero)"
+                           verifier-exit-code 0)
+                ;; If we got a nonzero answer on the verifier, we can't do
+                ;; any additional checks anyway, so bail out
+                (when (not (eqv? verifier-exit-code 0))
+                  (return (void)))]
+               [else
+                (test-false "Issuer should fail (exit status nonzero)"
+                            (eqv? issuer-exit-code 0))]))]
           ;; issuer is expected to be invalid
           [else
            (test-false "Issuer should fail (exit status nonzero)"
