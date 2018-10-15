@@ -7,7 +7,8 @@
 
 (require racket/runtime-path
          json
-         rackunit)
+         rackunit
+         net/url)
 
 (define-runtime-path parent-dir
   "..")
@@ -165,11 +166,81 @@
             (or (hash-ref issued 'proof #f)
                 (hash-ref issued 'signature #f)))))]))
 
+;; The following two regexes copied from https://stackoverflow.com/a/37563868
+;;   (CC BY-SA 3.0, though I think copyright doesn't apply to regexes)
+(define iso-8601-rx
+  #px"^\\d{4}(-\\d\\d(-\\d\\d(T\\d\\d:\\d\\d(:\\d\\d)?(\\.\\d+)?(([+-]\\d\\d:\\d\\d)|Z)?)?)?)?$")
+
+(define (valid-date? str)
+  (regexp-match iso-8601-rx str))
+
+;; The only person who is likely to complain about this is
+;; Gregg Kellogg.  Are you reading my code, Gregg?
+(define uri-rx
+  #px".+:.+")
+
+(define (valid-uri? str)
+  (regexp-match uri-rx str))
+
+(define proof-suite%
+  (class object%
+    (super-new)
+    (init-field name
+                [creator-required? #t]
+                [created-required? #t])
+    (define/public (get-name)
+      name)
+    (define/public (required-properties-present? proof)
+      (and (or (hash-has-key? proof 'type)
+               (hash-has-key? proof '@type))
+           (hash-has-key? proof 'creator)
+           (hash-has-key? proof 'created)
+           (or (hash-has-key? proof 'signatureValue)
+               (hash-has-key? proof 'proofValue))))
+    (define/public (proof-acceptable? proof)
+      (and (required-properties-present? proof)
+           (string? (hash-ref proof 'type))
+           (and creator-required?
+                (string? (hash-ref proof 'creator))
+                (valid-uri? (hash-ref proof 'creator)))
+           (and created-required?
+                (string? (hash-ref proof 'created))
+                (valid-date? (hash-ref proof 'created)))
+           (or (and (hash-has-key? proof 'signatureValue)
+                    (string? (hash-ref proof 'signatureValue)))
+               (and (hash-has-key? proof 'proofValue)
+                    (string? (hash-ref proof 'proofValue))))))))
+
+(define lds2015-proof-suite
+  (new
+   (class proof-suite%
+     (super-new [name "LinkedDataSignature2015"]))))
+(define ed25519-proof-suite
+  (new
+   (class proof-suite%
+     (super-new [name "Ed25519VerificationKey2018"]))))
+(define rsa2018-proof-suite
+  (new
+   (class proof-suite%
+     (super-new [name "RsaSignature2018"]))))
+
+(define proof-suites
+  (for/fold ([result #hash()])
+            ([suite (list lds2015-proof-suite
+                          ed25519-proof-suite
+                          rsa2018-proof-suite)])
+    (hash-set result (send suite get-name) suite)))
+
 (define (get-proof issued)
   (or (hash-ref issued 'proof #f)
       (hash-ref issued 'signature)))
+(define (get-ldtype obj)
+  (match (or (hash-ref obj 'type #f)
+             (hash-ref obj '@type #f))
+    [(list val) val]
+    [val val]))
 
-(define valid-proof-suite
+(define proof-known-suite
   (new simple-vc-test%
        [name "Proof uses known proof suite"]
        [verify-valid? 'skip]
@@ -177,20 +248,56 @@
         (list
          (lambda (issued)
            (define proof (get-proof issued))
-           (define proof-type
-             (match (or (hash-ref proof 'type #f)
-                        (hash-ref proof '@type #f))
-               [(list val) val]
-               [val val]))
-           (test-not-false
+           (define proof-type (get-ldtype proof))
+           (test-true
             "Proof type is member of known proof suites"
-            (member proof-type
-                    ;; Extend this as more proof suites are supported
-                    '("RsaSignature2018"
-                      "Ed25519Signature2018"
-                      "LinkedDataSignature2015")))))]))
+            (hash-has-key? proof-suites proof-type))))]))
+
+(define proof-required-properties-present
+  (new simple-vc-test%
+       [name "Required proof properties are present"]
+       [verify-valid? 'skip]
+       [issuer-checks
+        (list
+         (lambda (issued)
+           (define proof (get-proof issued))
+           (define proof-type (get-ldtype proof))
+           (define suite (hash-ref proof-suites proof-type))
+           (test-true
+            "Required properties are present"
+            (send suite required-properties-present? proof))))]))
+
+(define proof-acceptable
+  (new simple-vc-test%
+       [name "Proof properties are valid and verifiable per suite"]
+       [verify-valid? 'skip]
+       [issuer-checks
+        (list
+         (lambda (issued)
+           (define proof (get-proof issued))
+           (define proof-type (get-ldtype proof))
+           (define suite (hash-ref proof-suites proof-type))
+           (test-true
+            "Proof data is in acceptable form for verifying"
+            (send suite proof-acceptable? proof))))]))
+
+;; This is a negative test for
+;; "`credentialStatus` value MUST be a status scheme that provides
+;;  enough information to determine current status of credential"
+(define bogus-credentialStatus-scheme-invalid
+  (new simple-vc-test%
+       [name "Bogus credentialStatus scheme should be invalid"]
+       [cred
+        (hash-set minimal-cred
+                  'credentialStatus
+                  #hasheq((id . "urn:sha1:56742d9965815c154442b8914aabc2fb89b7dc0a")
+                          (type . "urn:sha1:a5b997075fd07435ede2a65469e3177cbbdfae2a")))]
+       [verify-valid? #f]))
 
 (define racket-tests
   (list issuer-can-revoke-test issuer-no-revocation-test
         has-proof
-        valid-proof-suite))
+        proof-known-suite
+        proof-required-properties-present
+        proof-acceptable
+        bogus-credentialStatus-scheme-invalid))
