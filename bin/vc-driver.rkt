@@ -48,13 +48,13 @@
             (interact 'wait)
             (values (port->string stdout) (port->string stderr)
                     (interact 'exit-code)))))
-      ;; Run extra issuer logic
-      (send test run-issuer-checks issuer-stdout)
       ;; Now run verifier checks
       (with-check-info (;; TODO: input-json
                         ['issuer-stdout (string-info issuer-stdout)]
                         ['issuer-stderr (string-info issuer-stderr)]
                         ['issuer-exit-code issuer-exit-code])
+        ;; Run extra issuer logic
+        (send test run-issuer-checks issuer-stdout)
         (cond
           ;; Issuer is expected to be valid
           [(send test get-issue-valid?)
