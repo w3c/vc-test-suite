@@ -119,7 +119,7 @@
     (map convert-data-model-test
          (hash-ref data-model-base 'test)))
   ;; TODO: Do we want to sort these?
-  (append data-model-tests racket-tests))
+  (append racket-tests data-model-tests))
 
 (define default-tests
   (generate-tests data-model-1.0 racket-tests))
