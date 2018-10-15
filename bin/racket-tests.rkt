@@ -30,7 +30,7 @@
     [get-name (->m string?)]
     [get-cred (->m hash-eq?)]
     [get-issue-valid? (->m boolean?)]
-    [get-verify-valid? (->m boolean?)]
+    [get-verify-valid? (->m (or/c boolean? 'skip))]
     [modify-issuer-args (->m (listof string?) (listof string?))]
     [modify-verifier-args (->m (listof string?) (listof string?))]
     [modify-issuer-resources (->m hash-equal? hash-equal?)]
