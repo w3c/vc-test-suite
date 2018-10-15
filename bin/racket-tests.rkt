@@ -89,13 +89,15 @@
       (call/ec
        (lambda (return)
          (unless (null? issuer-checks)
-           (define issued-cred-json #f)
+           (define issued-cred-json 'unset)
            (test-not-exn
             "stdout is valid json"
             (lambda ()
               (set! issued-cred-json
-                    (call-with-input-string issued-cred-string read-json))
-              (return (void))))
+                    (call-with-input-string issued-cred-string read-json))))
+           (when (eq? issued-cred-json 'unset)
+             ;; must have failed...
+             (return (void)))
            (test-not-exn
             "No unexpected exceptions in checks"
             (lambda ()
