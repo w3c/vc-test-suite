@@ -6,7 +6,8 @@
          json-vc-test%)
 
 (require racket/runtime-path
-         json)
+         json
+         rackunit)
 
 (define-runtime-path parent-dir
   "..")
@@ -35,7 +36,7 @@
     [modify-verifier-args (->m (listof string?) (listof string?))]
     [modify-issuer-resources (->m hash-equal? hash-equal?)]
     [modify-verifier-resources (->m hash-equal? hash-equal?)]
-    [run-issuer-checks (->m hash-eq? any/c)]
+    [run-issuer-checks (->m string? any/c)]
     #;run-verifier-checks))
 
 (define vc-test-base%
@@ -84,9 +85,22 @@
     (super-new)
     (init-field [issuer-checks '()]
                 #;[verifier-checks '()])
-    (define/public (run-issuer-checks issued-cred)
-      (for ([check issuer-checks])
-        (check issued-cred)))))
+    (define/public (run-issuer-checks issued-cred-string)
+      (call/ec
+       (lambda (return)
+         (unless (null? issuer-checks)
+           (define issued-cred-json #f)
+           (test-not-exn
+            "stdout is valid json"
+            (lambda ()
+              (set! issued-cred-json
+                    (call-with-input-string issued-cred-string read-json))
+              (return (void))))
+           (test-not-exn
+            "No unexpected exceptions in checks"
+            (lambda ()
+              (for ([check issuer-checks])
+                (check issued-cred-json))))))))))
 
 (define json-vc-test%
   (class* vc-test-base% (vc-test<%>)
