@@ -93,7 +93,7 @@
                 #;(when (not (eqv? verifier-exit-code 0))
                     (return (void)))]
                [else
-                (test-false "Issuer should fail (exit status nonzero)"
+                (test-false "Verifier should fail (exit status nonzero)"
                             (eqv? issuer-exit-code 0))]))]
           ;; issuer is expected to be invalid
           [else
