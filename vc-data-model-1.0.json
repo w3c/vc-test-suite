@@ -112,5 +112,10 @@
     "extend": "default",
     "file": "tests-1.0/revocation-valid.jsonld",
     "issueValid": true
+  }, {
+    "name": "basic json values work",
+    "extend": "default",
+    "file": "tests-1.0/basic-json-values.jsonld",
+    "issueValid": true
   }]
 }
