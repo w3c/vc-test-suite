@@ -94,7 +94,7 @@
                     (return (void)))]
                [else
                 (test-false "Verifier should fail (exit status nonzero)"
-                            (eqv? issuer-exit-code 0))]))]
+                            (eqv? verifier-exit-code 0))]))]
           ;; issuer is expected to be invalid
           [else
            (test-false "Issuer should fail (exit status nonzero)"
