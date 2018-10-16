@@ -8,7 +8,8 @@
 (require racket/runtime-path
          json
          rackunit
-         net/url)
+         net/url
+         file/sha1)
 
 (define-runtime-path parent-dir
   "..")
@@ -209,7 +210,11 @@
            (or (and (hash-has-key? proof 'signatureValue)
                     (string? (hash-ref proof 'signatureValue)))
                (and (hash-has-key? proof 'proofValue)
-                    (string? (hash-ref proof 'proofValue))))))))
+                    (string? (hash-ref proof 'proofValue))))))
+    (define/public (proofPurpose-acceptable? proof)
+      (and (hash-has-key? proof 'proofPurpose)
+           (equal? (hash-ref proof 'proofPurpose)
+                   "credentialIssuance")))))
 
 (define lds2015-proof-suite
   (new
@@ -281,6 +286,27 @@
             "Proof data is in acceptable form for verifying"
             (send suite proof-acceptable? proof))))]))
 
+(define proofPurpose-acceptable
+  (new simple-vc-test%
+       [name "proofPurpose is valid if expected by cryptographic suite"]
+       [verify-valid? 'skip]
+       [issuer-checks
+        (list
+         (lambda (issued)
+           (define proof (get-proof issued))
+           (define proof-type (get-ldtype proof))
+           (define suite (hash-ref proof-suites proof-type))
+           (test-true
+            "proofPurpose is valid"
+            (send suite proofPurpose-acceptable? proof))))]))
+
+;; This just generates a sha1 URN based on some bytes.
+;; Used to generate some garbage URIs that are valid URIs but
+;; which the issuers/verifiers won't know what to do with
+(define (sha1-urn input-bytes)
+  (string-append "urn:sha1:"
+                 (call-with-input-bytes input-bytes sha1)))
+
 ;; This is a negative test for
 ;; "`credentialStatus` value MUST be a status scheme that provides
 ;;  enough information to determine current status of credential"
@@ -290,14 +316,29 @@
        [cred
         (hash-set minimal-cred
                   'credentialStatus
-                  #hasheq((id . "urn:sha1:56742d9965815c154442b8914aabc2fb89b7dc0a")
-                          (type . "urn:sha1:a5b997075fd07435ede2a65469e3177cbbdfae2a")))]
+                  `#hasheq((id . ,(sha1-urn #"Not an ID"))
+                           (type . ,(sha1-urn #"Not a type"))))]
        [verify-valid? #f]))
+
+;; Some nonsense URN that nobody will have cached and isn't
+;; a key
+(define nonsense-uri
+  (sha1-urn #"The semantic web gods demand more RDF"))
+
+(define nonexistent-associated-key-fails
+  (new
+   (class simple-vc-test%
+     (super-new
+       [name "Signature by nonexistent public key should fail"]
+       [verify-valid? #f])
+     (define/override (get-issuer-url)
+       nonsense-uri))))
 
 (define racket-tests
   (list issuer-can-revoke-test issuer-no-revocation-test
         has-proof
         proof-known-suite
         proof-required-properties-present
-        proof-acceptable
-        bogus-credentialStatus-scheme-invalid))
+        proof-acceptable proofPurpose-acceptable
+        bogus-credentialStatus-scheme-invalid
+        nonexistent-associated-key-fails))
