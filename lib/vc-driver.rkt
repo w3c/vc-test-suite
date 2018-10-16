@@ -1,5 +1,8 @@
 #lang racket
 
+(provide gen-test-suite default-tests
+         test-suite->json-core)
+
 (require rackunit
          rackunit/text-ui
          rackunit/gui
