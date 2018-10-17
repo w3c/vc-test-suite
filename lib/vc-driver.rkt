@@ -1,6 +1,6 @@
 #lang racket
 
-(provide gen-test-suite default-tests
+(provide gen-test-suite default-tests verbose-tests?
          test-suite->json-core)
 
 (require rackunit
@@ -30,7 +30,18 @@
     (putenv "JSONLD_LOADER_MAP" jsonld-loader-map)
     body ...))
 
+(define verbose-tests?
+  (make-parameter #f))
+
 (define (run-one-test test issuer verifier)
+  (define-syntax-rule (with-check-info-maybe params body ...)
+    (let ([to-run
+           (lambda () body ...)])
+      (if (verbose-tests?)
+          (with-check-info params
+            (to-run))
+          (to-run))))
+
   ;; Let's start out with the basic structure from the existing json
   ;; file and we can refactor later
   (test-suite
@@ -52,10 +63,10 @@
             (values (port->string stdout) (port->string stderr)
                     (interact 'exit-code)))))
       ;; Now run verifier checks
-      (with-check-info (;; TODO: input-json
-                        ['issuer-stdout (string-info issuer-stdout)]
-                        ['issuer-stderr (string-info issuer-stderr)]
-                        ['issuer-exit-code issuer-exit-code])
+      (with-check-info-maybe (;; TODO: input-json
+                              ['issuer-stdout (string-info issuer-stdout)]
+                              ['issuer-stderr (string-info issuer-stderr)]
+                              ['issuer-exit-code issuer-exit-code])
         ;; Run extra issuer logic
         (send test run-issuer-checks issuer-stdout)
         (cond
@@ -82,9 +93,9 @@
                  (values (port->string stdout) (port->string stderr)
                          (interact 'exit-code)))))
            ;; Finally, let's see if the exit status was what we expected
-           (with-check-info (['verifier-stdout (string-info verifier-stdout)]
-                             ['verifier-stderr (string-info verifier-stderr)]
-                             ['verifier-exit-code verifier-exit-code])
+           (with-check-info-maybe (['verifier-stdout (string-info verifier-stdout)]
+                                   ['verifier-stderr (string-info verifier-stderr)]
+                                   ['verifier-exit-code verifier-exit-code])
              (cond
                ;; verifier is expected to validate
                [(send test get-verify-valid?)
