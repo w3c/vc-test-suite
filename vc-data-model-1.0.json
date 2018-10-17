@@ -20,7 +20,24 @@
     "https://w3id.org/vc/v1": "contexts/vc-v1.jsonld",
     "https://w3id.org/credentials/v1": "contexts/credentials-v1.jsonld"
   },
-  "test": [{
+  "test": [
+  {
+    "name": "Supports machine readable extensions",
+    "spectext": "VC MUST be expressed in standard machine-readable data formats for expressing VCs which can be extended with minimal coordination",
+    "extend": "default",
+    "file": "tests-1.0/extended-valid.jsonld",
+    "issueValid": true
+  }, {
+    "name": "Basic json values work",
+    "extend": "default",
+    "file": "tests-1.0/basic-json-values.jsonld",
+    "issueValid": true
+  }, {
+    "name": "Minimal example",
+    "extend": "default",
+    "file": "tests-1.0/minimal-valid.jsonld",
+    "issueValid": true
+  }, {
     "name": "evidence (cardinality)",
     "extend": "default",
     "file": "tests-1.0/evidence-cardinality-valid.jsonld",
@@ -46,12 +63,6 @@
     "extend": "default",
     "file": "tests-1.0/expires-date-invalid.jsonld",
     "issueValid": false
-  }, {
-    "name": "supports machine readable extensions",
-    "spectext": "VC MUST be expressed in standard machine-readable data formats for expressing VCs which can be extended with minimal coordination",
-    "extend": "default",
-    "file": "tests-1.0/extended-valid.jsonld",
-    "issueValid": true
   }, {
     "name": "issued (cardinality invalid)",
     "extend": "default",
@@ -93,11 +104,6 @@
     "file": "tests-1.0/issuer-valid.jsonld",
     "issueValid": true
   }, {
-    "name": "minimal",
-    "extend": "default",
-    "file": "tests-1.0/minimal-valid.jsonld",
-    "issueValid": true
-  }, {
     "name": "revocation (type invalid)",
     "extend": "default",
     "file": "tests-1.0/revocation-type-invalid.jsonld",
@@ -111,11 +117,6 @@
     "name": "revocation",
     "extend": "default",
     "file": "tests-1.0/revocation-valid.jsonld",
-    "issueValid": true
-  }, {
-    "name": "basic json values work",
-    "extend": "default",
-    "file": "tests-1.0/basic-json-values.jsonld",
     "issueValid": true
   }]
 }
