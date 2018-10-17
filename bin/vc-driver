@@ -21,7 +21,6 @@
   (define verifier #f)
   (define config #f)
   (define test-runner run-console-tests)
-  (define verbose #f)
   (command-line
    #:program "vc-driver"
    #:once-each
@@ -42,11 +41,11 @@
    [("-c" "--config") config-arg
                       "Additional configuration"
                       (set! config (string->path config-arg))]
-   [("--verbose") verbose
-                  "Verbose information on failed tests"
-                  (set! verbose #t)])
+   [("--verbose") "Verbose information on failed tests"
+                  (verbose-tests? #t)])
   (unless issuer
     (raise-user-error "--issuer must be supplied."))
   (unless verifier
     (raise-user-error "--verifier must be supplied."))
-  (test-runner config (gen-test-suite default-tests issuer verifier)))
+  (test-runner config (gen-test-suite default-tests issuer verifier))
+  (void))
