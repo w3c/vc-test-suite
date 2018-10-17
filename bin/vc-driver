@@ -8,6 +8,7 @@
 
 
 (define (run-console-tests config tests)
+  (displayln "Running tests for the Verifiable Credentials test suite...")
   (run-tests tests))
 (define (run-gui-tests config tests)
   (test/gui tests
