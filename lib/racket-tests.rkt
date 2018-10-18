@@ -312,7 +312,7 @@
 ;;  enough information to determine current status of credential"
 (define bogus-credentialStatus-scheme-invalid
   (new simple-vc-test%
-       [name "Bogus credentialStatus scheme should be invalid"]
+       [name "Bogus credentialStatus field should be invalid"]
        [cred
         (hash-set minimal-cred
                   'credentialStatus
