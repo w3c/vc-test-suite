@@ -30,7 +30,6 @@
    [("-v" "--verifier") verifier-arg
                         "[REQUIRED] Path to verifier executable."
                         (set! verifier (string->path verifier-arg))]
-   #:once-any
    [("-m" "--mode") mode-arg
                     "Output mode: \"console\", \"report\", or \"gui"
                     (set! test-runner
