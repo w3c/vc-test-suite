@@ -10,8 +10,6 @@
          racket/runtime-path
          "racket-tests.rkt")
 
-(require linkeddata/pk)
-
 (define-runtime-path parent-dir
   "..")
 
