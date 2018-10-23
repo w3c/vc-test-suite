@@ -46,5 +46,9 @@
     (raise-user-error "--issuer must be supplied."))
   (unless verifier
     (raise-user-error "--verifier must be supplied."))
+  (unless (file-exists? issuer)
+    (raise-user-error "issuer executable does not exist!"))
+  (unless (file-exists? verifier)
+    (raise-user-error "verifier executable does not exist!"))
   (test-runner config (gen-test-suite default-tests issuer verifier))
   (void))
