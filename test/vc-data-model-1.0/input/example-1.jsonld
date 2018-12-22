@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "https://w3.org/2018/credentials/v1",
+    "https://example.com/examples/v1"
+  ],
+  "id": "http://example.edu/credentials/58473",
+  "type": ["VerifiableCredential", "AlumniCredential"],
+  "credentialSubject": {
+    "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+    "alumniOf": "Example University"
+  },
+  "proof": {}
+}
+
