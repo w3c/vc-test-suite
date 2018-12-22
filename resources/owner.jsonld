@@ -1,8 +1,0 @@
-{
-  "@context": "https://w3id.org/identity/v1",
-  "id": "https://example.com/owner",
-  "type": "Identity",
-  "publicKey": [
-    "https://example.com/issuer/keys/1"
-  ]
-}
