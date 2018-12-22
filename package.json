@@ -1,0 +1,29 @@
+{
+  "name": "vc-test-suite",
+  "version": "0.3.0",
+  "description": "Verifiable Credentials Test Suite",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3c/vc-test-suite.git"
+  },
+  "keywords": [
+    "verifiable",
+    "credentials",
+    "test",
+    "suite",
+    "w3c"
+  ],
+  "author": "Manu Sporny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3c/vc-test-suite/issues"
+  },
+  "homepage": "https://github.com/w3c/vc-test-suite#readme"
+}
