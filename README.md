@@ -7,14 +7,14 @@ There are multiple test suites, each of which is detailed below.
 
 ## Verifiable Claims Data Model 1.0 Test Suite
 
-The test suite manifest for the Verifiable Claims Data Model 1.0 specification
-is available here:
+This test suite will check any application that generates Verifiable Credential
+Data Model documents to ensure conformance with the specification.
 
-https://w3c.github.io/vc-test-suite/vc-data-model-1.0.json
+### Setting up the Test Suite
 
-The associated tests can be found in the following directory:
-
-`tests-1.0`
+1. npm install
+2. Copy the `config.json.example` file to `config.json` and modify.
+3. npm test
 
 ## Contributing
 
