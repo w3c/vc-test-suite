@@ -1,0 +1,102 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-12-23T21:58:32.694Z",
+    "end": "2018-12-23T21:58:32.743Z",
+    "duration": 49
+  },
+  "tests": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Verifiable Credentials Document Contexts MUST be one or more URIs",
+      "duration": 15,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Verifiable Credentials Document Contexts MUST be one or more URIs (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://w3.org/2018/credentials/v1",
+      "fullTitle": "Verifiable Credentials Document Contexts first value MUST be https://w3.org/2018/credentials/v1",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Verifiable Credentials Document Contexts first value MUST be https://w3.org/2018/credentials/v1 (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Verifiable Credentials Document Identifiers MUST be a single URI",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Verifiable Credentials Document Identifiers MUST be a single URI (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Verifiable Credentials Document Contexts MUST be one or more URIs",
+      "duration": 15,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Verifiable Credentials Document Contexts MUST be one or more URIs (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://w3.org/2018/credentials/v1",
+      "fullTitle": "Verifiable Credentials Document Contexts first value MUST be https://w3.org/2018/credentials/v1",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Verifiable Credentials Document Contexts first value MUST be https://w3.org/2018/credentials/v1 (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Verifiable Credentials Document Identifiers MUST be a single URI",
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Verifiable Credentials Document Identifiers MUST be a single URI (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
