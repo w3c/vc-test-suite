@@ -1,0 +1,21 @@
+/**
+ * An example local configuration for the test suite. To use:
+ *
+ * 1. Copy this file to one called config.json.
+ * 2. Modify the file and replace with appropriate values for your system.
+ * 3. npm install
+ * 4. npm test
+ * 5. Rename results.json to YOUR_IMPLEMENTATION-results.json into the 
+ *    implementations/ directory.
+ * 6. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
+ *    pull request for your implementation.
+ */
+ 
+module.exports = {
+  // The following binary will, given an input file, produce a valid 
+  // Verifiable Credentials Data Model document.
+  "generator": "/bin/cat",
+  
+  // The arguments that should be passed to the VC generator.
+  "generatorOptions": ""
+}
