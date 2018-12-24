@@ -61,4 +61,30 @@ describe('Document', () => {
     });
   });
 
+  describe('`type` properties', () => {
+
+    it('MUST be one or more URIs', async () => {
+      const doc = await util.generate('example-3.jsonld', generatorOptions);
+      doc.type.should.be.a('Array');
+    });
+
+    it('MUST be one or more URIs (negative)', async () => {
+      expect(util.generate(
+        'example-3-bad-cardinality.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('for Credential MUST be `VerifiableCredential` plus specific type', async () => {
+      const doc = await util.generate('example-3.jsonld', generatorOptions);
+      doc.type.should.have.length.greaterThan(1);
+      doc.type.should.include('VerifiableCredential');
+    });
+
+    it('for Credential MUST be `VerifiableCredential` plus specific type (negative)', async () => {
+      expect(util.generate(
+        'example-3-bad-missing-type.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
 });
