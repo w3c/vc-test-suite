@@ -10,7 +10,9 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "test": "mocha --recursive"
+    "report": "mocha --recursive test/vc-data-model-1.0/ -R json > implementations/report.json",
+    "summary": "cd implementations && node generate.js",
+    "test": "mocha --recursive test/vc-data-model-1.0/"
   },
   "repository": {
     "type": "git",

@@ -20,7 +20,7 @@ Data Model documents to ensure conformance with the specification.
 
 1. npm install
 2. Copy the `config.json.example` file to `config.json` and modify.
-3. npm report
+3. npm run report
 4. Rename implementation/results.json to
    implementation/YOUR_IMPLEMENTATION-results.json.
 5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
