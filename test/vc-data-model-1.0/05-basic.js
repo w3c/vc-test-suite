@@ -130,4 +130,17 @@ describe('Document', () => {
     });
   });
 
+  describe('`proof` property', () => {
+
+    it('MUST be present', async () => {
+      const doc = await util.generate('example-5.jsonld', generatorOptions);
+      doc.proof.should.be.a('Object');
+    });
+
+    it('MUST be present (negative - missing)', async () => {
+      expect(util.generate(
+        'example-5-bad-proof.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
 });
