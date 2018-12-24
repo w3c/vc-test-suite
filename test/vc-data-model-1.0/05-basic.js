@@ -6,6 +6,7 @@ const util = require('./util');
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
+const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]+)?(Z)?$/
 
 // configure chai
 chai.should();
@@ -83,6 +84,48 @@ describe('Document', () => {
     it('for Credential MUST be `VerifiableCredential` plus specific type (negative)', async () => {
       expect(util.generate(
         'example-3-bad-missing-type.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
+  describe('`issuer` property', () => {
+
+    it('MUST be a single URI', async () => {
+      const doc = await util.generate('example-4.jsonld', generatorOptions);
+      doc.issuer.should.be.a('string');
+      expect(doc.issuer).to.match(uriRegex);
+    });
+
+    it('MUST be a single URI (negative - not URI)', async () => {
+      expect(util.generate(
+        'example-4-bad-issuer-uri.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST be a single URI (negative - Array)', async () => {
+      expect(util.generate(
+        'example-4-bad-issuer-cardinality.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
+  describe('`issuanceDate` property', () => {
+
+    it('MUST be an ISO8601 datetime', async () => {
+      const doc = await util.generate('example-4.jsonld', generatorOptions);
+      doc.issuanceDate.should.be.a('string');
+      expect(doc.issuanceDate).to.match(iso8601Regex);
+    });
+
+    it('MUST be an ISO8601 datetime (negative - not URI)', async () => {
+      expect(util.generate(
+        'example-4-bad-issuanceDate.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST be an ISO8601 datetime (negative - Array)', async () => {
+      expect(util.generate(
+        'example-4-bad-issuanceDate-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
   });
