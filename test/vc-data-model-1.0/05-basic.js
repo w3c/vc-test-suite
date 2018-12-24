@@ -9,7 +9,7 @@ const uriRegex = /\w+:(\/?\/?)[^\s]+/;
 const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]+)?(Z)?$/
 
 // configure chai
-chai.should();
+const should = chai.should();
 chai.use(require('chai-as-promised'));
 
 describe('Document', () => {
@@ -161,6 +161,27 @@ describe('Document', () => {
     it('MUST be an ISO8601 datetime (negative - Array)', async () => {
       expect(util.generate(
         'example-6-bad-cardinality.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
+  describe('`credentialStatus` property', () => {
+
+    it('MUST include `id` and `type`', async () => {
+      const doc = await util.generate('example-7.jsonld', generatorOptions);
+      doc.credentialStatus.id.should.be.a('string');
+      should.exist(doc.credentialStatus.type);
+    });
+
+    it('MUST include `id` and `type` (negative - missing `id`)', async () => {
+      expect(util.generate(
+        'example-7-bad-missing-id.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST include `id` and `type` (negative - missing `type`)', async () => {
+      expect(util.generate(
+        'example-7-bad-missing-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
   });
