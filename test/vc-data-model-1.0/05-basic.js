@@ -117,7 +117,7 @@ describe('Document', () => {
       expect(doc.issuanceDate).to.match(iso8601Regex);
     });
 
-    it('MUST be an ISO8601 datetime (negative - not URI)', async () => {
+    it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
       expect(util.generate(
         'example-4-bad-issuanceDate.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
@@ -143,4 +143,26 @@ describe('Document', () => {
         .to.be.rejectedWith(Error);
     });
   });
+
+  describe('`expirationDate` property', () => {
+
+    it('MUST be an ISO8601 datetime', async () => {
+      const doc = await util.generate('example-6.jsonld', generatorOptions);
+      doc.expirationDate.should.be.a('string');
+      expect(doc.expirationDate).to.match(iso8601Regex);
+    });
+
+    it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
+      expect(util.generate(
+        'example-6-bad-expirationDate.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST be an ISO8601 datetime (negative - Array)', async () => {
+      expect(util.generate(
+        'example-6-bad-cardinality.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
 });
