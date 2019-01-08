@@ -186,4 +186,12 @@ describe('Basic Documents', () => {
     });
   });
 
+  describe('Presentations', () => {
+
+    it.skip('MUST be of type `VerifiablePresentation`');
+    it.skip('MUST include `verifiableCredential` and `proof`');
+    it.skip('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)');
+    it.skip('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)');
+  });
+
 });
