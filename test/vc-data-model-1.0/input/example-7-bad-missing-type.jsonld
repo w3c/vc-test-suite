@@ -15,7 +15,7 @@
     }
   },
   "credentialStatus": {
-    "id": "https://example.edu/status/24
+    "id": "https://example.edu/status/24"
   },
   "proof": {}
 }
