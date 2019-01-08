@@ -11,7 +11,7 @@
  *    pull request for your implementation.
  */
 
-module.exports = {
+{
   // The following binary will, given an input file, produce a valid
   // Verifiable Credentials Data Model document.
   // use "type" on Windows as a "cat" replacement
