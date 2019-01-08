@@ -1,14 +1,16 @@
 # W3C Verifiable Claims Working Group Test Suite
 
-This repository contains the W3C Verifiable Claims Working Group test suite.
+This repository contains the W3C
+[Verifiable Claims Working Group](https://www.w3.org/2017/vc/WG/) test suite.
 Any conforming implementation MUST pass all tests in the test suite.
 
 There are multiple test suites, each of which is detailed below.
 
 ## Verifiable Claims Data Model 1.0 Test Suite
 
-This test suite will check any application that generates Verifiable Credential
-Data Model documents to ensure conformance with the specification.
+This test suite will check any application that generates [Verifiable Credential
+Data Model](https://www.w3.org/TR/verifiable-claims-data-model/) documents to
+ensure conformance with the specification.
 
 ### Running the Test Suite
 
