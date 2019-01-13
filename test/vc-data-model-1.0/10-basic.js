@@ -12,7 +12,7 @@ const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
-describe('Document', () => {
+describe('Basic Documents', () => {
   const generatorOptions = {
     generator: config.generator,
     args: ""
