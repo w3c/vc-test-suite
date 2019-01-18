@@ -34,4 +34,27 @@ describe('Advanced Documents', () => {
     });
   });
 
+  // https://w3c.github.io/vc-data-model/#data-schemas
+  describe('Data Schemas', () => {
+    it.skip('`credentialSchema` MUST provide one or more data schemas', async () => {
+      // test that `credentialSchema` is either an array or an object
+    });
+    describe('each object within `credentialSchema`...', () => {
+      // if there are multiple objects, loop these tests
+      it.skip('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property exitence
+      });
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+        // test for `type`'s value existence in the active context / term dictionary
+      });
+      it.skip('MUST specify an `id` property', async () => {
+        // test for `id` property existence
+      });
+      it.skip('value of `id` MUST be a URI identifying a schema file', async () => {
+        // test that `id`'s value is a valid URI
+        // TODO: https://github.com/w3c/vc-data-model/issues/381
+      });
+    });
+  });
+
 });
