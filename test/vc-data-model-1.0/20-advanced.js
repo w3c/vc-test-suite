@@ -57,4 +57,28 @@ describe('Advanced Documents', () => {
     });
   });
 
+  // https://w3c.github.io/vc-data-model/#refreshing
+  describe('Refreshing', () => {
+    it.skip('`refreshService` MUST provide one or more refresh services', async () => {
+      // test that `refreshService` is either an array or an object
+    });
+    describe('each object within `refreshService`...', () => {
+      // if there are multiple objects, loop these tests
+      it.skip('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property exitence
+      });
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+        // test for `type`'s value existence in the active context / term dictionary
+      });
+      // TODO: consider changing `serviceEndpoint` to `id`: https://github.com/w3c/vc-data-model/issues/380
+      it.skip('MUST specify an `serviceEndpoint` property', async () => {
+        // test for `serviceEndpoint` property existence
+      });
+      it.skip('value of `serviceEndpoint` MUST be a URL identifying a service endpoint', async () => {
+        // test that `serviceEndpoint`'s value is a valid URL
+        // TODO: https://github.com/w3c/vc-data-model/issues/381
+        // (possibly) attempt to dereference the service endpoint to validate it's "locator-ness" (i.e. URL vs. URI)
+      });
+    });
+  });
 });
