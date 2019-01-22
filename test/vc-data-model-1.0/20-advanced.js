@@ -124,4 +124,45 @@ describe('Advanced Documents', () => {
       // TODO: contents of a `evidence` are yet to be defined: https://w3c.github.io/vc-data-model/#h-issue-6
     });
   });
+
+  // https://w3c.github.io/vc-data-model/#zero-knowledge-proofs
+  describe('Zero Knowledge Proofs', () => {
+    describe('A verifiable credential...', () => {
+      it.skip('MUST contain a credential definition', async () => {
+        // test for one or more valid `credentialSchema`
+      });
+      it.skip('MUST contain a proof', async () => {
+        // test for one or more valid `proof`
+      });
+    });
+    describe('A verifiable presenation...', () => {
+      // TODO: these 3 tests are "fuzzy"; non-data-model tests--the 3 following have specifics
+      it.skip('All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.', async () => {
+
+      });
+      it.skip('All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.', async () => {
+
+      });
+      it.skip('MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage', async () => {
+        /* "The verifiable presentation MUST contain a proof enabling the
+         * verifier to ascertain that all verifiable credentials in the
+         * verifiable presentation were issued to the same holder without
+         * leaking personally identifiable information that the holder did not
+         * intend to share." */
+      });
+      // TODO: these 3 tests MAY be more testable--but may not test the "spirit" of the above requirements...
+      it.skip('MUST be a valid `VerifiablePresentation`', async () => {
+        // test `type` contains `VerifiablePresentation`
+      });
+      it.skip('MUST have a `verifiableCredential` member', async () => {
+        // test `verifiableCredential` exists (and is valid? or is that an additional test?)
+      });
+      it.skip('the `verifiableCredential` MUST have a `proof` member', async () => {
+        // test that `proof` exists on the embedded credential (and that it's valid?)
+      });
+      it.skip('MUST have a direct `proof` member (on the presenation)', async() => {
+        // test that `proof` exists on the top-leve presentation (and that it's valid?)
+      });
+    });
+  });
 });
