@@ -165,4 +165,7 @@ describe('Advanced Documents', () => {
       });
     });
   });
+
+  // Subject is the Holder is at risk (and vague); so skipping (for now?)
+  // https://w3c.github.io/vc-data-model/#subject-is-the-holder
 });
