@@ -171,4 +171,12 @@ describe('Advanced Documents', () => {
 
   // Disputes is currently underdefined and (consequently) untestable
   // https://w3c.github.io/vc-data-model/#disputes
+
+  // Authorization contains a "specification use" requirement--which cannot be
+  // tested in code; so skipping.
+  // https://w3c.github.io/vc-data-model/#authorization
+
+  // Syntatic Sugar is a descriptive (only) section; so skipping.
+  // https://w3c.github.io/vc-data-model/#syntactic-sugar
+
 });
