@@ -81,4 +81,27 @@ describe('Advanced Documents', () => {
       });
     });
   });
+
+  // Mode of Operation is non-normative; so skipping
+  // https://w3c.github.io/vc-data-model/#mode-of-operation
+
+  // https://w3c.github.io/vc-data-model/#terms-of-use
+  describe('Terms of Use', () => {
+    // `termsOfUse` is optional, so these should only be run if that term is present
+    it.skip('`termsOfUse` MUST provide one or more refresh services', async () => {
+      // test that `termsOfUse` is either an array or an object
+    });
+    describe('each object within `termsOfUse`...', () => {
+      // if there are multiple objects, loop these tests
+      it.skip('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property exitence
+      });
+      // TODO: this requirement is not expressed inline here, but inherits from
+      // the general definition mechanism of `type` throughout the document
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+        // test for `type`'s value existence in the active context / term dictionary
+      });
+      // TODO: contents of a `termsOfUse` member is untestable because it is undefined
+    });
+  });
 });
