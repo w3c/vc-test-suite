@@ -178,5 +178,4 @@ describe('Advanced Documents', () => {
 
   // Syntatic Sugar is a descriptive (only) section; so skipping.
   // https://w3c.github.io/vc-data-model/#syntactic-sugar
-
 });
