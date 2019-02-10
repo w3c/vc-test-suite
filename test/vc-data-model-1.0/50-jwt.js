@@ -8,7 +8,7 @@ const util = require('./util');
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
-describe('JWT', () => {
+describe('JWT (optional)', () => {
   const generatorOptions = {
     generator: config.generator,
     args: ""

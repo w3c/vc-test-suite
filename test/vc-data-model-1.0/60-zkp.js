@@ -13,7 +13,7 @@ const should = chai.should();
 chai.use(require('chai-as-promised'));
 
 // https://w3c.github.io/vc-data-model/#zero-knowledge-proofs
-describe('Zero-Knowledge Proofs', () => {
+describe('Zero-Knowledge Proofs (optional)', () => {
   const generatorOptions = {
     generator: config.generator,
     args: ""
