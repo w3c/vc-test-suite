@@ -36,32 +36,69 @@ describe('Advanced Documents', () => {
 
   // https://w3c.github.io/vc-data-model/#data-schemas
   describe('Data Schemas', () => {
-    it.skip('`credentialSchema` MUST provide one or more data schemas', async () => {
+    it('`credentialSchema` MUST provide one or more data schemas', async () => {
       // test that `credentialSchema` is either an array or an object
+      const doc = await util.generate('example-009.jsonld', generatorOptions);
+      const isArray = Array.isArray(doc.credentialSchema) &&
+        doc.credentialSchema.length > 0;
+      const isObject = doc.credentialSchema && typeof doc.credentialSchema.id === 'string';
+      expect(isArray || isObject).to.be.true;
     });
+
     describe('each object within `credentialSchema`...', () => {
       // if there are multiple objects, loop these tests
-      it.skip('MUST specify a `type` property with a valid value', async () => {
-        // test for `type` property exitence
+      it('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property existence
+        const doc = await util.generate('example-010.jsonld', generatorOptions);
+        should.exist(doc.credentialSchema);
+        let schemas = [].concat(doc.credentialSchema);
+        expect(schemas.length > 0).to.be.true;
+
+        for(let schema of schemas) {
+          schema.type.should.be.a('string');
+        }
       });
+
       it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
         // test for `type`'s value existence in the active context / term dictionary
       });
-      it.skip('MUST specify an `id` property', async () => {
+
+      it('MUST specify an `id` property', async () => {
         // test for `id` property existence
+        const doc = await util.generate('example-010.jsonld', generatorOptions);
+        should.exist(doc.credentialSchema);
+        let schemas = [].concat(doc.credentialSchema);
+        expect(schemas.length > 0).to.be.true;
+
+        for(let schema of schemas) {
+          schema.id.should.be.a('string');
+        }
       });
-      it.skip('value of `id` MUST be a URI identifying a schema file', async () => {
+
+      it('value of `id` MUST be a URI identifying a schema file', async () => {
         // test that `id`'s value is a valid URI
         // TODO: https://github.com/w3c/vc-data-model/issues/381
+        const doc = await util.generate('example-010.jsonld', generatorOptions);
+        let schemas = [].concat(doc.credentialSchema);
+
+        for(let schema of schemas) {
+          expect(schema.id).to.match(uriRegex);
+        }
       });
     });
   });
 
   // https://w3c.github.io/vc-data-model/#refreshing
   describe('Refreshing', () => {
-    it.skip('`refreshService` MUST provide one or more refresh services', async () => {
+    it('`refreshService` MUST provide one or more refresh services', async () => {
       // test that `refreshService` is either an array or an object
+      const doc = await util.generate('example-011.jsonld', generatorOptions);
+      const isArray = Array.isArray(doc.refreshService) &&
+        doc.refreshService.length > 0;
+      const isObject = doc.refreshService && typeof doc.refreshService.id === 'string';
+      expect(isArray || isObject).to.be.true;
     });
+
     describe('each object within `refreshService`...', () => {
       // if there are multiple objects, loop these tests
       it.skip('MUST specify a `type` property with a valid value', async () => {
@@ -106,9 +143,9 @@ describe('Advanced Documents', () => {
   });
 
   // https://w3c.github.io/vc-data-model/#evidence
-  describe('Evindence', () => {
+  describe('Evidence', () => {
     // `evidence` is optional, so these should only be run if that term is present
-    it.skip('`evidence` MUST provide one or more refresh services', async () => {
+    it.skip('`evidence` MUST provide one or more evidence objects', async () => {
       // test that `evidence` is either an array or an object
     });
     describe('each object within `evidence`...', () => {
@@ -131,13 +168,13 @@ describe('Advanced Documents', () => {
   // Subject is the Holder is at risk (and vague); so skipping (for now?)
   // https://w3c.github.io/vc-data-model/#subject-is-the-holder
 
-  // Disputes is currently underdefined and (consequently) untestable
+  // Disputes is currently under-defined and (consequently) untestable
   // https://w3c.github.io/vc-data-model/#disputes
 
   // Authorization contains a "specification use" requirement--which cannot be
   // tested in code; so skipping.
   // https://w3c.github.io/vc-data-model/#authorization
 
-  // Syntatic Sugar is a descriptive (only) section; so skipping.
+  // Syntactic Sugar is a descriptive (only) section; so skipping.
   // https://w3c.github.io/vc-data-model/#syntactic-sugar
 });

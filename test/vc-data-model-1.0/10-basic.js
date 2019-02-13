@@ -3,6 +3,7 @@ const config = require('../../config.json');
 const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
+const { hasType } = util;
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
@@ -189,10 +190,28 @@ describe('Basic Documents', () => {
 
   describe('Presentations', () => {
 
-    it.skip('MUST be of type `VerifiablePresentation`');
-    it.skip('MUST include `verifiableCredential` and `proof`');
-    it.skip('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)');
-    it.skip('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)');
+    it('MUST be of type `VerifiablePresentation`', async () => {
+      const doc = await util.generate('example-8.jsonld', generatorOptions);
+      expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
+    });
+
+    it('MUST include `verifiableCredential` and `proof`', async () => {
+      const doc = await util.generate('example-8.jsonld', generatorOptions);
+      should.exist(doc.verifiableCredential);
+      should.exist(doc.proof);
+    });
+
+    it('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)', async () => {
+      await expect(util.generate(
+        'example-8-bad-missing-verifiableCredential.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)', async () => {
+      await expect(util.generate(
+        'example-8-bad-missing-proof.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
   });
 
 });
