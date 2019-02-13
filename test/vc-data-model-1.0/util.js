@@ -1,12 +1,10 @@
+'use strict';
 const path = require('path');
 const util = require('util');
 
 const exec = util.promisify(require('child_process').exec);
 
-const api = {};
-module.exports = api;
-
-api.generate = async (file, options) => {
+async function generate(file, options) {
   options = options || {};
   const {stdout, stderr} =
     await exec(options.generator + ' ' + options.args +
@@ -21,4 +19,8 @@ api.generate = async (file, options) => {
   }
 
   return JSON.parse(stdout);
+};
+
+module.exports = {
+  generate
 };
