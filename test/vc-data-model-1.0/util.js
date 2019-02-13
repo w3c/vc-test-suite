@@ -19,8 +19,22 @@ async function generate(file, options) {
   }
 
   return JSON.parse(stdout);
-};
+}
+
+function hasType(doc, expectedType) {
+  if(!doc) {
+    return false;
+  }
+
+  let type = doc.type;
+  if(!Array.isArray(type)) {
+    type = [type];
+  }
+
+  return type.some(el => el === expectedType);
+}
 
 module.exports = {
-  generate
+  generate,
+  hasType
 };
