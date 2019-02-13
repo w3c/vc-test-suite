@@ -28,7 +28,7 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be one or more URIs (negative)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-1-bad-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -40,7 +40,8 @@ describe('Basic Documents', () => {
 
     it('first value MUST be https://w3.org/2018/credentials/v1 (negative)',
       async () => {
-        expect(util.generate('example-1-bad-url.jsonld', generatorOptions))
+        await expect(util.generate(
+          'example-1-bad-url.jsonld', generatorOptions))
           .to.be.rejectedWith(Error);
       });
   });
@@ -56,7 +57,7 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be a single URI (negative)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-2-bad-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -70,7 +71,7 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be one or more URIs (negative)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-3-bad-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -82,7 +83,7 @@ describe('Basic Documents', () => {
     });
 
     it('for Credential MUST be `VerifiableCredential` plus specific type (negative)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-3-bad-missing-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -97,13 +98,13 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be a single URI (negative - not URI)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-4-bad-issuer-uri.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     it('MUST be a single URI (negative - Array)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-4-bad-issuer-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -118,13 +119,13 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-4-bad-issuanceDate.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     it('MUST be an ISO8601 datetime (negative - Array)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-4-bad-issuanceDate-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -138,7 +139,7 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be present (negative - missing)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-5-bad-proof.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -153,13 +154,13 @@ describe('Basic Documents', () => {
     });
 
     it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-6-bad-expirationDate.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     it('MUST be an ISO8601 datetime (negative - Array)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-6-bad-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
@@ -174,13 +175,13 @@ describe('Basic Documents', () => {
     });
 
     it('MUST include `id` and `type` (negative - missing `id`)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-7-bad-missing-id.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     it('MUST include `id` and `type` (negative - missing `type`)', async () => {
-      expect(util.generate(
+      await expect(util.generate(
         'example-7-bad-missing-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
