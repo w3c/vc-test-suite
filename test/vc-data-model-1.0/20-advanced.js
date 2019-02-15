@@ -6,7 +6,6 @@ const util = require('./util');
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
-const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]+)?(Z)?$/
 
 // configure chai
 const should = chai.should();
@@ -79,7 +78,7 @@ describe('Advanced Documents', () => {
         // test that `id`'s value is a valid URI
         // TODO: https://github.com/w3c/vc-data-model/issues/381
         const doc = await util.generate('example-010.jsonld', generatorOptions);
-        let schemas = [].concat(doc.credentialSchema);
+        const schemas = [].concat(doc.credentialSchema);
 
         for(let schema of schemas) {
           expect(schema.id).to.match(uriRegex);
@@ -101,20 +100,39 @@ describe('Advanced Documents', () => {
 
     describe('each object within `refreshService`...', () => {
       // if there are multiple objects, loop these tests
-      it.skip('MUST specify a `type` property with a valid value', async () => {
-        // test for `type` property exitence
+      it('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property existence
+        const doc = await util.generate('example-011.jsonld', generatorOptions);
+        const services = [].concat(doc.refreshService);
+
+        for(let service of services) {
+          expect(service.type).to.be.a('string');
+        }
       });
+
       it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
         // test for `type`'s value existence in the active context / term dictionary
       });
-      // TODO: consider changing `serviceEndpoint` to `id`: https://github.com/w3c/vc-data-model/issues/380
-      it.skip('MUST specify an `serviceEndpoint` property', async () => {
+
+      it('MUST specify an `id` property', async () => {
         // test for `serviceEndpoint` property existence
+        const doc = await util.generate('example-011.jsonld', generatorOptions);
+        const services = [].concat(doc.refreshService);
+
+        for(let service of services) {
+          expect(service.id).to.be.a('string');
+        }
       });
-      it.skip('value of `serviceEndpoint` MUST be a URL identifying a service endpoint', async () => {
-        // test that `serviceEndpoint`'s value is a valid URL
-        // TODO: https://github.com/w3c/vc-data-model/issues/381
+
+      it('value of `id` MUST be a URL identifying a service endpoint', async () => {
+        // test that the `id`'s value is a valid URL
         // (possibly) attempt to dereference the service endpoint to validate it's "locator-ness" (i.e. URL vs. URI)
+        const doc = await util.generate('example-011.jsonld', generatorOptions);
+        const services = [].concat(doc.refreshService);
+
+        for(let service of services) {
+          expect(service.id).to.match(uriRegex);
+        }
       });
     });
   });
@@ -125,13 +143,25 @@ describe('Advanced Documents', () => {
   // https://w3c.github.io/vc-data-model/#terms-of-use
   describe('Terms of Use', () => {
     // `termsOfUse` is optional, so these should only be run if that term is present
-    it.skip('`termsOfUse` MUST provide one or more refresh services', async () => {
+    it('`termsOfUse` MUST provide one or more ToU objects', async () => {
       // test that `termsOfUse` is either an array or an object
+      const doc = await util.generate('example-012.jsonld', generatorOptions);
+      const isArray = Array.isArray(doc.termsOfUse) &&
+        doc.termsOfUse.length > 0;
+      const isObject = doc.termsOfUse && typeof doc.termsOfUse.id === 'string';
+      expect(isArray || isObject).to.be.true;
     });
+
     describe('each object within `termsOfUse`...', () => {
       // if there are multiple objects, loop these tests
-      it.skip('MUST specify a `type` property with a valid value', async () => {
-        // test for `type` property exitence
+      it('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property existence
+        const doc = await util.generate('example-012.jsonld', generatorOptions);
+        const tous = [].concat(doc.termsOfUse);
+
+        for(let tou of tous) {
+          expect(tou.type).to.be.a('string');
+        }
       });
       // TODO: this requirement is not expressed inline here, but inherits from
       // the general definition mechanism of `type` throughout the document
@@ -145,14 +175,27 @@ describe('Advanced Documents', () => {
   // https://w3c.github.io/vc-data-model/#evidence
   describe('Evidence', () => {
     // `evidence` is optional, so these should only be run if that term is present
-    it.skip('`evidence` MUST provide one or more evidence objects', async () => {
+    it('`evidence` MUST provide one or more evidence objects', async () => {
       // test that `evidence` is either an array or an object
+      const doc = await util.generate('example-013.jsonld', generatorOptions);
+      const isArray = Array.isArray(doc.evidence) &&
+        doc.evidence.length > 0;
+      const isObject = doc.evidence && typeof doc.evidence.id === 'string';
+      expect(isArray || isObject).to.be.true;
     });
+
     describe('each object within `evidence`...', () => {
       // if there are multiple objects, loop these tests
-      it.skip('MUST specify a `type` property with a valid value', async () => {
-        // test for `type` property exitence
+      it('MUST specify a `type` property with a valid value', async () => {
+        // test for `type` property existence
+        const doc = await util.generate('example-013.jsonld', generatorOptions);
+        const evidence = [].concat(doc.evidence);
+
+        for(let e of evidence) {
+          expect([].concat(e.type).length > 0).to.be.true;
+        }
       });
+
       // TODO: this requirement is not expressed inline here, but inherits from
       // the general definition mechanism of `type` throughout the document
       it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
