@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/v1",
     "https://example.com/examples/v1"
   ],
   "id": "http://example.gov/credentials/3732",
