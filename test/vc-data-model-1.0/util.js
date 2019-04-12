@@ -6,8 +6,7 @@ const exec = util.promisify(require('child_process').exec);
 
 async function generate(file, options) {
   options = options || {};
-  const {stdout, stderr} =
-    await exec(options.generator + ' ' + options.args +
+  const {stdout, stderr} = await exec(options.generator + ' ' + options.args +
     path.join(__dirname, 'input', file));
 
   if(file.match(/bad/)) {

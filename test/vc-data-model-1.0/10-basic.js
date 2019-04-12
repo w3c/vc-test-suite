@@ -34,12 +34,12 @@ describe('Basic Documents', () => {
         .to.be.rejectedWith(Error);
     });
 
-    it('first value MUST be https://w3.org/2018/credentials/v1', async () => {
+    it('first value MUST be https://www.w3.org/2018/credentials/v1', async () => {
       const doc = await util.generate('example-1.jsonld', generatorOptions);
-      expect(doc['@context'][0]).to.equal('https://w3.org/2018/credentials/v1');
+      expect(doc['@context'][0]).to.equal('https://www.w3.org/2018/credentials/v1');
     });
 
-    it('first value MUST be https://w3.org/2018/credentials/v1 (negative)',
+    it('first value MUST be https://www.w3.org/2018/credentials/v1 (negative)',
       async () => {
         await expect(util.generate(
           'example-1-bad-url.jsonld', generatorOptions))
@@ -136,7 +136,7 @@ describe('Basic Documents', () => {
 
     it('MUST be present', async () => {
       const doc = await util.generate('example-5.jsonld', generatorOptions);
-      doc.proof.should.be.a('Object');
+      expect(Array.isArray(doc.proof) || typeof doc.proof === 'object') ;
     });
 
     it('MUST be present (negative - missing)', async () => {

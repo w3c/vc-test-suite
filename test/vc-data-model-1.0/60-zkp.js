@@ -27,7 +27,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
       // test for one or more valid `proof`
     });
   });
-  describe('A verifiable presenation...', () => {
+  describe('A verifiable presentation...', () => {
     // TODO: these 3 tests are "fuzzy"; non-data-model tests--the 3 following have specifics
     it.skip('All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.', async () => {
 
