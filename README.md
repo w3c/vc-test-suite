@@ -33,3 +33,8 @@ ensure conformance with the specification.
 You may contribute to this test suite by submitting pull requests here:
 
 https://github.com/w3c/vc-test-suite/
+
+## Other Verifiable Claims github repos
+* [Data Model](https://github.com/w3c/vc-data-model)
+* [Implementation Guideline](https://github.com/w3c/vc-imp-guide)
+* [Use Cases](https://github.com/w3c/vc-use-cases)
