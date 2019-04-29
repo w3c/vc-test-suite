@@ -45,6 +45,13 @@ describe('Basic Documents', () => {
           'example-1-bad-url.jsonld', generatorOptions))
           .to.be.rejectedWith(Error);
       });
+
+    it('subsequent items can be objects that express context information', async () => {
+      const doc = await util.generate('example-1-object-context.jsonld', generatorOptions);
+      expect(doc['@context'][2]).to.eql({
+        "image": { "@id": "schema:image", "@type": "@id" }
+      });
+    });
   });
 
   describe('`id` properties', () => {
@@ -90,7 +97,40 @@ describe('Basic Documents', () => {
     });
   });
 
+  describe('`credentialSubject` property', () => {
+    it('MUST be present', async () => {
+      const doc = await util.generate('example-1.jsonld', generatorOptions);
+      doc.should.have.property('credentialSubject');
+      expect(doc.credentialSubject.id).to.match(uriRegex);
+    });
+
+    it('MUST be present, may be a set of objects', async () => {
+      const doc = await util
+        .generate('example-014-credential-subjects.jsonld', generatorOptions);
+      doc.credentialSubject.should.be.a('Array');
+      expect(doc.credentialSubject[0].id).to.match(uriRegex);
+      expect(doc.credentialSubject[1].id).to.match(uriRegex);
+    });
+
+    it('MUST be present (negative - credentialSubject missing)', async () => {
+      await expect(util.generate(
+        'example-014-bad-no-credential-subject.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+  });
+
   describe('`issuer` property', () => {
+    it('MUST be present', async () => {
+      const doc = await util.generate('example-4.jsonld', generatorOptions);
+      doc.should.have.property('issuer');
+      expect(doc.issuer).to.match(uriRegex);
+    });
+
+    it('MUST be present (negative - missing issuer)', async () => {
+      await expect(util.generate(
+        'example-4-bad-missing-issuer.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
 
     it('MUST be a single URI', async () => {
       const doc = await util.generate('example-4.jsonld', generatorOptions);
@@ -112,6 +152,16 @@ describe('Basic Documents', () => {
   });
 
   describe('`issuanceDate` property', () => {
+    it('MUST be present', async () => {
+      const doc = await util.generate('example-4.jsonld', generatorOptions);
+      doc.should.have.property('issuanceDate');
+    });
+
+    it('MUST be present (negative - missing issuanceDate)', async () => {
+      await expect(util.generate(
+        'example-4-bad-missing-issuanceDate.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
 
     it('MUST be an ISO8601 datetime', async () => {
       const doc = await util.generate('example-4.jsonld', generatorOptions);
@@ -136,12 +186,31 @@ describe('Basic Documents', () => {
 
     it('MUST be present', async () => {
       const doc = await util.generate('example-5.jsonld', generatorOptions);
-      expect(Array.isArray(doc.proof) || typeof doc.proof === 'object') ;
+      expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
     });
 
     it('MUST be present (negative - missing)', async () => {
       await expect(util.generate(
         'example-5-bad-proof.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST include specific method using the type property', async () => {
+      const doc = await util.generate('example-5.jsonld', generatorOptions);
+
+      if (Array.isArray(doc.proof)) {
+        doc.proof[0].should.have.property('type');
+        doc.proof[0].type.should.be.a('string');
+      } else {
+        // only one proof
+        doc.proof.should.have.property('type');
+        doc.proof.type.should.be.a('string');
+      }
+    });
+
+    it('MUST include type property (negative - missing proof type)', async () => {
+      await expect(util.generate(
+        'example-5-bad-proof-missing-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
   });

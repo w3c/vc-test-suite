@@ -1,6 +1,10 @@
 {
   "@context": [
-    "https://www.w3.org/2018/credentials/v1"
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    {
+      "image": { "@id": "schema:image", "@type": "@id" }
+    }
   ],
   "id": "http://example.edu/credentials/58473",
   "type": ["VerifiableCredential", "AlumniCredential"],
@@ -12,4 +16,3 @@
   },
   "proof": {}
 }
-
