@@ -5,5 +5,12 @@
   ],
   "id": "urn:uuid:3978344f-8596-4c3a-a978-8fcaba3903c5",
   "type": ["VerifiablePresentation"],
+  "credentialSubject": {
+    "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+    "degree": {
+      "type": "BachelorDegree",
+      "name": "Bachelor of Science in Mechanical Engineering"
+    }
+  },
   "verifiableCredential": [{}]
 }
