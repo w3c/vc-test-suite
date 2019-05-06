@@ -27,6 +27,7 @@ ensure conformance with the specification.
    implementation/YOUR_IMPLEMENTATION-results.json.
 5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
    pull request for your implementation.
+6. `cd implementations/ && node generate.js`
 
 ## Contributing
 
