@@ -24,6 +24,10 @@ files.forEach((file) => {
     allResults[implementation][test.fullTitle] =
       (Object.keys(test.err).length === 0) ? 'success' : 'failure';
 
+    if(results.pending.find(skipped => skipped.fullTitle === test.fullTitle)) {
+      allResults[implementation][test.fullTitle] = 'unimplemented';
+    }
+
     // assume vc.js tests all features
     if(implementation === 'vc.js') {
       allTests.push(test.fullTitle);
