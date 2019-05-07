@@ -13,12 +13,9 @@ const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
-describe('Basic Documents', () => {
-  const generatorOptions = {
-    generator: config.generator,
-    args: ""
-  };
+const generatorOptions = config;
 
+describe('Basic Documents', () => {
   describe('@context', () => {
 
     it('MUST be one or more URIs', async () => {
@@ -260,24 +257,24 @@ describe('Basic Documents', () => {
   describe('Presentations', () => {
 
     it('MUST be of type `VerifiablePresentation`', async () => {
-      const doc = await util.generate('example-8.jsonld', generatorOptions);
+      const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
 
     it('MUST include `verifiableCredential` and `proof`', async () => {
-      const doc = await util.generate('example-8.jsonld', generatorOptions);
+      const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
       should.exist(doc.verifiableCredential);
       should.exist(doc.proof);
     });
 
     it('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)', async () => {
-      await expect(util.generate(
+      await expect(util.generatePresentation(
         'example-8-bad-missing-verifiableCredential.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     it('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)', async () => {
-      await expect(util.generate(
+      await expect(util.generatePresentation(
         'example-8-bad-missing-proof.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });

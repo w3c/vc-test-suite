@@ -12,12 +12,10 @@ const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
+const generatorOptions = config;
+
 // https://w3c.github.io/vc-data-model/#zero-knowledge-proofs
 describe('Zero-Knowledge Proofs (optional)', () => {
-  const generatorOptions = {
-    generator: config.generator,
-    args: ""
-  };
 
   describe('A verifiable credential...', () => {
     it.skip('MUST contain a credential definition', async () => {

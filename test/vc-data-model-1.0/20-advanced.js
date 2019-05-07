@@ -11,11 +11,9 @@ const uriRegex = /\w+:(\/?\/?)[^\s]+/;
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
+const generatorOptions = config;
+
 describe('Advanced Documents', () => {
-  const generatorOptions = {
-    generator: config.generator,
-    args: ""
-  };
 
   // https://w3c.github.io/vc-data-model/#semantic-interoperability
   describe('Extensibility - Semantic Interoperability', () => {

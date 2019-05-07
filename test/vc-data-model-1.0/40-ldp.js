@@ -7,12 +7,9 @@ const util = require('./util');
 // configure chai
 const should = chai.should();
 chai.use(require('chai-as-promised'));
+const generatorOptions = config;
 
 describe('Linked Data Proofs (optional)', () => {
-  const generatorOptions = {
-    generator: config.generator,
-    args: ""
-  };
 
   // JSON Web Tokens (JWTs) https://w3c.github.io/vc-data-model/#json-web-token
   describe('Linked Data Signature', () => {

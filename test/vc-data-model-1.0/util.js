@@ -6,12 +6,21 @@ const exec = util.promisify(require('child_process').exec);
 
 async function generate(file, options) {
   options = options || {};
-  const {stdout, stderr} = await exec(options.generator + ' ' + options.args +
-    path.join(__dirname, 'input', file));
+  const {stdout, stderr} = await exec(options.generator + ' ' +
+    options.generatorOptions + ' ' + path.join(__dirname, 'input', file));
 
-  if(file.match(/bad/)) {
-    throw new Error('NO_OUTPUT');
+  if(stderr) {
+    throw new Error(stderr);
   }
+
+  return JSON.parse(stdout);
+}
+
+
+async function generatePresentation(file, options) {
+  options = options || {};
+  const {stdout, stderr} = await exec(options.presentationGenerator + ' ' +
+    options.generatorOptions + ' ' + path.join(__dirname, 'input', file));
 
   if(stderr) {
     throw new Error(stderr);
@@ -35,5 +44,6 @@ function hasType(doc, expectedType) {
 
 module.exports = {
   generate,
+  generatePresentation,
   hasType
 };

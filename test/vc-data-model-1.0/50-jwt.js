@@ -8,11 +8,9 @@ const util = require('./util');
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
+const generatorOptions = config;
+
 describe('JWT (optional)', () => {
-  const generatorOptions = {
-    generator: config.generator,
-    args: ""
-  };
 
   // JSON Web Tokens (JWTs) https://w3c.github.io/vc-data-model/#json-web-token
   describe('JSON Web Token (storing Verifiable Credentials/Presentations)', () => {

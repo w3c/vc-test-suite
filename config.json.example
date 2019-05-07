@@ -17,6 +17,11 @@
   // use "type" on Windows as a "cat" replacement
   "generator": "/bin/cat",
 
+  // The following binary will, given an input file, produce a valid
+  // Verifiable Presentation Data Model document.
+  // use "type" on Windows as a "cat" replacement
+  "presentationGenerator": "/bin/cat",
+
   // The arguments that should be passed to the VC generator.
   "generatorOptions": ""
 }
