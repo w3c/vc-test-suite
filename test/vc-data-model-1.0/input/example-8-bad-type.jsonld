@@ -13,5 +13,7 @@
     }
   },
   "verifiableCredential": [{}],
-  "proof": [{}]
+  "proof": [{
+    "type": "example"
+  }]
 }

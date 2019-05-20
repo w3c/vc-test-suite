@@ -17,7 +17,11 @@
         "name": "<span lang='fr-CA'>Baccalauréat en musiques numériques</span>"
       }
     },
-    "proof": [{}]
+    "proof": [{
+      "type": "example"
+    }]
   }],
-  "proof": [{}]
+  "proof": [{
+    "type": "example"
+  }]
 }

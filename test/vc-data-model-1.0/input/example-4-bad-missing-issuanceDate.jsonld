@@ -13,5 +13,7 @@
       "name": "Bachelor of Science in Mechanical Engineering"
     }
   },
-  "proof": {}
+  "proof": {
+    "type": "example"
+  }
 }

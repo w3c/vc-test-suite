@@ -31,5 +31,7 @@
       ]
     }
   ],
-  "proof": {}
+  "proof": {
+    "type": "example"
+  }
 }

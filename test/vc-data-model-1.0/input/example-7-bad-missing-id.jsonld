@@ -17,5 +17,7 @@
   "credentialStatus": {
     "type": "CredentialStatusList2017"
   },
-  "proof": {}
+  "proof": {
+    "type": "example"
+  }
 }
