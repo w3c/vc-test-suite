@@ -29,5 +29,7 @@
     "subjectPresence": "Digital",
     "documentPresence": "Digital"
   }],
-  "proof": {}
+  "proof": {
+    "type": "example"
+  }
 }

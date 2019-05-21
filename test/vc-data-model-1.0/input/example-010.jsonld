@@ -24,5 +24,7 @@
       "type": "ZkpExampleSchema2018"
     }
   ],
-  "proof": {}
+  "proof": {
+    "type": "example"
+  }
 }
