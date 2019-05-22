@@ -18,11 +18,44 @@ const generatorOptions = config;
 describe('Zero-Knowledge Proofs (optional)', () => {
 
   describe('A verifiable credential...', () => {
-    it.skip('MUST contain a credential definition', async () => {
-      // test for one or more valid `credentialSchema`
+    it('MUST contain a credential definition', async () => {
+      const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
+      doc.should.have.property('credentialSubject');
+      expect(doc.credentialSubject.id).to.match(uriRegex);
     });
-    it.skip('MUST contain a proof', async () => {
-      // test for one or more valid `proof`
+    it('MUST contain a credential definition (negative - credentialSchema missing)', async () => {
+      await expect(util.generate(
+        'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+    it('MUST contain a proof', async () => {
+      const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
+      expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
+    });
+
+    it('MUST contain a proof (negative - missing)', async () => {
+      await expect(util.generate(
+        'example-015-zkp-bad-no-proof.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
+    });
+
+    it('MUST include specific method using the type property', async () => {
+      const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
+
+      if (Array.isArray(doc.proof)) {
+        doc.proof[0].should.have.property('type');
+        doc.proof[0].type.should.be.a('string');
+      } else {
+        // only one proof
+        doc.proof.should.have.property('type');
+        doc.proof.type.should.be.a('string');
+      }
+    });
+
+    it('MUST include type property (negative - missing proof type)', async () => {
+      await expect(util.generate(
+        'example-015-zkp-bad-proof-missing-type.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
     });
   });
   describe('A verifiable presentation...', () => {
