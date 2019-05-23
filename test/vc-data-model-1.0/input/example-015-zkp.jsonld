@@ -22,6 +22,6 @@
     }
   ],
   "proof": {
-    "type": "example"
+    "type": "CLSignature2019"
   }
 }

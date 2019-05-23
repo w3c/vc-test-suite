@@ -113,10 +113,25 @@ describe('Zero-Knowledge Proofs (optional)', () => {
 
   });
   describe('A verifiable presentation...', () => {
-    // TODO: these 3 tests are "fuzzy"; non-data-model tests--the 3 following have specifics
-    it.skip('All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.', async () => {
-
+    it.skip('MUST be a valid `VerifiablePresentation`', async () => {
+      // test `type` contains `VerifiablePresentation`
     });
+    it.skip('MUST have a `verifiableCredential` member', async () => {
+      // test `verifiableCredential` exists (and is valid? or is that an additional test?)
+    });
+    describe('Each verifiable credential...', () => {
+      it.skip('MUST have a `credentialSchema` member', async () => {
+      // test that `proof` exists on the embedded credential (and that it's valid?)
+      });
+      it.skip('MUST have a `proof` member', async () => {
+      // test that `proof` exists on the embedded credential (and that it's valid?)
+      });
+    });
+    it.skip('MUST have a `proof` member', async () => {
+    // test that `proof` exists on the embedded credential (and that it's valid?)
+    });
+
+
     it.skip('All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.', async () => {
 
     });
@@ -127,7 +142,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
        * leaking personally identifiable information that the holder did not
        * intend to share." */
     });
-    // TODO: these 3 tests MAY be more testable--but may not test the "spirit" of the above requirements...
+    // TODO: these tests MAY be more testable--but may not test the "spirit" of the above requirements...
     it.skip('MUST be a valid `VerifiablePresentation`', async () => {
       // test `type` contains `VerifiablePresentation`
     });
