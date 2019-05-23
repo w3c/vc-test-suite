@@ -20,8 +20,8 @@ describe('Zero-Knowledge Proofs (optional)', () => {
   describe('A verifiable credential...', () => {
     it('MUST contain a credential definition', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
-      doc.should.have.property('credentialSubject');
-      expect(doc.credentialSubject.id).to.match(uriRegex);
+      doc.should.have.property('credentialSchema');
+      expect(doc.credentialSchema).to.match(uriRegex);
     });
     it('MUST contain a credential definition (negative - credentialSchema missing)', async () => {
       await expect(util.generate(
@@ -39,7 +39,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
         .to.be.rejectedWith(Error);
     });
 
-    it('MUST include specific method using the type property', async () => {
+    it('proof MUST include specific method using the type property', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
 
       if (Array.isArray(doc.proof)) {
@@ -51,8 +51,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
         doc.proof.type.should.be.a('string');
       }
     });
-
-    it('MUST include type property (negative - missing proof type)', async () => {
+    it('proof MUST include type property (negative - missing proof type)', async () => {
       await expect(util.generate(
         'example-015-zkp-bad-proof-missing-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
