@@ -28,7 +28,10 @@ describe('Zero-Knowledge Proofs (optional)', () => {
         'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
-    it('MUST contain a proof', async () => {
+
+    // all verifiable credentials need to have a proof,
+    // so these tests feel redundant
+    it.skip('MUST contain a proof', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
       expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
     });
