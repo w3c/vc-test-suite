@@ -31,7 +31,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
 
     // all verifiable credentials need to have a proof,
     // so these tests feel redundant
-    it.skip('MUST contain a proof', async () => {
+    it('MUST contain a proof', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
       expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
     });
