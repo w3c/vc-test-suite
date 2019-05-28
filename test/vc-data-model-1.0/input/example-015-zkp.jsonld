@@ -7,6 +7,10 @@
   "type": ["VerifiableCredential", "AlumniCredential"],
   "issuer": "https://example.edu/issuers/14",
   "issuanceDate": "2010-01-01T19:23:24Z",
+  "credentialSchema": {
+    "id": "https://example.org/examples/anoncred.zkp",
+    "type": "CLCredentialDefinition2019"
+  },
   "credentialSubject": [
     {
       "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
@@ -18,6 +22,6 @@
     }
   ],
   "proof": {
-    "type": "RsaSignature2018"
+    "type": "CLSignature2019"
   }
 }

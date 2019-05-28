@@ -22,10 +22,10 @@
       }
     },
     "proof": [{
-      "type": "example"
+      "type": "RsaSignature2018"
     }]
   }],
   "proof": [{
-    "type": "example"
+    "type": "RsaSignature2018"
   }]
 }

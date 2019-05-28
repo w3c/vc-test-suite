@@ -22,7 +22,7 @@
       }
     },
     "proof": [{
-      "type": "example"
+      "type": "RsaSignature2018"
     }]
   }]
 }
