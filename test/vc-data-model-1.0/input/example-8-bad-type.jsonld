@@ -6,10 +6,6 @@
   "id": "urn:uuid:3978344f-8596-4c3a-a978-8fcaba3903c5",
   "type": ["VerifiablePreso"],
   "credentialSubject": {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://www.w3.org/2018/credentials/examples/v1"
-      ],
     "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
     "degree": {
       "type": "BachelorDegree",
