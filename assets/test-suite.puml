@@ -1,0 +1,44 @@
+@startuml
+
+Participant Test as Test
+Participant util.js as generate
+Participant Generator as Driver
+Participant "VC Implementation" as Lib
+
+box "Test Suite" #LightGrey
+	participant Test
+	participant generate
+end box
+
+box "Implementer" #LightBlue
+	participant Driver
+	participant Lib
+end box
+
+note right of Test
+    params:
+    - file
+    - options
+end note
+Test -> generate: generate
+
+note right of generate
+    params:
+    - file
+    - options
+end note
+generate -> Driver: exec generator
+
+note right of Driver
+    create VC or presentation
+end note
+Driver <-> Lib: out-of-scope
+Driver --> generate: JSON/ JWT (base64)
+generate --> Test: JSON/ JWT (base64)
+
+note right of Test
+    Checks conformance with spec
+end note
+Test -> Test: test JSON/ JWT (base64)
+
+@enduml
