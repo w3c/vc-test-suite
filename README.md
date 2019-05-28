@@ -12,6 +12,9 @@ This test suite will check any application that generates [Verifiable Credential
 Data Model](https://www.w3.org/TR/verifiable-claims-data-model/) documents to
 ensure conformance with the specification.
 
+The following is a sequence diagram that explains the flow of the test suite:
+![image](./assets/test-suite.svg)
+
 ### Running the Test Suite
 
 1. `npm install`
