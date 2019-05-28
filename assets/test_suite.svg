@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1070px" preserveAspectRatio="none" style="width:1118px;height:1070px;" version="1.1" viewBox="0 0 1118 1070" width="1118px" zoomAndPan="magnify"><defs><filter height="300%" id="fu4j8xu13o01n" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="4.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="8.0" dy="8.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#D3D3D3" height="1041.2695" style="stroke: #A80036; stroke-width: 2.0;" width="446" x="8" y="8"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="132" x="165" y="33.1367">Test Suite</text><rect fill="#ADD8E6" height="1041.2695" style="stroke: #A80036; stroke-width: 2.0;" width="508" x="588" y="8"/><text fill="#000000" font-family="sans-serif" font-size="26" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="174" x="755" y="33.1367">Implementer</text><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 5.0,5.0;" x1="62" x2="62" y1="117.5977" y2="972.293"/><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 5.0,5.0;" x1="390" x2="390" y1="117.5977" y2="972.293"/><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 5.0,5.0;" x1="682" x2="682" y1="117.5977" y2="972.293"/><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 5.0,5.0;" x1="938" x2="938" y1="117.5977" y2="972.293"/><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="86" x="16" y="46.6211"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="58" x="30" y="87.6914">Test</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="86" x="16" y="970.293"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="58" x="30" y="1011.3633">Test</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="102" x="336" y="46.6211"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="74" x="350" y="87.6914">util.js</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="102" x="336" y="970.293"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="74" x="350" y="1011.3633">util.js</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="166" x="596" y="46.6211"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="138" x="610" y="87.6914">Generator</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="166" x="596" y="970.293"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="138" x="610" y="1011.3633">Generator</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="290" x="790" y="46.6211"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="262" x="804" y="87.6914">VC Implementation</text><rect fill="#FEFECE" filter="url(#fu4j8xu13o01n)" height="60.9766" style="stroke: #A80036; stroke-width: 3.0;" width="290" x="790" y="970.293"/><text fill="#000000" font-family="sans-serif" font-size="28" lengthAdjust="spacingAndGlyphs" textLength="262" x="804" y="1011.3633">VC Implementation</text><path d="M72,147.5977 L72,257.5977 L234,257.5977 L234,167.5977 L214,147.5977 L72,147.5977 " fill="#FBFB77" filter="url(#fu4j8xu13o01n)" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M214,147.5977 L214,167.5977 L234,167.5977 L214,147.5977 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="100" x="84" y="182.7344">params:</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="64" x="84" y="213.3555">- file</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="120" x="84" y="243.9766">- options</text><polygon fill="#A80036" points="367,312.082,387,320.082,367,328.082,375,320.082" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="63" x2="379" y1="320.082" y2="320.082"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="108" x="77" y="310.5977">generate</text><path d="M400,346.082 L400,456.082 L562,456.082 L562,366.082 L542,346.082 L400,346.082 " fill="#FBFB77" filter="url(#fu4j8xu13o01n)" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M542,346.082 L542,366.082 L562,366.082 L542,346.082 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="100" x="412" y="381.2188">params:</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="64" x="412" y="411.8398">- file</text><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="120" x="412" y="442.4609">- options</text><polygon fill="#A80036" points="659,510.5664,679,518.5664,659,526.5664,667,518.5664" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="391" x2="671" y1="518.5664" y2="518.5664"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="186" x="405" y="509.082">exec generator</text><path d="M692,544.5664 L692,594.5664 L1052,594.5664 L1052,564.5664 L1032,544.5664 L692,544.5664 " fill="#FBFB77" filter="url(#fu4j8xu13o01n)" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M1032,544.5664 L1032,564.5664 L1052,564.5664 L1032,544.5664 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="318" x="704" y="579.7031">create VC or presentation</text><polygon fill="#A80036" points="705,647.8086,685,655.8086,705,663.8086,697,655.8086" style="stroke: #A80036; stroke-width: 2.0;"/><polygon fill="#A80036" points="915,647.8086,935,655.8086,915,663.8086,923,655.8086" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="693" x2="927" y1="655.8086" y2="655.8086"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="174" x="717" y="646.3242">out-of-scope</text><polygon fill="#A80036" points="413,706.4297,393,714.4297,413,722.4297,405,714.4297" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 2.0,2.0;" x1="401" x2="681" y1="714.4297" y2="714.4297"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="244" x="425" y="704.9453">JSON/ JWT (base64)</text><polygon fill="#A80036" points="85,765.0508,65,773.0508,85,781.0508,77,773.0508" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0; stroke-dasharray: 2.0,2.0;" x1="73" x2="389" y1="773.0508" y2="773.0508"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="244" x="97" y="763.5664">JSON/ JWT (base64)</text><path d="M72,799.0508 L72,849.0508 L506,849.0508 L506,819.0508 L486,799.0508 L72,799.0508 " fill="#FBFB77" filter="url(#fu4j8xu13o01n)" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M486,799.0508 L486,819.0508 L506,819.0508 L486,799.0508 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="392" x="84" y="834.1875">Checks conformance with spec</text><line style="stroke: #A80036; stroke-width: 2.0;" x1="63" x2="147" y1="910.293" y2="910.293"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="147" x2="147" y1="910.293" y2="936.293"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="65" x2="147" y1="936.293" y2="936.293"/><polygon fill="#A80036" points="85,928.293,65,936.293,85,944.293,77,936.293" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="26" lengthAdjust="spacingAndGlyphs" textLength="300" x="77" y="900.8086">test JSON/ JWT (base64)</text><!--
+@startuml
+
+Participant Test as Test
+Participant util.js as generate
+Participant Generator as Driver
+Participant "VC Implementation" as Lib
+
+box "Test Suite" #LightGrey
+	participant Test
+	participant generate
+end box
+
+box "Implementer" #LightBlue
+	participant Driver
+	participant Lib
+end box
+
+note right of Test
+    params:
+    - file
+    - options
+end note
+Test -> generate: generate
+
+note right of generate
+    params:
+    - file
+    - options
+end note
+generate -> Driver: exec generator
+
+note right of Driver
+    create VC or presentation
+end note
+Driver <-> Lib: out-of-scope
+Driver - -> generate: JSON/ JWT (base64)
+generate - -> Test: JSON/ JWT (base64)
+
+note right of Test
+    Checks conformance with spec
+end note
+Test -> Test: test JSON/ JWT (base64)
+
+@enduml
+
+PlantUML version 1.2019.04(Fri Mar 29 16:44:36 CET 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_152-release-1248-b8
+Operating System: Mac OS X
+OS Version: 10.14.5
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>
