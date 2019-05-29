@@ -3,6 +3,7 @@ const config = require('../../config.json');
 const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
+const { hasType } = util;
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
@@ -25,8 +26,7 @@ describe('Zero-Knowledge Proofs (optional)', () => {
       const isObject = doc.credentialSchema && typeof doc.credentialSchema.id === 'string';
       expect(isArray || isObject).to.be.true;
     });
-    it('MUST contain a credentialSchema (negative - credentialSchema missing)', async ()
-    => {
+    it('MUST contain a credentialSchema (negative - credentialSchema missing)', async () => {
       await expect(util.generate(
         'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
@@ -115,25 +115,43 @@ describe('Zero-Knowledge Proofs (optional)', () => {
   });
   describe('A verifiable presentation...', () => {
 
-    it.skip('MUST be of type `VerifiablePresentation`', async () => {
-      const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
+    it('MUST be of type `VerifiablePresentation`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
 
-    it.skip('MUST include `verifiableCredential`', async () => {
-      const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
+    it('MUST include `verifiableCredential`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
       should.exist(doc.verifiableCredential);
     });
 
-    it.skip('MUST include `verifiableCredential` (negative - missing `verifiableCredential`)', async () => {
+    it('MUST include `verifiableCredential` (negative - missing `verifiableCredential`)', async () => {
       await expect(util.generatePresentation(
-        'example-8-bad-missing-verifiableCredential.jsonld', generatorOptions))
+        'example-015-zkp-vp-bad-missing-verifiableCredential.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
     describe('Each verifiable credential...', () => {
-      it.skip('MUST have a `credentialSchema` member', async () => {
-      // test that `proof` exists on the embedded credential (and that it's valid?)
+      it('MUST have a `credentialSchema` member', async () => {
+        const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
+        if (Array.isArray(doc.verifiableCredential)) {
+          let creds = [].concat(doc.verifiableCredential)
+          for(let cred of creds){
+            const isArray = Array.isArray(cred.credentialSchema) && cred.credentialSchema.length > 0;
+            const isObject = cred.credentialSchema && typeof cred.credentialSchema.id === 'string';
+            expect(isArray || isObject).to.be.true;
+          }
+        } else {
+          // only one credential
+          const isArray = Array.isArray(doc.credentialSubject.credentialSchema) && doc.credentialSubject.credentialSchema.length > 0;
+          const isObject = doc.credentialSubject.credentialSchema && typeof doc.credentialSubject.credentialSchema.id === 'string';
+          expect(isArray || isObject).to.be.true;
+        }
+      });
+      it('MUST contain a credentialSchema (negative - credentialSchema missing)', async () => {
+        await expect(util.generate(
+          'example-015-zkp-vp-bad-no-credential-schema.jsonld', generatorOptions))
+          .to.be.rejectedWith(Error);
       });
     });
 
@@ -142,17 +160,16 @@ describe('Zero-Knowledge Proofs (optional)', () => {
     correlate the holder across multiple verifiable presentations.*/
       const doc1 = await expect(util.generatePresentation('example-015-zkp-vp-no-leak1'));
       const doc2 = await expect(util.generatePresentation('example-015-zkp-vp-no-leak2'));
-      expect(doc1.)
     });
 
-    it.skip('MUST include `proof`', async () => {
-      const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
+    it('MUST include `proof`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
       should.exist(doc.proof);
     });
 
-    it.skip('MUST include `proof` (negative - missing `proof`)', async () => {
+    it('MUST include `proof` (negative - missing `proof`)', async () => {
       await expect(util.generatePresentation(
-        'example-8-bad-missing-proof.jsonld', generatorOptions))
+        'example-015-zkp-vp-bad-missing-proof.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
