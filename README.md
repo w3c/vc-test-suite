@@ -23,8 +23,8 @@ ensure conformance with the specification.
 1. npm install
 2. Copy the `config.json.example` file to `config.json` and modify.
 3. npm run report
-4. Rename implementation/results.json to
-   implementation/YOUR_IMPLEMENTATION-results.json.
+4. Rename implementations/report.json to
+   implementations/YOUR_IMPLEMENTATION-report.json.
 5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
    pull request for your implementation.
 6. `cd implementations/ && node generate.js`
