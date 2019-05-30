@@ -3,29 +3,30 @@
     "https://www.w3.org/2018/credentials/v1",
     "https://www.w3.org/2018/credentials/examples/v1"
   ],
-  "id": "urn:uuid:3978344f-8596-4c3a-a978-8fcaba3903c5",
-  "type": ["VerifiablePresentation", "CredentialManagerPresentation"],
-  "verifiableCredential": [{
-    "id": "http://example.edu/credentials/3732",
+  "type": "VerifiablePresentation",
+  "verifiableCredential": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://www.w3.org/2018/credentials/examples/v1"
+    ],
     "type": ["VerifiableCredential", "UniversityDegreeCredential"],
-    "issuer": "https://example.edu/issuers/14",
-    "issuanceDate": "2010-01-01T19:23:24Z",
     "credentialSchema": {
-      "id": "https://example.org/examples/anoncred.zkp",
-      "type": "CLCredentialDefinition2019"
+      "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
+      "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
     },
+    "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
     "credentialSubject": {
-      "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-      "degree": {
-        "type": "BachelorDegree",
-        "name": "<span lang='fr-CA'>Baccalauréat en musiques numériques</span>"
-      }
+      "degreeType": "BachelorDegree",
+      "degreeSchool": "College of Engineering"
     },
-    "proof": [{
-      "type": "CLSignature2019"
-    }]
-  }],
-  "proof": [{
-    "type": "CLSignature2019"
-  }]
+    "proof": {
+      "type": "ex:AnonCredDerivedCredentialv1",
+      "primaryProof": "cg7wLNSi48K5qNyAVMwdYqVHSMv1Ur8i...Fg2ZvWF6zGvcSAsym2sgSk737",
+      "nonRevocationProof": "mu6fg24MfJPU1HvSXsf3ybzKARib4WxG...RSce53M6UwQCxYshCuS3d2h"
+    }
+  },
+  "proof": {
+    "type": "ex:AnonCredPresentationProofv1",
+    "proofValue": "DgYdYMUYHURJLD7xdnWRinqWCEY5u5fK...j915Lt3hMzLHoPiPQ9sSVfRrs1D"
+  }
 }
