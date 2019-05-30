@@ -150,8 +150,8 @@ describe('Zero-Knowledge Proofs (optional)', () => {
           }
         } else {
           // only one credential
-          const isArray = Array.isArray(doc.credentialSubject.credentialSchema) && doc.credentialSubject.credentialSchema.length > 0;
-          const isObject = doc.credentialSubject.credentialSchema && typeof doc.credentialSubject.credentialSchema.id === 'string';
+          const isArray = Array.isArray(doc.verifiableCredential.credentialSchema) && doc.verifiableCredential.credentialSchema.length > 0;
+          const isObject = doc.verifiableCredential.credentialSchema && typeof doc.verifiableCredential.credentialSchema.id === 'string';
           expect(isArray || isObject).to.be.true;
         }
       });
