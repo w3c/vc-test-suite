@@ -158,8 +158,6 @@ describe('Zero-Knowledge Proofs (optional)', () => {
     it.skip('MUST NOT leak information', async () => {
     /*A verifiable presentation MUST NOT leak information that would enable the verifier to
     correlate the holder across multiple verifiable presentations.*/
-      const doc1 = await expect(util.generatePresentation('example-015-zkp-vp-no-leak1'));
-      const doc2 = await expect(util.generatePresentation('example-015-zkp-vp-no-leak2'));
     });
 
     it('MUST include `proof`', async () => {
