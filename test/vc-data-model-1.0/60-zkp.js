@@ -3,6 +3,7 @@ const config = require('../../config.json');
 const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
+const { hasType } = util;
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
@@ -18,19 +19,19 @@ const generatorOptions = config;
 describe('Zero-Knowledge Proofs (optional)', () => {
 
   describe('A verifiable credential...', () => {
-    it('MUST contain a credential definition', async () => {
+    it('MUST contain a credentialSchema', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.credentialSchema) &&
         doc.credentialSchema.length > 0;
       const isObject = doc.credentialSchema && typeof doc.credentialSchema.id === 'string';
       expect(isArray || isObject).to.be.true;
     });
-    it('MUST contain a credential definition (negative - credentialSchema missing)', async () => {
+    it('MUST contain a credentialSchema (negative - credentialSchema missing)', async () => {
       await expect(util.generate(
         'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
-    describe('Each credential definition...', () => {
+    describe('Each credentialSchema...', () => {
       it('MUST specify a type', async () => {
         const doc = await util.generate('example-015-zkp-credential-schema-array.jsonld',
         generatorOptions);
@@ -113,32 +114,62 @@ describe('Zero-Knowledge Proofs (optional)', () => {
 
   });
   describe('A verifiable presentation...', () => {
-    // TODO: these 3 tests are "fuzzy"; non-data-model tests--the 3 following have specifics
-    it.skip('All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.', async () => {
 
+    it('MUST be of type `VerifiablePresentation`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
+      expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
-    it.skip('All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.', async () => {
 
+    it('MUST include `verifiableCredential`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
+      should.exist(doc.verifiableCredential);
     });
-    it.skip('MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage', async () => {
-      /* "The verifiable presentation MUST contain a proof enabling the
-       * verifier to ascertain that all verifiable credentials in the
-       * verifiable presentation were issued to the same holder without
-       * leaking personally identifiable information that the holder did not
-       * intend to share." */
+
+    it('MUST include `verifiableCredential` (negative - missing `verifiableCredential`)', async () => {
+      await expect(util.generatePresentation(
+        'example-015-zkp-vp-bad-missing-verifiableCredential.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
     });
-    // TODO: these 3 tests MAY be more testable--but may not test the "spirit" of the above requirements...
-    it.skip('MUST be a valid `VerifiablePresentation`', async () => {
-      // test `type` contains `VerifiablePresentation`
+
+    describe('Each verifiable credential...', () => {
+      it('MUST have a `credentialSchema` member', async () => {
+        const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
+        if (Array.isArray(doc.verifiableCredential)) {
+          let creds = [].concat(doc.verifiableCredential)
+          for(let cred of creds){
+            const isArray = Array.isArray(cred.credentialSchema) && cred.credentialSchema.length > 0;
+            const isObject = cred.credentialSchema && typeof cred.credentialSchema.id === 'string';
+            expect(isArray || isObject).to.be.true;
+          }
+        } else {
+          // only one credential
+          const isArray = Array.isArray(doc.verifiableCredential.credentialSchema) && doc.verifiableCredential.credentialSchema.length > 0;
+          const isObject = doc.verifiableCredential.credentialSchema && typeof doc.verifiableCredential.credentialSchema.id === 'string';
+          expect(isArray || isObject).to.be.true;
+        }
+      });
+      it('MUST contain a credentialSchema (negative - credentialSchema missing)', async () => {
+        await expect(util.generate(
+          'example-015-zkp-vp-bad-no-credential-schema.jsonld', generatorOptions))
+          .to.be.rejectedWith(Error);
+      });
     });
-    it.skip('MUST have a `verifiableCredential` member', async () => {
-      // test `verifiableCredential` exists (and is valid? or is that an additional test?)
+
+    it.skip('MUST NOT leak information', async () => {
+    /*A verifiable presentation MUST NOT leak information that would enable the verifier to
+    correlate the holder across multiple verifiable presentations.*/
     });
-    it.skip('the `verifiableCredential` MUST have a `proof` member', async () => {
-      // test that `proof` exists on the embedded credential (and that it's valid?)
+
+    it('MUST include `proof`', async () => {
+      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
+      should.exist(doc.proof);
     });
-    it.skip('MUST have a direct `proof` member (on the presenation)', async() => {
-      // test that `proof` exists on the top-leve presentation (and that it's valid?)
+
+    it('MUST include `proof` (negative - missing `proof`)', async () => {
+      await expect(util.generatePresentation(
+        'example-015-zkp-vp-bad-missing-proof.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
     });
+
   });
 });
