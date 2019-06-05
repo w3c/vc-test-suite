@@ -15,6 +15,7 @@
       "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
     },
     "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+    "issuanceDate": "2010-01-01T19:23:24Z",
     "credentialSubject": {
       "degreeType": "BachelorDegree",
       "degreeSchool": "College of Engineering"
