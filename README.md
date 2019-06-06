@@ -14,20 +14,21 @@ ensure conformance with the specification.
 
 ### Running the Test Suite
 
-1. npm install
-2. Copy the `config.json.example` file to `config.json` and modify.
-3. npm test
+1. `npm install`
+2. `cp config.json.example config.json`
+3. Modify `config.json` for your run.
+4. `npm test`
 
 ### Submit an Implementation Report
 
-1. npm install
-2. Copy the `config.json.example` file to `config.json` and modify.
-3. npm run report
-4. Rename implementations/report.json to
-   implementations/YOUR_IMPLEMENTATION-report.json.
-5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
-   pull request for your implementation.
-6. `cd implementations/ && node generate.js`
+1. `npm install`
+2. `cp config.json.example config.json`
+3. Modify `config.json` for your run.
+4. `npm run report`
+5. `mv implementations/report.json implementations/{YOUR_IMPLEMENTATION}-report.json`
+6. `git add implementations/{YOUR_IMPLEMENTATION}-results.json` 
+7. Submit a pull request for your implementation.
+8. `cd implementations/ && node generate.js`
 
 ## Contributing
 
