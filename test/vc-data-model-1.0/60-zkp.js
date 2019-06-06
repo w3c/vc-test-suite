@@ -19,23 +19,19 @@ const generatorOptions = config;
 describe('Zero-Knowledge Proofs (optional)', () => {
 
   describe('A verifiable credential...', () => {
-    it('MUST contain a credential definition', async () => {
+    it('MUST contain a credentialSchema', async () => {
       const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.credentialSchema) &&
         doc.credentialSchema.length > 0;
       const isObject = doc.credentialSchema && typeof doc.credentialSchema.id === 'string';
       expect(isArray || isObject).to.be.true;
     });
-<<<<<<< HEAD
-    it('MUST contain a credential definition (negative - credentialSchema missing)', async () => {
-=======
     it('MUST contain a credentialSchema (negative - credentialSchema missing)', async () => {
->>>>>>> 4b73cd2... all tests but leak test
       await expect(util.generate(
         'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
-    describe('Each credential definition...', () => {
+    describe('Each credentialSchema...', () => {
       it('MUST specify a type', async () => {
         const doc = await util.generate('example-015-zkp-credential-schema-array.jsonld',
         generatorOptions);
@@ -118,14 +114,11 @@ describe('Zero-Knowledge Proofs (optional)', () => {
 
   });
   describe('A verifiable presentation...', () => {
-    // TODO: these 3 tests are "fuzzy"; non-data-model tests--the 3 following have specifics
-    it.skip('All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.', async () => {
 
     it('MUST be of type `VerifiablePresentation`', async () => {
       const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
-    it.skip('All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.', async () => {
 
     it('MUST include `verifiableCredential`', async () => {
       const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
@@ -177,5 +170,6 @@ describe('Zero-Knowledge Proofs (optional)', () => {
         'example-015-zkp-vp-bad-missing-proof.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
+
   });
 });
