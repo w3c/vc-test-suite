@@ -21,6 +21,7 @@ async function prepareGeneratorOptions() {
 
     // let people choose which crypto algorithm they want to use
     generatorOptions.jwt = {
+      isJwt : true,
       aud : 'did:example:0xcd',
       rsa : {
         kid : 'did:example:0xab#verikey-1',
