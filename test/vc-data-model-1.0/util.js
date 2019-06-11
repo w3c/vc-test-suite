@@ -41,6 +41,18 @@ async function generatePresentation(file, options) {
   return JSON.parse(stdout);
 }
 
+async function generatePresentationJwt(file, options) {
+  options = options || {};
+  const {stdout, stderr} = await exec(options.presentationGenerator + ' ' +
+    options.generatorOptions + ' ' + path.join(__dirname, 'input', file));
+
+  if(stderr) {
+    throw new Error(stderr);
+  }
+
+  return stdout;
+}
+
 function hasType(doc, expectedType) {
   if(!doc) {
     return false;
@@ -58,5 +70,6 @@ module.exports = {
   generate,
   generatePresentation,
   generateJwt,
+  generatePresentationJwt,
   hasType
 };

@@ -190,7 +190,7 @@ describe('JWT (optional)', () => {
   describe('A verifiable presentation ...', () => {
 
     it('vp MUST be present in a JWT verifiable presentation.', async () => {
-      const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
+      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', generatorOptions);
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
       const payload = jwtResult.getPayload();
