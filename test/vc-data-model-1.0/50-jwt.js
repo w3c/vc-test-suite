@@ -21,14 +21,14 @@ async function prepareGeneratorOptions() {
 
     // let people choose which crypto algorithm they want to use
     generatorOptions.jwt = {
-      kid : 'did:example:0xab#verikey-1',
       aud : 'did:example:0xcd',
-      domainAttribute : 'domain attribute',
       rsa : {
+        kid : 'did:example:0xab#verikey-1',
         privateKey : rsaPrivateKey,
         publicKey : rsaPublicKey
       },
       ecdsaSecp256k1 : {
+        kid : 'did:example:0xab#verikey-2',
         privateKey : ecPrivateKey,
         publicKey : ecPublicKey
       }
@@ -45,8 +45,8 @@ describe('JWT (optional)', () => {
       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
-
-      // FIXME: TODO: vc MUST be present
+      const payload = jwtResult.getPayload();
+      expect(payload.vc !== null).to.be.true();
     });
 
     describe('To encode a verifiable credential as a JWT, specific properties introduced by this' +
@@ -59,7 +59,6 @@ describe('JWT (optional)', () => {
         const jwtResult = new jwt.JwsToken(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-        // if typ is present, it MUST be set to JWT.
         const typ = jwtResult.getHeader('typ');
         if (typ) {
           expect(typ).to.be.a('string');
@@ -75,7 +74,7 @@ describe('JWT (optional)', () => {
         const alg = jwtResult.getHeader('alg')
         expect(alg).to.be.a('string')
 
-        var publicKey;
+        let publicKey;
         if (jwtResult.getHeader('alg') === 'ES256K') {
           expect(alg).to.equal('ES256K');
           publicKey = generatorOptions.jwt.ecPublicKey;
@@ -93,7 +92,8 @@ describe('JWT (optional)', () => {
         const jwtResult = new jwt.JwsToken(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
         if (jwtResult.signature === null) {
-          // FIXME: TODO: check if `proof` attribute is present
+          const payload = jwtResult.getPayload();
+          expect(payload.proof !== null).to.be.true();
         }
       });
 
@@ -114,7 +114,8 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if exp is present
+       const payload = jwtResult.getPayload();
+       expect(payload.exp !== null).to.be.true();
        // FIXME: TODO: check if exp matches expirationDate
      });
 
@@ -124,7 +125,8 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if iss is present
+       const payload = jwtResult.getPayload();
+       expect(payload.iss !== null).to.be.true();
        // FIXME: TODO: check if iss matches issuer
      });
 
@@ -134,8 +136,9 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if iss is present
-       // FIXME: TODO: check if iss matches issuer
+       const payload = jwtResult.getPayload();
+       expect(payload.iat !== null).to.be.true();
+       // FIXME: TODO: check if iat matches issuanceDate
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
@@ -144,7 +147,8 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if jti is present
+       const payload = jwtResult.getPayload();
+       expect(payload.jti !== null).to.be.true();
        // FIXME: TODO: check if jti matches id
      });
 
@@ -154,7 +158,8 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if sub is present
+       const payload = jwtResult.getPayload();
+       expect(payload.sub !== null).to.be.true();
        // FIXME: TODO: check if sub matches id
      });
 
@@ -163,8 +168,9 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: check if aud is present
-       // FIXME: TODO: check if aud matches generatorOptions
+       const payload = jwtResult.getPayload();
+       expect(payload.aud !== null).to.be.true();
+       expect(payload.aud).to.equal(generatorOptions.jwt.aud);
      });
 
      it('Additional claims MUST be added to the credentialSubject property of the JWT.', async () => {
@@ -172,8 +178,10 @@ describe('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       // FIXME: TODO: don't know how to implement that feature? provide additional parameters using generatorOptions?
-       // FIXME: TODO: check if additional claim got added to credentialSubject
+       const payload = jwtResult.getPayload();
+       expect(payload.credentialSubject !== null).to.be.true();
+       expect(payload.credentialSubject.alumniOf !== null).to.be.true();
+       expect(payload.credentialSubject.alumniOf).to.equal('alumniOf');
      });
     });
   });
@@ -184,8 +192,8 @@ describe('JWT (optional)', () => {
       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
-
-      // FIXME: TODO: vp MUST be present
+      const payload = jwtResult.getPayload();
+      expect(payload.vp !== null).to.be.true();
     });
   });
 
