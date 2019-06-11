@@ -19,23 +19,25 @@ async function prepareGeneratorOptions() {
     const ecPrivateKey = await jwt.EcPrivateKey.generatePrivateKey(kid);
     const ecPublicKey = ecPrivateKey.getPublicKey();
 
+    // let people choose which crypto algorithm they want to use
     generatorOptions.jwt = {
       kid : 'did:example:0xab#verikey-1',
       aud : 'did:example:0xcd',
+      domainAttribute : 'domain attribute',
       rsa : {
         privateKey : rsaPrivateKey,
         publicKey : rsaPublicKey
       },
-      secp256k1 : {
+      ecdsaSecp256k1 : {
         privateKey : ecPrivateKey,
         publicKey : ecPublicKey
       }
     }
 }
 
-prepareGeneratorOptions();
-
 describe('JWT (optional)', () => {
+
+  prepareGeneratorOptions();
 
   describe('A verifiable credential ...', () => {
 
@@ -72,7 +74,15 @@ describe('JWT (optional)', () => {
 
         const alg = jwtResult.getHeader('alg')
         expect(alg).to.be.a('string')
-        expect(alg).to.be.oneOf(['ES256K', 'RS256'])
+
+        var publicKey;
+        if (jwtResult.getHeader('alg') === 'ES256K') {
+          expect(alg).to.equal('ES256K');
+          publicKey = generatorOptions.jwt.ecPublicKey;
+        } else {
+          expect(alg).to.equal('RS256');
+          publicKey = generatorOptions.jwt.rsaPublicKey;
+        }
 
         const payload = await jwtResult.verifySignature(publicKey);
         expect(payload !== null).to.be.true;
