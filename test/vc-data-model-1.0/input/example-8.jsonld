@@ -18,7 +18,7 @@
       "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
       "degree": {
         "type": "BachelorDegree",
-        "name": "<span lang='fr-CA'>Baccalauréat en musiques numériques</span>"
+        "name": "Bachelor of Science in Mechanical Engineering"
       }
     },
     "proof": [{
