@@ -1,0 +1,1279 @@
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1-bad-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1-bad-url.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-2.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-2-bad-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-3.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-3-bad-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-3.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-3-bad-missing-type.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-1.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-014-bad-no-credential-subject.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-missing-issuer.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-issuer-uri.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-issuer-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-missing-issuanceDate.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-issuanceDate.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-4-bad-issuanceDate-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-5.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-5-bad-proof.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-5.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-5-bad-proof-missing-type.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-6.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-6-bad-expirationDate.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-6-bad-cardinality.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-7.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-7-bad-missing-id.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-7-bad-missing-type.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-8.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-8.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-8-bad-missing-verifiableCredential.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-8-bad-missing-proof.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-009.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-010.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-010.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-010.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-011.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-011.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-011.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-011.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-012.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-012.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-013.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-013.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-bad-no-credential-schema.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-bad-no-proof.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-credential-schema-array.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-bad-no-credential-schema-type.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-bad-no-credential-schema-id.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-bad-proof-missing-type.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp-bad-missing-verifiableCredential.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp-bad-missing-proof.jsonld
+/usr/src/app/vc_parse.rb --presentation <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld
+/usr/src/app/vc_parse.rb --issue <  /root/test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp-bad-no-credential-schema.jsonld
+{
+  "stats": {
+    "suites": 34,
+    "tests": 88,
+    "passes": 68,
+    "pending": 20,
+    "failures": 0,
+    "start": "2019-06-12T05:33:39.296Z",
+    "end": "2019-06-12T05:37:08.955Z",
+    "duration": 209659
+  },
+  "tests": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "duration": 3104,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "duration": 2073,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 2964,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "duration": 2947,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 3037,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 3081,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
+      "duration": 3167,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "duration": 2988,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
+      "duration": 3106,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 2987,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "duration": 3015,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 3055,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 3414,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "duration": 3022,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "duration": 3078,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuer)",
+      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
+      "duration": 3132,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "duration": 3275,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative - not URI)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
+      "duration": 3049,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative - Array)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
+      "duration": 3114,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "duration": 4043,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "duration": 3075,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
+      "duration": 3057,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "duration": 3460,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "duration": 2969,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `proof` property MUST be present",
+      "duration": 3231,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing)",
+      "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
+      "duration": 3190,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
+      "duration": 3076,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 3023,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
+      "duration": 3010,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "duration": 4172,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "duration": 3278,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
+      "duration": 3116,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "duration": 3123,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "duration": 3056,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "duration": 3072,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "duration": 3185,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "duration": 2957,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "duration": 3450,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST process the `@context` property; ensure credential `type` value exists",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "expected `type` values MUST be in expected order",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "expected order MUST be defined by human-readable extension specification",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
+      "duration": 3111,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 3088,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 3052,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 2928,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
+      "duration": 3004,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 3156,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
+      "duration": 3071,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 2996,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 3058,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 4258,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
+      "duration": 3082,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 2965,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting Archival",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting Archival",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting non-subject Presentation",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting non-subject Presentation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting 3rd Party Correlation",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting 3rd Party Correlation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST verify",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST verify (negative)",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "key MUST NOT be suspended, revoked, or expired",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "key MUST NOT be suspended, revoked, or expired (negative)",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proofPurpose MUST exist and be \"credentialIssuance\"",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be \"credentialIssuance\"",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`vc` MUST be present in a JWT verifiable credential",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`vp` MUST be present in a JWT verifiable presentation",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "duration": 3152,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 3009,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a proof",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
+      "duration": 3008,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
+      "duration": 3052,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
+      "duration": 3006,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
+      "duration": 3506,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
+      "duration": 4081,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+      "duration": 5091,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+      "duration": 3006,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "duration": 4443,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "duration": 2972,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "duration": 3102,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "duration": 3160,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "duration": 715,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST NOT leak information",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "duration": 2942,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "duration": 719,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "duration": 3050,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 702,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [
+    {
+      "title": "MUST process the `@context` property; ensure credential `type` value exists",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "expected `type` values MUST be in expected order",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "expected order MUST be defined by human-readable extension specification",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting Archival",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting Archival",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting non-subject Presentation",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting non-subject Presentation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST support prohibiting 3rd Party Correlation",
+      "fullTitle": "Terms of Use (optional) MUST support prohibiting 3rd Party Correlation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST verify",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST verify (negative)",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "key MUST NOT be suspended, revoked, or expired",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "key MUST NOT be suspended, revoked, or expired (negative)",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proofPurpose MUST exist and be \"credentialIssuance\"",
+      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be \"credentialIssuance\"",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`vc` MUST be present in a JWT verifiable credential",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`vp` MUST be present in a JWT verifiable presentation",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST NOT leak information",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information",
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "failures": [],
+  "passes": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "duration": 3104,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "duration": 2073,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 2964,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "duration": 2947,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 3037,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 3081,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
+      "duration": 3167,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "duration": 2988,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
+      "duration": 3106,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 2987,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "duration": 3015,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 3055,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 3414,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "duration": 3022,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "duration": 3078,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuer)",
+      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
+      "duration": 3132,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "duration": 3275,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative - not URI)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
+      "duration": 3049,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative - Array)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
+      "duration": 3114,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "duration": 4043,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "duration": 3075,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
+      "duration": 3057,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "duration": 3460,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "duration": 2969,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `proof` property MUST be present",
+      "duration": 3231,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing)",
+      "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
+      "duration": 3190,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
+      "duration": 3076,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 3023,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
+      "duration": 3010,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "duration": 4172,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an ISO8601 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "duration": 3278,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
+      "duration": 3116,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "duration": 3123,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "duration": 3056,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "duration": 3072,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "duration": 3185,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "duration": 2957,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "duration": 3450,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
+      "duration": 3111,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 3088,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 3052,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 2928,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
+      "duration": 3004,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 3156,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
+      "duration": 3071,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 2996,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 3058,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 4258,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
+      "duration": 3082,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 2965,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "duration": 3152,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 3009,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a proof",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
+      "duration": 3008,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
+      "duration": 3052,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
+      "duration": 3006,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
+      "duration": 3506,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
+      "duration": 4081,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+      "duration": 5091,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+      "duration": 3006,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "duration": 4443,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "duration": 2972,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "duration": 3102,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "duration": 3160,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "duration": 715,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "duration": 2942,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "duration": 719,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "duration": 3050,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 702,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
