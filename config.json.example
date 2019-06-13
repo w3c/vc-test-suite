@@ -23,5 +23,8 @@
   "presentationGenerator": "/bin/cat",
 
   // The arguments that should be passed to the VC generator.
-  "generatorOptions": ""
+  "generatorOptions": "",
+
+  // The arguments that should be passed to the VC generator when testing JWTs.
+  "jwt": ""
 }
