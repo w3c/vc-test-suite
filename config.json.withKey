@@ -1,0 +1,6 @@
+{
+  "generator": "node ../uport-vc-driver/index.js",
+  "presentationGenerator": "/bin/cat",
+  "generatorOptions": "",
+  "jwt": "-a did:example:0xcd -s ecdsaSecp256k1 -k 0cf0289c5dbac754a0e66225109bf2dcf76a35e9940cd2d533d8c27924fe1932"
+}

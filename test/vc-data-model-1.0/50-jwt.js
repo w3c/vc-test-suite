@@ -5,6 +5,7 @@ const {expect} = chai;
 const util = require('./util');
 const jwt = require('@decentralized-identity/did-auth-jose')
 const jwtOptions = require('commander')
+const base64url = require('base64url')
 
 // configure chai
 const should = chai.should();
@@ -12,14 +13,32 @@ chai.use(require('chai-as-promised'));
 
 // parse jwt generator options
 const generatorOptions = config;
-const args = ['', '', ...generatorOptions.jwt.split(' ')]
-jwtOptions
-  .option('-a, --aud <string>')
-  .option('-s, --signer <string>')
-  .option('-k, --private-key <string>')
-jwtOptions.parse(args)
+let ecPublicKey;
+
+// I think we need to set up a cryptoFactory to generate the jws tokens
+const cryptoFactory = new jwt.CryptoFactory([new jwt.Secp256k1CryptoSuite()]);
+
+async function prepareGeneratorOptions() {
+  // parse cli style args for the driver to access them in tests
+  const args = ['', '', ...generatorOptions.jwt.split(' ')]
+  jwtOptions.option('-a, --aud <string>')
+  jwtOptions.parse(args)
+
+  // generate keys and append to jwt options
+  // TODO: switch on jwtOptions.signer to generate keys based on specified algorithm
+  const kid = 'did:example:0xab#verikey-1'
+  const ecPrivateKey = await jwt.EcPrivateKey.generatePrivateKey(kid)
+  const hexPrivateKey = base64url.toBuffer(ecPrivateKey.d).toString('hex')
+  generatorOptions.jwt += ` -k ${hexPrivateKey}`
+
+  // remember the public key for use in tests
+  // PublicKey type from security/PublicKey
+  ecPublicKey = ecPrivateKey.getPublicKey()
+  console.log(ecPublicKey)
+}
 
 describe.only('JWT (optional)', () => {
+  prepareGeneratorOptions();
 
   describe('A verifiable credential ...', () => {
 
@@ -50,21 +69,13 @@ describe.only('JWT (optional)', () => {
 
       it('alg MUST be used for RSA and ECDSA-based digital signatures.', async () => {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
-        const jwtResult = new jwt.JwsToken(jwtBase64);
+        const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
         const { alg } = jwtResult.getHeader()
         expect(alg).to.be.a('string')
 
-        let publicKey;
-        if (alg === 'ES256K') {
-          publicKey = generatorOptions.jwt.ecPublicKey;
-        } else {
-          expect(alg).to.equal('RS256');
-          publicKey = generatorOptions.jwt.rsaPublicKey;
-        }
-
-        const payload = await jwtResult.verifySignature(publicKey);
+        const payload = await jwtResult.verifySignature(ecPublicKey);
         expect(payload !== null).to.be.true;
       });
 
@@ -144,7 +155,7 @@ describe.only('JWT (optional)', () => {
        // FIXME: TODO: check if sub matches id
      });
 
-     it.only('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
+     it('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
