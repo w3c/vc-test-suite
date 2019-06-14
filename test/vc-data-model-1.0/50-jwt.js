@@ -33,7 +33,7 @@ describe.only('JWT (optional)', () => {
         const jwtResult = new jwt.JwsToken(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-        const typ = jwtResult.getHeader()['typ'];
+        const { typ } = jwtResult.getHeader();
         if (typ) {
           expect(typ).to.be.a('string');
           expect(typ).to.equal('JWT');
@@ -45,11 +45,11 @@ describe.only('JWT (optional)', () => {
         const jwtResult = new jwt.JwsToken(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-        const alg = jwtResult.getHeader()['alg']
+        const { alg } = jwtResult.getHeader()
         expect(alg).to.be.a('string')
 
         let publicKey;
-        if (jwtResult.getHeader()['alg'] === 'ES256K') {
+        if (alg === 'ES256K') {
           expect(alg).to.equal('ES256K');
           publicKey = generatorOptions.jwt.ecPublicKey;
         } else {
