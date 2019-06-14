@@ -50,7 +50,6 @@ describe.only('JWT (optional)', () => {
 
         let publicKey;
         if (alg === 'ES256K') {
-          expect(alg).to.equal('ES256K');
           publicKey = generatorOptions.jwt.ecPublicKey;
         } else {
           expect(alg).to.equal('RS256');
@@ -153,9 +152,9 @@ describe.only('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = JSON.parse(jwtResult.getPayload());
-       expect(payload.credentialSubject !== null).to.be.true;
-       expect(payload.credentialSubject.alumniOf !== null).to.be.true;
-       expect(payload.credentialSubject.alumniOf).to.equal('alumniOf');
+       expect(payload.vc.credentialSubject !== null).to.be.true;
+       expect(payload.vc.credentialSubject.alumniOf !== null).to.be.true;
+       expect(payload.vc.credentialSubject.alumniOf).to.equal('Example University');
      });
     });
   });
