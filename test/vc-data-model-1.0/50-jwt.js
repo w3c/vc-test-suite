@@ -11,34 +11,7 @@ chai.use(require('chai-as-promised'));
 
 const generatorOptions = config;
 
-async function prepareGeneratorOptions() {
-    const kid = 'did:example:0xab#verikey-1';
-    const aud = 'did:example:0xcd';
-    const rsaPrivateKey = await jwt.PrivateKeyRsa.generatePrivateKey(kid);
-    const rsaPublicKey = rsaPrivateKey.getPublicKey();
-    const ecPrivateKey = await jwt.EcPrivateKey.generatePrivateKey(kid);
-    const ecPublicKey = ecPrivateKey.getPublicKey();
-
-    // let people choose which crypto algorithm they want to use
-    generatorOptions.jwt = {
-      isJwt : true,
-      aud : 'did:example:0xcd',
-      rsa : {
-        kid : 'did:example:0xab#verikey-1',
-        privateKey : rsaPrivateKey,
-        publicKey : rsaPublicKey
-      },
-      ecdsaSecp256k1 : {
-        kid : 'did:example:0xab#verikey-2',
-        privateKey : ecPrivateKey,
-        publicKey : ecPublicKey
-      }
-    }
-}
-
-describe('JWT (optional)', () => {
-
-  prepareGeneratorOptions();
+describe.only('JWT (optional)', () => {
 
   describe('A verifiable credential ...', () => {
 
@@ -47,7 +20,7 @@ describe('JWT (optional)', () => {
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
       const payload = jwtResult.getPayload();
-      expect(payload.vc !== null).to.be.true();
+      expect(payload.vc !== null).to.be.true;
     });
 
     describe('To encode a verifiable credential as a JWT, specific properties introduced by this' +
@@ -94,7 +67,7 @@ describe('JWT (optional)', () => {
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
         if (jwtResult.signature === null) {
           const payload = jwtResult.getPayload();
-          expect(payload.proof !== null).to.be.true();
+          expect(payload.proof !== null).to.be.true;
         }
       });
 
@@ -116,7 +89,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.exp !== null).to.be.true();
+       expect(payload.exp !== null).to.be.true;
        // FIXME: TODO: check if exp matches expirationDate
      });
 
@@ -127,7 +100,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.iss !== null).to.be.true();
+       expect(payload.iss !== null).to.be.true;
        // FIXME: TODO: check if iss matches issuer
      });
 
@@ -138,7 +111,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.iat !== null).to.be.true();
+       expect(payload.iat !== null).to.be.true;
        // FIXME: TODO: check if iat matches issuanceDate
      });
 
@@ -149,7 +122,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.jti !== null).to.be.true();
+       expect(payload.jti !== null).to.be.true;
        // FIXME: TODO: check if jti matches id
      });
 
@@ -160,7 +133,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.sub !== null).to.be.true();
+       expect(payload.sub !== null).to.be.true;
        // FIXME: TODO: check if sub matches id
      });
 
@@ -170,7 +143,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.aud !== null).to.be.true();
+       expect(payload.aud !== null).to.be.true;
        expect(payload.aud).to.equal(generatorOptions.jwt.aud);
      });
 
@@ -180,8 +153,8 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = jwtResult.getPayload();
-       expect(payload.credentialSubject !== null).to.be.true();
-       expect(payload.credentialSubject.alumniOf !== null).to.be.true();
+       expect(payload.credentialSubject !== null).to.be.true;
+       expect(payload.credentialSubject.alumniOf !== null).to.be.true;
        expect(payload.credentialSubject.alumniOf).to.equal('alumniOf');
      });
     });
@@ -194,7 +167,7 @@ describe('JWT (optional)', () => {
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
       const payload = jwtResult.getPayload();
-      expect(payload.vp !== null).to.be.true();
+      expect(payload.vp !== null).to.be.true;
     });
   });
 
