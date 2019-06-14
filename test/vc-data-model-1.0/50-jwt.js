@@ -142,7 +142,7 @@ describe.only('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       const payload = jwtResult.getPayload();
+       const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.aud !== null).to.be.true;
        expect(payload.aud).to.equal(generatorOptions.jwt.aud);
      });
@@ -152,7 +152,7 @@ describe.only('JWT (optional)', () => {
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
-       const payload = jwtResult.getPayload();
+       const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.credentialSubject !== null).to.be.true;
        expect(payload.credentialSubject.alumniOf !== null).to.be.true;
        expect(payload.credentialSubject.alumniOf).to.equal('alumniOf');
