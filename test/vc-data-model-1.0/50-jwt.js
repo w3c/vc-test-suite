@@ -4,12 +4,20 @@ const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
 const jwt = require('@decentralized-identity/did-auth-jose')
+const jwtOptions = require('commander')
 
 // configure chai
 const should = chai.should();
 chai.use(require('chai-as-promised'));
 
+// parse jwt generator options
 const generatorOptions = config;
+const args = ['', '', ...generatorOptions.jwt.split(' ')]
+jwtOptions
+  .option('-a, --aud <string>')
+  .option('-s, --signer <string>')
+  .option('-k, --private-key <string>')
+jwtOptions.parse(args)
 
 describe.only('JWT (optional)', () => {
 
@@ -136,14 +144,14 @@ describe.only('JWT (optional)', () => {
        // FIXME: TODO: check if sub matches id
      });
 
-     it('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
+     it.only('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', generatorOptions);
        const jwtResult = new jwt.JwsToken(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.aud !== null).to.be.true;
-       expect(payload.aud).to.equal(generatorOptions.jwt.aud);
+       expect(payload.aud).to.equal(jwtOptions.aud);
      });
 
      it('Additional claims MUST be added to the credentialSubject property of the JWT.', async () => {
