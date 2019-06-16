@@ -3,9 +3,7 @@
   "version": "0.3.0",
   "description": "Verifiable Credentials Test Suite",
   "dependencies": {
-    "@decentralized-identity/did-auth-jose": "^0.1.13",
-    "base64url": "^3.0.1",
-    "commander": "^2.20.0"
+    "@decentralized-identity/did-auth-jose": "^0.1.13"
   },
   "devDependencies": {
     "chai": "^4.2.0",
