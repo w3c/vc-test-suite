@@ -11,6 +11,15 @@ chai.use(require('chai-as-promised'));
 
 // parse jwt generator options
 const options = config;
+const generatorOptions = options.generatorOptions;
+
+// test case specific options
+const OPTIONS = {
+    JWT: '--jwt',
+    JWT_NO_JWS: '--jwt-no-jws',
+    JWT_PRESENTATION: '--jwt-presentation',
+    JWT_AUD: '--jwt-aud'
+}
 
 // jwt specific generator options
 const cryptoFactory = new jwt.CryptoFactory([new jwt.Secp256k1CryptoSuite(), new jwt.RsaCryptoSuite()]);
@@ -18,35 +27,54 @@ const aud = "did:example:0xcafe";
 let rsaPublicKey;
 let ecPrivateKey;
 
-async function prepareGeneratorOptions() {
-  // indicate this is a jwt test case
-  options.generatorOptions += ' --jwt'
+async function setGeneratorKeys() {
+  if (options.jwt.es256kPrivateKeyJwk !== undefined) {
+    var privateKey = {
+        id: options.jwt.es256kPrivateKeyJwk.kid,
+        type: 'publicKeyJwk',
+        publicKeyJwk: options.jwt.es256kPrivateKeyJwk
+    };
 
-  // generate keys and append to jwt options  
-  const kid = 'did:example:0xab#verikey-1'
-  ecPrivateKey = await jwt.EcPrivateKey.generatePrivateKey(kid)
-  //rsaPrivateKey = await jwt.RsaPrivateKey.generatePrivateKey(kid)
+    ecPrivateKey = new jwt.EcPrivateKey(privateKey);
+  }
 
-  // remember the public key for use in tests
-  ecPublicKey = ecPrivateKey.getPublicKey()
-  //rsaPublicKey = rsaPublicKey.getPublicKey();
-
-  const ecPrivateKey64 = Buffer.from(JSON.stringify(ecPrivateKey)).toString('base64');
-  options.generatorOptions += ` --jwt-jwk-ES256K ${ecPrivateKey64}`
-
-  //const rsaPrivateKey64 = base64url.encode(JSON.stringify(rsaPrivateKey));
-  //options.generatorOptions += ` -jwt-jwk-RS256 ${rsaPrivateKey64}`
+//  if (options.jwt.rs256PrivateKeyJwk !== undefined) {
+//    var privateKey = {
+//        id: options.jwt.rs256PrivateKeyJwk.kid,
+//        type: 'publicKeyJwk',
+//        publicKeyJwk: options.jwt.rs256PrivateKeyJwk
+//    };
+//
+//    rsaPrivateKey = new jwt.RsaPrivateKey(privateKey);
+//  }
 
   options.generatorOptions += ` --jwt-aud ${aud}`
 }
 
-describe('JWT (optional)', () => {
-  prepareGeneratorOptions();
+function getGeneratorOptions(additionalOptions = '') {
+
+  const jwt = {
+    es256kPrivateKeyJwk: options.jwt.es256kPrivateKeyJwk,
+    rs256PrivateKeyJwk: options.jwt.rs256PrivateKeyJwk
+  };
+
+  const allOptions = generatorOptions
+    + ' ' + OPTIONS.JWT + ' ' + Buffer.from(JSON.stringify(jwt)).toString('base64')
+    + ' ' + OPTIONS.JWT_AUD + ' ' + options.jwt.aud
+    + ' ' + additionalOptions;
+
+  options.generatorOptions = allOptions;
+
+  return options;
+}
+
+describe.only('JWT (optional)', () => {
+  setGeneratorKeys();
 
   describe('A verifiable credential ...', () => {
 
     it('vc MUST be present in a JWT verifiable credential.', async () => {
-      const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+      const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
       const payload = JSON.parse(jwtResult.getPayload());
@@ -59,7 +87,7 @@ describe('JWT (optional)', () => {
               
       it('If no explicit rule is specified, properties are encoded in the same way as with a standard' + 
          'verifiable credential, and are added to the vc property of the JWT.', async () => {
-        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -70,7 +98,7 @@ describe('JWT (optional)', () => {
        });
         
       it('if typ is present, it MUST be set to JWT.', async () => {
-        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -82,7 +110,7 @@ describe('JWT (optional)', () => {
       });
 
       it('alg MUST be used for RSA and ECDSA-based digital signatures.', async () => {
-        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -102,31 +130,27 @@ describe('JWT (optional)', () => {
       });
 
       it('If no JWS is present, a proof property MUST be provided.', async () => {
-        // FIXME: TODO: how to trigger this test case?
-//        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
-//        const jwtResult = cryptoFactory.constructJws(jwtBase64);
-//        expect(jwtResult.isContentWellFormedToken()).to.be.true;
-//
-//        expect(jwtResult.signature === null || jwtResult.signature === undefined).to.be.true;
-//        const payload = JSON.parse(jwtResult.getPayload());
-//        expect(payload.proof !== null && payload.proof !== undefined).to.be.true;
+        const jwtBase64 = await util.generateJwt('example-016-jwt-with-embedded-proof.jsonld', getGeneratorOptions(OPTIONS.JWT_NO_JWS));
+        const jwtResult = cryptoFactory.constructJws(jwtBase64);
+        expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+        expect(jwtResult.signature === null || jwtResult.signature === undefined || jwtResult.signature === "").to.be.true;
+        const payload = JSON.parse(jwtResult.getPayload());
+        expect(payload.proof !== null && payload.proof !== undefined).to.be.true;
       });
 
-      it('If only the proof attribute is used, the alg header MUST be set to none..', async () => {
-        // FIXME: TODO: how to trigger this test case?
-//        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
-//        const jwtResult = cryptoFactory.constructJws(jwtBase64);
-//        expect(jwtResult.isContentWellFormedToken()).to.be.true;
-//
-//        expect(jwtResult.signature === null || jwtResult.signature === undefined).to.be.true;
-//        const payload = JSON.parse(jwtResult.getPayload());
-//        expect(payload.proof !== null && payload.proof !== undefined).to.be.true;
-//        const { alg } = jwtResult.getHeader('alg')
-//        expect(alg).to.be.a('string')
+      it('If only the proof attribute is used, the alg header MUST be set to none.', async () => {
+        const jwtBase64 = await util.generateJwt('example-016-jwt-with-embedded-proof.jsonld', getGeneratorOptions(OPTIONS.JWT_NO_JWS));
+        const jwtResult = cryptoFactory.constructJws(jwtBase64);
+        expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+        expect(jwtResult.signature === null || jwtResult.signature === undefined || jwtResult.signature === "").to.be.true;
+        const { alg } = jwtResult.getHeader('alg')
+        expect(alg).to.be.a('string')
       });
 
      it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -136,7 +160,7 @@ describe('JWT (optional)', () => {
      });
 
      it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt-no-exp.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt-no-exp.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -145,7 +169,7 @@ describe('JWT (optional)', () => {
      });
 
      it('iss MUST represent the issuer property.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -155,7 +179,7 @@ describe('JWT (optional)', () => {
      });
 
      it('iat MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -165,7 +189,7 @@ describe('JWT (optional)', () => {
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -175,7 +199,7 @@ describe('JWT (optional)', () => {
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt-no-jti.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt-no-jti.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -184,7 +208,7 @@ describe('JWT (optional)', () => {
      });
 
      it('sub MUST represent the id property contained in the verifiable credential subject.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -203,7 +227,7 @@ describe('JWT (optional)', () => {
 //     });
 
      it('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -213,7 +237,7 @@ describe('JWT (optional)', () => {
      });
 
      it('Additional claims MUST be added to the credentialSubject property of the JWT.', async () => {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', options);
+       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -227,9 +251,8 @@ describe('JWT (optional)', () => {
   });
 
   describe('A verifiable presentation ...', () => {
-
     it('vp MUST be present in a JWT verifiable presentation.', async () => {
-      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', options);
+      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
@@ -237,5 +260,4 @@ describe('JWT (optional)', () => {
       expect(payload.vp !== null && payload.vp !== undefined).to.be.true;
     });
   });
-
 });

@@ -24,9 +24,14 @@
    // The arguments that should be passed to the VC generator.
    "generatorOptions":"",
 
-   // The arguments that should be passed to the VC generator when testing JWTs. Implementers can choose between
-   // RS256 and ES256K JWS. The jwt parameter will be provided as --jwt and contains the base64 encoded
-   // JSON structure:
+   // The following JSON object is used to configure JWT test cases. The test cases will derive the following
+   // parameters from the JSON object:
+   // --jwt <base64-encoded-keys> ... generators can choose between RS256 and ES256K private keys to generate JWS
+   //                                 for verifiable credentials and presentations. <base6e-encoded-keys> contains
+   //                                 a base64encoded JSON object containing es256kPrivateKeyJwk and rs256PrivateKeyJwk.
+   // --jwt-aud <aud>             ... generators have to use <aud> as the aud attribute in all JWTs
+   // --jwt-no-jws                ... generators have to suppress the JWS although keys are present
+   // --jwt-presentation          ... generators have to generate a verifiable presentation
    "jwt":{
       // according to https://tools.ietf.org/html/rfc7518
       "es256kPrivateKeyJwk":{
