@@ -184,7 +184,7 @@ describe('JWT (optional)', () => {
 
        const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.iat !== null && payload.iat !== undefined).to.be.true;
-       expect(payload.exp).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
+       expect(payload.iat).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
