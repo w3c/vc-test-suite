@@ -35,28 +35,28 @@ JWT tests belong to any of the following three categories:
 1. generate (encode) a JWT W3C verifiable credential from a JSON-LD W3C credential (.jsonld file). The 
 following parameters are used:
 
-| Cmd Line Parameter             |   
-| ------------------------------ | 
-| `--jwt <base64-encoded-keys>`  | 
-| `--jwt-aud <aud>`              | 
-| `--jwt-no-jws`                 | 
+| Cmd Line Parameter             | Optional |
+| ------------------------------ | ---------
+| `--jwt <base64-encoded-keys>`  | no
+| `--jwt-aud <aud>`              | no
+| `--jwt-no-jws`                 | yes
 
 2. generate (encode) a JWT W3C verifiable presentation from a JSON-LD W3C credential (.jsonld file).
 The generator will have to create a JWT verifiable credential first and then put the verifiable credential into 
 the JWT verifiable presentation (as shown in [Example 31](https://w3c.github.io/vc-data-model/#example-31-verifiable-presentation-using-jwt-compact-serialization-non-normative)).
 The following command line parameter are used:
 
-| Cmd Line Parameter             |   
-| ------------------------------ | 
-| `--jwt <base64-encoded-keys>`  | 
-| `--jwt-aud <aud>`              |
-| `--jwt-presentation`           |
+| Cmd Line Parameter             | Optional |  
+| ------------------------------ | ---------
+| `--jwt <base64-encoded-keys>`  | no
+| `--jwt-aud <aud>`              | no
+| `--jwt-presentation`           | yes
 
 3. generate (decode) a JSON-LD W3C credential from a JWT W3C verifiable credential (.jwt).
 
-| Cmd Line Parameter             |  
-| ------------------------------ |
-| `--jwt-decode`                 |
+| Cmd Line Parameter             | Optional |
+| ------------------------------ | ---------
+| `--jwt-decode`                 | no
 
 **NOTE**: the command line parameters will be provided by the JWT tests based on the configuration in `config.json`. 
 See `config.json.example` for all possible JWT specific config parameters, and see `config.json.jwt.example` for an example 
