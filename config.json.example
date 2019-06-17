@@ -32,6 +32,8 @@
    // --jwt-aud <aud>             ... generators have to use <aud> as the aud attribute in all JWTs
    // --jwt-no-jws                ... generators have to suppress the JWS although keys are present
    // --jwt-presentation          ... generators have to generate a verifiable presentation
+   // --jwt-decode                ... generators have to generate a credential from a JWT verifiable credential. The
+   //                                 input file will be a JWT instead of a JSON-LD file.
    "jwt":{
       // according to https://tools.ietf.org/html/rfc7518
       "es256kPrivateKeyJwk":{
