@@ -4,7 +4,6 @@ const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
 const jwt = require('@decentralized-identity/did-auth-jose')
-//const base64url = require('base64url')
 
 // configure chai
 const should = chai.should();
@@ -230,13 +229,12 @@ describe.only('JWT (optional)', () => {
   describe('A verifiable presentation ...', () => {
 
     it('vp MUST be present in a JWT verifiable presentation.', async () => {
-       // FIXME: TODO: how to test presentations? what params should be passed on to generator?
-//      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', options);
-//      const jwtResult = cryptoFactory.constructJws(jwtBase64);
-//      expect(jwtResult.isContentWellFormedToken()).to.be.true;
-//
-//      const payload = JSON.parse(jwtResult.getPayload());
-//      expect(payload.vp !== null && payload.vp !== undefined).to.be.true;
+      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', options);
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.vp !== null && payload.vp !== undefined).to.be.true;
     });
   });
 
