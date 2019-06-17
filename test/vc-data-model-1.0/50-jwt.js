@@ -40,7 +40,7 @@ async function prepareGeneratorOptions() {
   options.generatorOptions += ` --jwt-aud ${aud}`
 }
 
-describe.only('JWT (optional)', () => {
+describe('JWT (optional)', () => {
   prepareGeneratorOptions();
 
   describe('A verifiable credential ...', () => {
