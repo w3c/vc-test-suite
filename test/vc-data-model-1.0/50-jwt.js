@@ -68,7 +68,7 @@ function getGeneratorOptions(additionalOptions = '') {
   return options;
 }
 
-describe.only('JWT (optional)', () => {
+describe('JWT (optional)', () => {
   setGeneratorKeys();
 
   describe('A verifiable credential ...', () => {
