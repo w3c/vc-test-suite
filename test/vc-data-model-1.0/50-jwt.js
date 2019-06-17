@@ -18,7 +18,8 @@ const OPTIONS = {
     JWT: '--jwt',
     JWT_NO_JWS: '--jwt-no-jws',
     JWT_PRESENTATION: '--jwt-presentation',
-    JWT_AUD: '--jwt-aud'
+    JWT_AUD: '--jwt-aud',
+    JWT_DECODE: '--jwt-decode'
 }
 
 // jwt specific generator options
@@ -247,6 +248,50 @@ describe('JWT (optional)', () => {
        expect(payload.vc.credentialSubject.alumniOf !== null && payload.vc.credentialSubject.alumniOf !== undefined).to.be.true;
        expect(payload.vc.credentialSubject.alumniOf).to.equal('Example University');
      });
+    });
+  });
+
+  describe('To decode a JWT to a standard verifiable credential, the following transformation MUST be performed...', () => {
+
+    it('Add the content from the vc property to the new JSON object.', async () => {
+      const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+      expect(doc['@context'] !== null && doc['@context'] !== undefined).to.be.true;
+      expect(doc.type !== null && doc.type !== undefined).to.be.true;
+      expect(doc.credentialSubject !== null && doc.credentialSubject !== undefined).to.be.true;
+    });
+
+    describe('To transform the JWT specific headers and claims, the following MUST be done:', () => {
+      it('If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, '
+       + 'and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.', async () => {
+        const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+        expect(doc.expirationDate !== null && doc.expirationDate !== undefined).to.be.true;
+        expect(Date.parse(doc.expirationDate)).to.be.equal(1573029723*1000);
+      });
+
+      it('If iss is present, the value MUST be used to set the issuer property of the new JSON object.', async () => {
+        const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+        expect(doc['@context'] !== null && doc['@context'] !== undefined).to.be.true;
+        expect(doc.issuer !== null && doc.issuer !== undefined).to.be.true;
+        expect(doc.issuer).to.be.equal('did:example:abfe13f712120431c276e12ecab');
+      });
+
+      it('If iat is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.', async () => {
+        const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+        expect(doc.issuanceDate !== null && doc.issuanceDate !== undefined).to.be.true;
+        expect(Date.parse(doc.issuanceDate)).to.be.equal(1541493724*1000);
+      });
+
+      it('If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.', async () => {
+        const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+        expect(doc.credentialSubject.id !== null && doc.credentialSubject.id !== undefined).to.be.true;
+        expect(doc.credentialSubject.id).to.be.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
+      });
+
+      it('If jti is present, the value MUST be used to set the value of the id property of the new JSON object.', async () => {
+        const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
+        expect(doc.id !== null && doc.id !== undefined).to.be.true;
+        expect(doc.id).to.be.equal('http://example.edu/credentials/3732');
+      });
     });
   });
 
