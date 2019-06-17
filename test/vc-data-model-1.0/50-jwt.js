@@ -164,7 +164,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = JSON.parse(jwtResult.getPayload());
-       expect(payload.exp === null || payload.exp === undefined).to.be.true;
+       expect(payload.exp === null || typeof payload.exp === 'undefined').to.be.true;
      });
 
      it('iss MUST represent the issuer property.', async () => {
@@ -203,7 +203,7 @@ describe('JWT (optional)', () => {
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = JSON.parse(jwtResult.getPayload());
-       expect(payload.jti === null || payload.jti === undefined).to.be.true;
+       expect(payload.jti === null || typeof payload.jti === 'undefined').to.be.true;
      });
 
      it('sub MUST represent the id property contained in the verifiable credential subject.', async () => {
