@@ -132,7 +132,7 @@ describe.only('JWT (optional)', () => {
 
        const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.exp !== null && payload.exp !== undefined).to.be.true;
-       // FIXME: TODO: check if exp matches expirationDate
+       expect(payload.exp).to.equal(new Date('2020-01-01T19:23:24Z').getTime() / 1000);
      });
 
      it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.', async () => {
@@ -161,7 +161,7 @@ describe.only('JWT (optional)', () => {
 
        const payload = JSON.parse(jwtResult.getPayload());
        expect(payload.iat !== null && payload.iat !== undefined).to.be.true;
-       // FIXME: TODO: check if iat matches issuanceDate
+       expect(payload.exp).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
