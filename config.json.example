@@ -25,7 +25,7 @@
    "generatorOptions":"",
 
    // The arguments that should be passed to the VC generator when testing JWTs. Implementers can choose between
-   // RS256 and ES256K JWS. The jwt parameter will be provided as -jwt, --jwt and contains the base64 encoded
+   // RS256 and ES256K JWS. The jwt parameter will be provided as --jwt and contains the base64 encoded
    // JSON structure:
    "jwt":{
       // according to https://tools.ietf.org/html/rfc7518
