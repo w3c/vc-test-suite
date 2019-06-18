@@ -6,6 +6,8 @@ Any conforming implementation MUST pass all tests in the test suite.
 
 There are multiple test suites, each of which is detailed below.
 
+You can review [the current draft implementation report](https://w3c.github.io/vc-test-suite/implementations/).
+
 ## Verifiable Claims Data Model 1.0 Test Suite
 
 This test suite will check any application that generates [Verifiable Credential
