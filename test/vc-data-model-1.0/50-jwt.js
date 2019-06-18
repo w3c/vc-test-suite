@@ -177,14 +177,14 @@ describe('JWT (optional)', () => {
        expect(payload.iss).to.equal('https://example.edu/issuers/14');
      });
 
-     it('iat MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).', async () => {
+     it('nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).', async () => {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
        const payload = JSON.parse(jwtResult.getPayload());
-       expect(payload.iat !== null && payload.iat !== undefined).to.be.true;
-       expect(payload.iat).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
+       expect(payload.nbf !== null && payload.nbf !== undefined).to.be.true;
+       expect(payload.nbf).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
      });
 
      it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
@@ -273,7 +273,7 @@ describe('JWT (optional)', () => {
         expect(doc.issuer).to.be.equal('did:example:abfe13f712120431c276e12ecab');
       });
 
-      it('If iat is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.', async () => {
+      it('If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.', async () => {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc.issuanceDate !== null && doc.issuanceDate !== undefined).to.be.true;
         expect(Date.parse(doc.issuanceDate)).to.be.equal(1541493724*1000);
