@@ -135,7 +135,8 @@ describe('JWT (optional)', () => {
 
         expect(jwtResult.signature === null || (typeof jwtResult.signature === 'undefined') || /\S/.test(jwtResult.signature) === false).to.be.true;
         const payload = JSON.parse(jwtResult.getPayload());
-        expect(payload.proof !== null && payload.proof !== undefined).to.be.true;
+        expect(payload.vc !== null && payload.vc !== undefined).to.be.true;
+        expect(payload.vc.proof !== null && payload.vc.proof !== undefined).to.be.true;
       });
 
       it('If only the proof attribute is used, the alg header MUST be set to none.', async () => {
