@@ -257,8 +257,8 @@
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
       "duration": 245,
       "currentRetry": 0,
       "err": {
@@ -273,15 +273,15 @@
       }
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 224,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "duration": 218,
       "currentRetry": 0,
       "err": {}
@@ -333,8 +333,8 @@
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
       "duration": 218,
       "currentRetry": 0,
       "err": {
@@ -349,15 +349,15 @@
       }
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 220,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "duration": 220,
       "currentRetry": 0,
       "err": {}
@@ -1385,8 +1385,8 @@
       }
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
       "duration": 245,
       "currentRetry": 0,
       "err": {
@@ -1433,8 +1433,8 @@
       }
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
       "duration": 218,
       "currentRetry": 0,
       "err": {
@@ -1921,15 +1921,15 @@
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 224,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "duration": 218,
       "currentRetry": 0,
       "err": {}
@@ -1949,15 +1949,15 @@
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 220,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "duration": 220,
       "currentRetry": 0,
       "err": {}
