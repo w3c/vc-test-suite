@@ -190,12 +190,6 @@ describe('Basic Documents', () => {
       expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
     });
 
-    it('MUST be present (negative - missing)', async () => {
-      await expect(util.generate(
-        'example-5-bad-proof.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-    });
-
     it('MUST include specific method using the type property', async () => {
       const doc = await util.generate('example-5.jsonld', generatorOptions);
 
