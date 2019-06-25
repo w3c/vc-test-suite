@@ -1,3 +1,6 @@
+/*!
+ * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ */
 /*global describe, it*/
 const config = require('../../config.json');
 const chai = require('chai');

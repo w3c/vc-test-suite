@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ */
+
 /**
  * Generates the Verifiable Credentials Data Model Implementation Report given
  * a set of *-report.json files.
