@@ -10,7 +10,8 @@ const { hasType } = util;
 
 // setup constants
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
-const iso8601Regex = /^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]+)?(Z)?$/
+
+// RFC3339regex
 
 // configure chai
 const should = chai.should();
@@ -163,19 +164,19 @@ describe('Basic Documents', () => {
         .to.be.rejectedWith(Error);
     });
 
-    it('MUST be an ISO8601 datetime', async () => {
+    it('MUST be an RFC3339 datetime', async () => {
       const doc = await util.generate('example-4.jsonld', generatorOptions);
       doc.issuanceDate.should.be.a('string');
-      expect(doc.issuanceDate).to.match(iso8601Regex);
+      expect(doc.issuanceDate).to.match(util.RFC3339regex);
     });
 
-    it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
+    it('MUST be an RFC3339 datetime (negative - RFC3339)', async () => {
       await expect(util.generate(
         'example-4-bad-issuanceDate.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
-    it('MUST be an ISO8601 datetime (negative - Array)', async () => {
+    it('MUST be an RFC3339 datetime (negative - Array)', async () => {
       await expect(util.generate(
         'example-4-bad-issuanceDate-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
@@ -217,19 +218,19 @@ describe('Basic Documents', () => {
 
   describe('`expirationDate` property', () => {
 
-    it('MUST be an ISO8601 datetime', async () => {
+    it('MUST be an RFC3339 datetime', async () => {
       const doc = await util.generate('example-6.jsonld', generatorOptions);
       doc.expirationDate.should.be.a('string');
-      expect(doc.expirationDate).to.match(iso8601Regex);
+      expect(doc.expirationDate).to.match(util.RFC3339regex);
     });
 
-    it('MUST be an ISO8601 datetime (negative - ISO8601)', async () => {
+    it('MUST be an RFC3339 datetime (negative - RFC3339)', async () => {
       await expect(util.generate(
         'example-6-bad-expirationDate.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
-    it('MUST be an ISO8601 datetime (negative - Array)', async () => {
+    it('MUST be an RFC3339 datetime (negative - Array)', async () => {
       await expect(util.generate(
         'example-6-bad-cardinality.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);

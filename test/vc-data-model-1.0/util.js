@@ -70,10 +70,14 @@ function hasType(doc, expectedType) {
   return type.some(el => el === expectedType);
 }
 
+// https://gist.github.com/marcelotmelo/b67f58a08bee6c2468f8#file-rfc-3339-regex
+const RFC3339regex = /^(\d+)-(0[1-9]|1[012])-(0[1-9]|[12]\d|3[01])\s([01]\d|2[0-3]):([0-5]\d):([0-5]\d|60)(\.\d+)?(([Zz])|([\+|\-]([01]\d|2[0-3])))$/
+
 module.exports = {
   generate,
   generatePresentation,
   generateJwt,
   generatePresentationJwt,
-  hasType
+  hasType,
+  RFC3339regex
 };
