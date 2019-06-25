@@ -1,3 +1,6 @@
+/*!
+ * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ */
 /*global describe, it*/
 const config = require('../../config.json');
 const chai = require('chai');
@@ -83,8 +86,8 @@ describe('JWT (optional)', () => {
     describe('To encode a verifiable credential as a JWT, specific properties introduced by this' +
              'specification MUST be either 1) encoded as standard JOSE header parameters, ' +
              '2) encoded as registered JWT claim names, or 3) contained in the JWS signature part...', () => {
-              
-      it('If no explicit rule is specified, properties are encoded in the same way as with a standard' + 
+
+      it('If no explicit rule is specified, properties are encoded in the same way as with a standard' +
          'verifiable credential, and are added to the vc property of the JWT.', async () => {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
@@ -95,7 +98,7 @@ describe('JWT (optional)', () => {
         expect(payload.vc.type !== null && payload.vc.type !== undefined).to.be.true;
         expect(payload.vc.type).to.equal('VerifiableCredential');
        });
-        
+
       it('if typ is present, it MUST be set to JWT.', async () => {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
@@ -123,7 +126,7 @@ describe('JWT (optional)', () => {
         // if (alg === 'RS256') {
         //   payload = await jwtResult.verifySignature(ecPublicKey);
         // } else {
-        //   payload = await jwtResult.verifySignature(rsaPublicKey);  
+        //   payload = await jwtResult.verifySignature(rsaPublicKey);
         // }
         // expect(payload !== null).to.be.true;
       });

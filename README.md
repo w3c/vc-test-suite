@@ -85,3 +85,7 @@ https://github.com/w3c/vc-test-suite/
 * [Data Model](https://github.com/w3c/vc-data-model)
 * [Implementation Guideline](https://github.com/w3c/vc-imp-guide)
 * [Use Cases](https://github.com/w3c/vc-use-cases)
+
+## License
+
+[New BSD License (3-clause)](LICENSE) © Digital Bazaar
