@@ -69,7 +69,7 @@ JWT configuration.
 3. Modify `config.json` for your run.
 4. `npm run report`
 5. `mv implementations/report.json implementations/{YOUR_IMPLEMENTATION}-report.json`
-6. `git add implementations/{YOUR_IMPLEMENTATION}-results.json` 
+6. `git add implementations/{YOUR_IMPLEMENTATION}-report.json` 
 7. Submit a pull request for your implementation.
 8. `cd implementations/ && node generate.js`
 
