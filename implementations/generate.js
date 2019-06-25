@@ -19,12 +19,17 @@ files.forEach((file) => {
     path.join(__dirname, file)), 'utf-8');
   allResults[implementation] = {};
 
+  console.log('Generating report for:', implementation);
+
   // process each test, noting the result
   results.tests.forEach((test) => {
+    const hasErrors = !test.err || Object.keys(test.err).length === 0;
     allResults[implementation][test.fullTitle] =
-      (Object.keys(test.err).length === 0) ? 'success' : 'failure';
+      hasErrors ? 'success' : 'failure';
 
-    if(results.pending.find(skipped => skipped.fullTitle === test.fullTitle)) {
+    const skippedTests = results.pending || [];
+
+    if(skippedTests.find(skipped => skipped.fullTitle === test.fullTitle)) {
       allResults[implementation][test.fullTitle] = 'unimplemented';
     }
 
