@@ -14,15 +14,22 @@ chai.use(require('chai-as-promised'));
 const generatorOptions = config;
 
 // https://w3c.github.io/vc-data-model/#terms-of-use
-describe('Terms of Use (optional)', () => {
+describe('Terms of Use (optional)', function() {
 
-  it.skip('MUST support prohibiting Archival', async () => {
+  before(function() {
+    const notSupported = generatorOptions.sectionsNotSupported || [];
+    if(notSupported.includes('tou')) {
+      this.skip();
+    }
   });
 
-  it.skip('MUST support prohibiting non-subject Presentation', async () => {
+  it.skip('MUST support prohibiting Archival', async function() {
   });
 
-  it.skip('MUST support prohibiting 3rd Party Correlation', async () => {
+  it.skip('MUST support prohibiting non-subject Presentation', async function() {
+  });
+
+  it.skip('MUST support prohibiting 3rd Party Correlation', async function() {
   });
 
 });

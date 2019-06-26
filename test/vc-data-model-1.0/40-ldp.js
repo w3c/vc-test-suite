@@ -12,24 +12,30 @@ const should = chai.should();
 chai.use(require('chai-as-promised'));
 const generatorOptions = config;
 
-describe('Linked Data Proofs (optional)', () => {
+describe('Linked Data Proofs (optional)', function() {
 
-  // JSON Web Tokens (JWTs) https://w3c.github.io/vc-data-model/#json-web-token
-  describe('Linked Data Signature', () => {
+  describe('Linked Data Signature', function() {
 
-    it.skip('MUST verify', async () => {
+    before(function() {
+      const notSupported = generatorOptions.sectionsNotSupported || [];
+      if(notSupported.includes('ldp')) {
+        this.skip();
+      }
     });
 
-    it.skip('MUST verify (negative)', async () => {
+    it.skip('MUST verify', async function() {
     });
 
-    it.skip('key MUST NOT be suspended, revoked, or expired', async () => {
+    it.skip('MUST verify (negative)', async function() {
     });
 
-    it.skip('key MUST NOT be suspended, revoked, or expired (negative)', async () => {
+    it.skip('key MUST NOT be suspended, revoked, or expired', async function() {
     });
 
-    it.skip('proofPurpose MUST exist and be "credentialIssuance"', async () => {
+    it.skip('key MUST NOT be suspended, revoked, or expired (negative)', async function() {
+    });
+
+    it.skip('proofPurpose MUST exist and be "credentialIssuance"', async function() {
     });
   });
 });
