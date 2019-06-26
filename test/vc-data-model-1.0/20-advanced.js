@@ -16,27 +16,34 @@ chai.use(require('chai-as-promised'));
 
 const generatorOptions = config;
 
-describe('Advanced Documents', () => {
+describe('Advanced Documents', function() {
+
+  before(function() {
+    const notSupported = generatorOptions.sectionsNotSupported || [];
+    if(notSupported.includes('advanced')) {
+      this.skip();
+    }
+  });
 
   // https://w3c.github.io/vc-data-model/#semantic-interoperability
-  describe('Extensibility - Semantic Interoperability', () => {
+  describe('Extensibility - Semantic Interoperability', function() {
 
-    describe('JSON-based processor', () => {
+    describe('JSON-based processor', function() {
       // TODO: https://github.com/w3c/vc-data-model/issues/371
-      it.skip('MUST process the `@context` property; ensure credential `type` value exists', async () => {});
-      it.skip('expected `type` values MUST be in expected order', async () => {});
-      it.skip('expected order MUST be defined by human-readable extension specification', async () => {});
+      it.skip('MUST process the `@context` property; ensure credential `type` value exists', async function() {});
+      it.skip('expected `type` values MUST be in expected order', async function() {});
+      it.skip('expected order MUST be defined by human-readable extension specification', async function() {});
     });
 
-    describe ('JSON-LD-based processor', () => {
+    describe ('JSON-LD-based processor', function() {
       // TODO: currently, JSON-LD processors would not trigger this error; needs discussion
-      it.skip('MUST produce an error when a JSON-LD context redefines any term in the active context.', async () => {});
+      it.skip('MUST produce an error when a JSON-LD context redefines any term in the active context.', async function() {});
     });
   });
 
   // https://w3c.github.io/vc-data-model/#data-schemas
-  describe('Data Schemas', () => {
-    it('`credentialSchema` MUST provide one or more data schemas', async () => {
+  describe('Data Schemas', function() {
+    it('`credentialSchema` MUST provide one or more data schemas', async function() {
       // test that `credentialSchema` is either an array or an object
       const doc = await util.generate('example-009.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.credentialSchema) &&
@@ -45,9 +52,9 @@ describe('Advanced Documents', () => {
       expect(isArray || isObject).to.be.true;
     });
 
-    describe('each object within `credentialSchema`...', () => {
+    describe('each object within `credentialSchema`...', function() {
       // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async () => {
+      it('MUST specify a `type` property with a valid value', async function() {
         // test for `type` property existence
         const doc = await util.generate('example-010.jsonld', generatorOptions);
         should.exist(doc.credentialSchema);
@@ -59,11 +66,11 @@ describe('Advanced Documents', () => {
         }
       });
 
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
         // test for `type`'s value existence in the active context / term dictionary
       });
 
-      it('MUST specify an `id` property', async () => {
+      it('MUST specify an `id` property', async function() {
         // test for `id` property existence
         const doc = await util.generate('example-010.jsonld', generatorOptions);
         should.exist(doc.credentialSchema);
@@ -75,7 +82,7 @@ describe('Advanced Documents', () => {
         }
       });
 
-      it('value of `id` MUST be a URI identifying a schema file', async () => {
+      it('value of `id` MUST be a URI identifying a schema file', async function() {
         // test that `id`'s value is a valid URI
         // TODO: https://github.com/w3c/vc-data-model/issues/381
         const doc = await util.generate('example-010.jsonld', generatorOptions);
@@ -89,8 +96,8 @@ describe('Advanced Documents', () => {
   });
 
   // https://w3c.github.io/vc-data-model/#refreshing
-  describe('Refreshing', () => {
-    it('`refreshService` MUST provide one or more refresh services', async () => {
+  describe('Refreshing', function() {
+    it('`refreshService` MUST provide one or more refresh services', async function() {
       // test that `refreshService` is either an array or an object
       const doc = await util.generate('example-011.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.refreshService) &&
@@ -99,9 +106,9 @@ describe('Advanced Documents', () => {
       expect(isArray || isObject).to.be.true;
     });
 
-    describe('each object within `refreshService`...', () => {
+    describe('each object within `refreshService`...', function() {
       // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async () => {
+      it('MUST specify a `type` property with a valid value', async function() {
         // test for `type` property existence
         const doc = await util.generate('example-011.jsonld', generatorOptions);
         const services = [].concat(doc.refreshService);
@@ -111,11 +118,11 @@ describe('Advanced Documents', () => {
         }
       });
 
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
         // test for `type`'s value existence in the active context / term dictionary
       });
 
-      it('MUST specify an `id` property', async () => {
+      it('MUST specify an `id` property', async function() {
         // test for `serviceEndpoint` property existence
         const doc = await util.generate('example-011.jsonld', generatorOptions);
         const services = [].concat(doc.refreshService);
@@ -125,7 +132,7 @@ describe('Advanced Documents', () => {
         }
       });
 
-      it('value of `id` MUST be a URL identifying a service endpoint', async () => {
+      it('value of `id` MUST be a URL identifying a service endpoint', async function() {
         // test that the `id`'s value is a valid URL
         // (possibly) attempt to dereference the service endpoint to validate it's "locator-ness" (i.e. URL vs. URI)
         const doc = await util.generate('example-011.jsonld', generatorOptions);
@@ -142,9 +149,9 @@ describe('Advanced Documents', () => {
   // https://w3c.github.io/vc-data-model/#mode-of-operation
 
   // https://w3c.github.io/vc-data-model/#terms-of-use
-  describe('Terms of Use', () => {
+  describe('Terms of Use', function() {
     // `termsOfUse` is optional, so these should only be run if that term is present
-    it('`termsOfUse` MUST provide one or more ToU objects', async () => {
+    it('`termsOfUse` MUST provide one or more ToU objects', async function() {
       // test that `termsOfUse` is either an array or an object
       const doc = await util.generate('example-012.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.termsOfUse) &&
@@ -153,9 +160,9 @@ describe('Advanced Documents', () => {
       expect(isArray || isObject).to.be.true;
     });
 
-    describe('each object within `termsOfUse`...', () => {
+    describe('each object within `termsOfUse`...', function() {
       // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async () => {
+      it('MUST specify a `type` property with a valid value', async function() {
         // test for `type` property existence
         const doc = await util.generate('example-012.jsonld', generatorOptions);
         const tous = [].concat(doc.termsOfUse);
@@ -166,7 +173,7 @@ describe('Advanced Documents', () => {
       });
       // TODO: this requirement is not expressed inline here, but inherits from
       // the general definition mechanism of `type` throughout the document
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
         // test for `type`'s value existence in the active context / term dictionary
       });
       // TODO: contents of a `termsOfUse` member is untestable because it is undefined
@@ -174,9 +181,9 @@ describe('Advanced Documents', () => {
   });
 
   // https://w3c.github.io/vc-data-model/#evidence
-  describe('Evidence', () => {
+  describe('Evidence', function() {
     // `evidence` is optional, so these should only be run if that term is present
-    it('`evidence` MUST provide one or more evidence objects', async () => {
+    it('`evidence` MUST provide one or more evidence objects', async function() {
       // test that `evidence` is either an array or an object
       const doc = await util.generate('example-013.jsonld', generatorOptions);
       const isArray = Array.isArray(doc.evidence) &&
@@ -185,9 +192,9 @@ describe('Advanced Documents', () => {
       expect(isArray || isObject).to.be.true;
     });
 
-    describe('each object within `evidence`...', () => {
+    describe('each object within `evidence`...', function() {
       // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async () => {
+      it('MUST specify a `type` property with a valid value', async function() {
         // test for `type` property existence
         const doc = await util.generate('example-013.jsonld', generatorOptions);
         const evidence = [].concat(doc.evidence);
@@ -199,7 +206,7 @@ describe('Advanced Documents', () => {
 
       // TODO: this requirement is not expressed inline here, but inherits from
       // the general definition mechanism of `type` throughout the document
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async () => {
+      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
         // test for `type`'s value existence in the active context / term dictionary
       });
       // TODO: contents of a `evidence` are yet to be defined: https://w3c.github.io/vc-data-model/#h-issue-6

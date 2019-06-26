@@ -70,12 +70,19 @@ function getGeneratorOptions(additionalOptions = '') {
   return options;
 }
 
-describe('JWT (optional)', () => {
-  setGeneratorKeys();
+describe('JWT (optional)', function() {
+  before(function() {
+    const notSupported = config.sectionsNotSupported || [];
+    if(notSupported.includes('jwt')) {
+      return this.skip();
+    }
 
-  describe('A verifiable credential ...', () => {
+    setGeneratorKeys();
+  });
 
-    it('vc MUST be present in a JWT verifiable credential.', async () => {
+  describe('A verifiable credential ...', function() {
+
+    it('vc MUST be present in a JWT verifiable credential.', async function() {
       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
       const jwtResult = new jwt.JwsToken(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -85,10 +92,10 @@ describe('JWT (optional)', () => {
 
     describe('To encode a verifiable credential as a JWT, specific properties introduced by this' +
              'specification MUST be either 1) encoded as standard JOSE header parameters, ' +
-             '2) encoded as registered JWT claim names, or 3) contained in the JWS signature part...', () => {
+             '2) encoded as registered JWT claim names, or 3) contained in the JWS signature part...', function() {
 
       it('If no explicit rule is specified, properties are encoded in the same way as with a standard' +
-         'verifiable credential, and are added to the vc property of the JWT.', async () => {
+         'verifiable credential, and are added to the vc property of the JWT.', async function() {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -99,7 +106,7 @@ describe('JWT (optional)', () => {
         expect(payload.vc.type).to.equal('VerifiableCredential');
        });
 
-      it('if typ is present, it MUST be set to JWT.', async () => {
+      it('if typ is present, it MUST be set to JWT.', async function() {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -111,7 +118,7 @@ describe('JWT (optional)', () => {
         }
       });
 
-      it('alg MUST be used for RSA and ECDSA-based digital signatures.', async () => {
+      it('alg MUST be used for RSA and ECDSA-based digital signatures.', async function() {
         const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -131,7 +138,7 @@ describe('JWT (optional)', () => {
         // expect(payload !== null).to.be.true;
       });
 
-      it('If no JWS is present, a proof property MUST be provided.', async () => {
+      it('If no JWS is present, a proof property MUST be provided.', async function() {
         const jwtBase64 = await util.generateJwt('example-016-jwt-with-embedded-proof.jsonld', getGeneratorOptions(OPTIONS.JWT_NO_JWS));
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -142,7 +149,7 @@ describe('JWT (optional)', () => {
         expect(payload.vc.proof !== null && payload.vc.proof !== undefined).to.be.true;
       });
 
-      it('If only the proof attribute is used, the alg header MUST be set to none.', async () => {
+      it('If only the proof attribute is used, the alg header MUST be set to none.', async function() {
         const jwtBase64 = await util.generateJwt('example-016-jwt-with-embedded-proof.jsonld', getGeneratorOptions(OPTIONS.JWT_NO_JWS));
         const jwtResult = cryptoFactory.constructJws(jwtBase64);
         expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -152,7 +159,7 @@ describe('JWT (optional)', () => {
         expect(alg).to.be.a('string')
       });
 
-     it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).', async () => {
+     it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -162,7 +169,7 @@ describe('JWT (optional)', () => {
        expect(payload.exp).to.equal(new Date('2020-01-01T19:23:24Z').getTime() / 1000);
      });
 
-     it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.', async () => {
+     it('exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt-no-exp.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -171,7 +178,7 @@ describe('JWT (optional)', () => {
        expect(payload.exp === null || typeof payload.exp === 'undefined').to.be.true;
      });
 
-     it('iss MUST represent the issuer property.', async () => {
+     it('iss MUST represent the issuer property.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -181,7 +188,7 @@ describe('JWT (optional)', () => {
        expect(payload.iss).to.equal('https://example.edu/issuers/14');
      });
 
-     it('nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).', async () => {
+     it('nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -191,7 +198,7 @@ describe('JWT (optional)', () => {
        expect(payload.nbf).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
      });
 
-     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async () => {
+     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -201,7 +208,7 @@ describe('JWT (optional)', () => {
        expect(payload.jti).to.equal('http://example.edu/credentials/58473');
      });
 
-     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected', async () => {
+     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt-no-jti.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -210,7 +217,7 @@ describe('JWT (optional)', () => {
        expect(payload.jti === null || typeof payload.jti === 'undefined').to.be.true;
      });
 
-     it('sub MUST represent the id property contained in the verifiable credential subject.', async () => {
+     it('sub MUST represent the id property contained in the verifiable credential subject.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -220,7 +227,7 @@ describe('JWT (optional)', () => {
        expect(payload.sub).to.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
      });
 
-//     it('sub MUST represent the id property contained in the verifiable credential subject -- negative, no sub expected.', async () => {
+//     it('sub MUST represent the id property contained in the verifiable credential subject -- negative, no sub expected.', async function() {
 //       const jwtBase64 = await util.generateJwt('example-016-jwt-no-sub.jsonld', generatorOptions);
 //       const jwtResult = new jwt.JwsToken(jwtBase64);
 //       expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -229,7 +236,7 @@ describe('JWT (optional)', () => {
 //       expect(payload.sub === null).to.be.true;
 //     });
 
-     it('aud MUST represent the subject of the consumer of the verifiable presentation.', async () => {
+     it('aud MUST represent the subject of the consumer of the verifiable presentation.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -239,7 +246,7 @@ describe('JWT (optional)', () => {
        expect(payload.aud).to.equal(aud);
      });
 
-     it('Additional claims MUST be added to the credentialSubject property of the JWT.', async () => {
+     it('Additional claims MUST be added to the credentialSubject property of the JWT.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -253,43 +260,43 @@ describe('JWT (optional)', () => {
     });
   });
 
-  describe('To decode a JWT to a standard verifiable credential, the following transformation MUST be performed...', () => {
+  describe('To decode a JWT to a standard verifiable credential, the following transformation MUST be performed...', function() {
 
-    it('Add the content from the vc property to the new JSON object.', async () => {
+    it('Add the content from the vc property to the new JSON object.', async function() {
       const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
       expect(doc['@context'] !== null && doc['@context'] !== undefined).to.be.true;
       expect(doc.type !== null && doc.type !== undefined).to.be.true;
       expect(doc.credentialSubject !== null && doc.credentialSubject !== undefined).to.be.true;
     });
 
-    describe('To transform the JWT specific headers and claims, the following MUST be done:', () => {
+    describe('To transform the JWT specific headers and claims, the following MUST be done:', function() {
       it('If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, '
-       + 'and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.', async () => {
+       + 'and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.', async function() {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc.expirationDate !== null && doc.expirationDate !== undefined).to.be.true;
         expect(Date.parse(doc.expirationDate)).to.be.equal(1573029723*1000);
       });
 
-      it('If iss is present, the value MUST be used to set the issuer property of the new JSON object.', async () => {
+      it('If iss is present, the value MUST be used to set the issuer property of the new JSON object.', async function() {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc['@context'] !== null && doc['@context'] !== undefined).to.be.true;
         expect(doc.issuer !== null && doc.issuer !== undefined).to.be.true;
         expect(doc.issuer).to.be.equal('did:example:abfe13f712120431c276e12ecab');
       });
 
-      it('If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.', async () => {
+      it('If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.', async function() {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc.issuanceDate !== null && doc.issuanceDate !== undefined).to.be.true;
         expect(Date.parse(doc.issuanceDate)).to.be.equal(1541493724*1000);
       });
 
-      it('If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.', async () => {
+      it('If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.', async function() {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc.credentialSubject.id !== null && doc.credentialSubject.id !== undefined).to.be.true;
         expect(doc.credentialSubject.id).to.be.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
       });
 
-      it('If jti is present, the value MUST be used to set the value of the id property of the new JSON object.', async () => {
+      it('If jti is present, the value MUST be used to set the value of the id property of the new JSON object.', async function() {
         const doc = await util.generate('example-016-jwt.jwt', getGeneratorOptions(OPTIONS.JWT_DECODE));
         expect(doc.id !== null && doc.id !== undefined).to.be.true;
         expect(doc.id).to.be.equal('http://example.edu/credentials/3732');
@@ -297,8 +304,8 @@ describe('JWT (optional)', () => {
     });
   });
 
-  describe('A verifiable presentation ...', () => {
-    it('vp MUST be present in a JWT verifiable presentation.', async () => {
+  describe('A verifiable presentation ...', function() {
+    it('vp MUST be present in a JWT verifiable presentation.', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
