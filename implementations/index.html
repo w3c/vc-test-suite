@@ -156,6 +156,8 @@ The results of the conformance testing are shown below:
       </p>
 
       
+<h4>Basic Documents</h4>
+
 <table class="simple">
   <thead>
     <th width="80%">Test</th>
@@ -164,7 +166,7 @@ The results of the conformance testing are shown below:
   <tbody>
 
     <tr>
-      <td>Basic Documents @context MUST be one or more URIs</td>
+      <td>@context MUST be one or more URIs</td>
   
       <td class="success">✓</td>
     
@@ -181,7 +183,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents @context MUST be one or more URIs (negative)</td>
+      <td>@context MUST be one or more URIs (negative)</td>
   
       <td class="success">✓</td>
     
@@ -198,7 +200,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1</td>
+      <td>@context first value MUST be https://www.w3.org/2018/credentials/v1</td>
   
       <td class="success">✓</td>
     
@@ -215,7 +217,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)</td>
+      <td>@context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)</td>
   
       <td class="success">✓</td>
     
@@ -232,143 +234,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents @context subsequent items can be objects that express context information</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `id` properties MUST be a single URI</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `id` properties MUST be a single URI (negative)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `type` properties MUST be one or more URIs</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `type` properties MUST be one or more URIs (negative)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `credentialSubject` property MUST be present</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `credentialSubject` property MUST be present, may be a set of objects</td>
+      <td>@context subsequent items can be objects that express context information</td>
   
       <td class="success">✓</td>
     
@@ -385,24 +251,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuer` property MUST be present</td>
+      <td>`id` properties MUST be a single URI</td>
   
       <td class="success">✓</td>
     
@@ -419,177 +268,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `issuer` property MUST be present (negative - missing issuer)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuer` property MUST be a single URI</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuer` property MUST be a single URI (negative - not URI)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuer` property MUST be a single URI (negative - Array)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuanceDate` property MUST be present</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuanceDate` property MUST be an RFC3339 datetime</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `proof` property MUST be present</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `proof` property MUST be present (negative - missing)</td>
+      <td>`id` properties MUST be a single URI (negative)</td>
   
       <td class="success">✓</td>
     
@@ -606,7 +285,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `proof` property MUST include specific method using the type property</td>
+      <td>`type` properties MUST be one or more URIs</td>
   
       <td class="success">✓</td>
     
@@ -623,7 +302,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `proof` property MUST include type property (negative - missing proof type)</td>
+      <td>`type` properties MUST be one or more URIs (negative)</td>
   
       <td class="success">✓</td>
     
@@ -640,7 +319,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `expirationDate` property MUST be an RFC3339 datetime</td>
+      <td>`type` properties for Credential MUST be `VerifiableCredential` plus specific type</td>
   
       <td class="success">✓</td>
     
@@ -657,7 +336,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)</td>
+      <td>`type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)</td>
   
       <td class="success">✓</td>
     
@@ -674,24 +353,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `credentialStatus` property MUST include `id` and `type`</td>
+      <td>`credentialSubject` property MUST be present</td>
   
       <td class="success">✓</td>
     
@@ -708,41 +370,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents Presentations MUST be of type `VerifiablePresentation`</td>
+      <td>`credentialSubject` property MUST be present, may be a set of objects</td>
   
       <td class="success">✓</td>
     
@@ -759,24 +387,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents Presentations MUST include `verifiableCredential` and `proof`</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="failure">❌</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)</td>
+      <td>`credentialSubject` property MUST be present (negative - credentialSubject missing)</td>
   
       <td class="success">✓</td>
     
@@ -793,92 +404,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)</td>
-  
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="success">✓</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas</td>
+      <td>`issuer` property MUST be present</td>
   
       <td class="success">✓</td>
     
@@ -895,7 +421,24 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value</td>
+      <td>`issuer` property MUST be present (negative - missing issuer)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`issuer` property MUST be a single URI</td>
   
       <td class="success">✓</td>
     
@@ -912,24 +455,41 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary</td>
+      <td>`issuer` property MUST be a single URI (negative - not URI)</td>
   
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
     
     </tr>
   
     <tr>
-      <td>Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property</td>
+      <td>`issuer` property MUST be a single URI (negative - Array)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`issuanceDate` property MUST be present</td>
   
       <td class="success">✓</td>
     
@@ -946,7 +506,24 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file</td>
+      <td>`issuanceDate` property MUST be present (negative - missing issuanceDate)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`issuanceDate` property MUST be an RFC3339 datetime</td>
   
       <td class="success">✓</td>
     
@@ -963,7 +540,342 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services</td>
+      <td>`issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`issuanceDate` property MUST be an RFC3339 datetime (negative - Array)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`proof` property MUST be present</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`proof` property MUST include specific method using the type property</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`proof` property MUST include type property (negative - missing proof type)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`expirationDate` property MUST be an RFC3339 datetime</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`expirationDate` property MUST be an RFC3339 datetime (negative - Array)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`credentialStatus` property MUST include `id` and `type`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`credentialStatus` property MUST include `id` and `type` (negative - missing `id`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>`credentialStatus` property MUST include `id` and `type` (negative - missing `type`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Presentations MUST be of type `VerifiablePresentation`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Presentations MUST include `verifiableCredential` and `proof`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+  </tbody>
+</table>
+
+<h4>Advanced Documents</h4>
+
+<table class="simple">
+  <thead>
+    <th width="80%">Test</th>
+<th>Credly</th><th>DanubeTech</th><th>Evernym</th><th>Sovrin_Ken_Ebert</th><th>uPort</th><th>vc.js</th>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Data Schemas `credentialSchema` MUST provide one or more data schemas</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Data Schemas each object within `credentialSchema`... MUST specify an `id` property</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+    </tr>
+  
+    <tr>
+      <td>Refreshing `refreshService` MUST provide one or more refresh services</td>
   
       <td class="success">✓</td>
     
@@ -980,7 +892,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value</td>
+      <td>Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value</td>
   
       <td class="success">✓</td>
     
@@ -997,24 +909,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property</td>
+      <td>Refreshing each object within `refreshService`... MUST specify an `id` property</td>
   
       <td class="success">✓</td>
     
@@ -1031,7 +926,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint</td>
+      <td>Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint</td>
   
       <td class="success">✓</td>
     
@@ -1048,7 +943,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects</td>
+      <td>Terms of Use `termsOfUse` MUST provide one or more ToU objects</td>
   
       <td class="success">✓</td>
     
@@ -1065,7 +960,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value</td>
+      <td>Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value</td>
   
       <td class="success">✓</td>
     
@@ -1082,24 +977,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="success">✓</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Advanced Documents Evidence `evidence` MUST provide one or more evidence objects</td>
+      <td>Evidence `evidence` MUST provide one or more evidence objects</td>
   
       <td class="success">✓</td>
     
@@ -1116,7 +994,7 @@ The results of the conformance testing are shown below:
     </tr>
   
     <tr>
-      <td>Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value</td>
+      <td>Evidence each object within `evidence`... MUST specify a `type` property with a valid value</td>
   
       <td class="success">✓</td>
     
@@ -1132,229 +1010,520 @@ The results of the conformance testing are shown below:
     
     </tr>
   
+  </tbody>
+</table>
+
+<h4>Terms of Use (optional)</h4>
+
+<table class="simple">
+  <thead>
+    <th width="80%">Test</th>
+<th>Credly</th><th>DanubeTech</th><th>Evernym</th><th>Sovrin_Ken_Ebert</th><th>uPort</th><th>vc.js</th>
+  </thead>
+  <tbody>
+
     <tr>
-      <td>Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary</td>
+      <td>MUST support prohibiting Archival</td>
   
-      <td class="unimplemented">-</td>
+      <td class="no tests">no tests</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+    </tr>
+  
+    <tr>
+      <td>MUST support prohibiting non-subject Presentation</td>
+  
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+    </tr>
+  
+    <tr>
+      <td>MUST support prohibiting 3rd Party Correlation</td>
+  
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+      <td class="no tests">no tests</td>
+    
+    </tr>
+  
+  </tbody>
+</table>
+
+<h4>JWT (optional)</h4>
+
+<table class="simple">
+  <thead>
+    <th width="80%">Test</th>
+<th>Credly</th><th>DanubeTech</th><th>Evernym</th><th>Sovrin_Ken_Ebert</th><th>uPort</th><th>vc.js</th>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential</td>
+  
+      <td class="no support">no support</td>
+    
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
     </tr>
   
     <tr>
-      <td>Terms of Use (optional) MUST support prohibiting Archival</td>
+      <td>JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation</td>
   
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
     </tr>
   
     <tr>
-      <td>Terms of Use (optional) MUST support prohibiting non-subject Presentation</td>
+      <td>JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part</td>
   
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
     </tr>
   
     <tr>
-      <td>Terms of Use (optional) MUST support prohibiting 3rd Party Correlation</td>
+      <td>A verifiable credential ... vc MUST be present in a JWT verifiable credential.</td>
   
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Linked Data Proofs (optional) Linked Data Signature MUST verify</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.</td>
   
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.</td>
   
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be "credentialIssuance"</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.</td>
   
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-    </tr>
-  
-    <tr>
-      <td>JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation</td>
-  
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.</td>
   
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
     
       <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
-    
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credential definition</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.</td>
   
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="untested">untested</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof</td>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... aud MUST represent the subject of the consumer of the verifiable presentation.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation ... vp MUST be present in a JWT verifiable presentation.</td>
+  
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="untested">untested</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+  </tbody>
+</table>
+
+<h4>Zero-Knowledge Proofs (optional)</h4>
+
+<table class="simple">
+  <thead>
+    <th width="80%">Test</th>
+<th>Credly</th><th>DanubeTech</th><th>Evernym</th><th>Sovrin_Ken_Ebert</th><th>uPort</th><th>vc.js</th>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>A verifiable credential... MUST contain a credentialSchema</td>
   
       <td class="success">✓</td>
     
@@ -1366,126 +1535,296 @@ The results of the conformance testing are shown below:
     
       <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.</td>
+      <td>A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.</td>
+      <td>A verifiable credential... MUST contain a proof</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage</td>
+      <td>A verifiable credential... MUST contain a proof (negative - missing)</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be a valid `VerifiablePresentation`</td>
+      <td>A verifiable credential... Each credentialSchema... MUST specify a type</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a `verifiableCredential` member</td>
+      <td>A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... the `verifiableCredential` MUST have a `proof` member</td>
+      <td>A verifiable credential... Each credentialSchema... MUST specify an `id` property</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="failure">❌</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
     
     </tr>
   
     <tr>
-      <td>Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a direct `proof` member (on the presenation)</td>
+      <td>A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)</td>
   
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="success">✓</td>
     
-      <td class="unimplemented">-</td>
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential... Each proof... MUST include specific method using the type property</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... MUST be of type `VerifiablePresentation`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... MUST include `verifiableCredential`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... MUST include `proof`</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... MUST include `proof` (negative - missing `proof`)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="failure">❌</td>
+    
+      <td class="no support">no support</td>
+    
+    </tr>
+  
+    <tr>
+      <td>A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)</td>
+  
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="success">✓</td>
+    
+      <td class="no support">no support</td>
     
     </tr>
   
