@@ -70,8 +70,13 @@ function hasType(doc, expectedType) {
   return type.some(el => el === expectedType);
 }
 
-// https://gist.github.com/marcelotmelo/b67f58a08bee6c2468f8#file-rfc-3339-regex
-const RFC3339regex = /^([0-9]+)-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])[Tt]([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9]|60)(\.[0-9]+)?(([Zz])|([\+|\-]([01][0-9]|2[0-3]):[0-5][0-9]))$/
+// Z and T can be lowercase
+// RFC3999 regex
+const RFC3339regex = new RegExp('^(?<fullyear>\\d{4})-(?<month>0[1-9]|1[0-2])-' +
+    '(?<mday>0[1-9]|[12][0-9]|3[01])T(?<hour>[01][0-9]|2[0-3]):' +
+    '(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)' +
+    '(?<secfrac>\\.[0-9]+)?(Z|(\\+|-)(?<offset_hour>[01][0-9]|2[0-3]):' +
+    '(?<offset_minute>[0-5][0-9]))$', 'i');
 
 module.exports = {
   generate,
