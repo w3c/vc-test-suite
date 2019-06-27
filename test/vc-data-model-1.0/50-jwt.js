@@ -70,7 +70,7 @@ function getGeneratorOptions(additionalOptions = '') {
   return options;
 }
 
-describe('JWT (optional)', () => {
+describe.skip('JWT (optional)', () => {
   setGeneratorKeys();
 
   describe('A verifiable credential ...', () => {

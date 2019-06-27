@@ -18,7 +18,7 @@ chai.use(require('chai-as-promised'));
 const generatorOptions = config;
 
 // https://w3c.github.io/vc-data-model/#zero-knowledge-proofs
-describe('Zero-Knowledge Proofs (optional)', () => {
+describe.skip('Zero-Knowledge Proofs (optional)', () => {
 
   describe('A verifiable credential...', () => {
     it('MUST contain a credentialSchema', async () => {
