@@ -14,7 +14,7 @@ const generatorOptions = config;
 
 describe('Linked Data Proofs (optional)', function() {
 
-  describe('Linked Data Signature', function() {
+  describe('`proof` property', function() {
 
     before(function() {
       const notSupported = generatorOptions.sectionsNotSupported || [];
@@ -23,19 +23,28 @@ describe('Linked Data Proofs (optional)', function() {
       }
     });
 
-    it.skip('MUST verify', async function() {
+    it('MUST be present', async function() {
+      const doc = await util.generate('example-5.jsonld', generatorOptions);
+      expect(Array.isArray(doc.proof) || typeof doc.proof === 'object');
     });
 
-    it.skip('MUST verify (negative)', async function() {
+    it('MUST include specific method using the type property', async function() {
+      const doc = await util.generate('example-5.jsonld', generatorOptions);
+
+      if (Array.isArray(doc.proof)) {
+        doc.proof[0].should.have.property('type');
+        doc.proof[0].type.should.be.a('string');
+      } else {
+        // only one proof
+        doc.proof.should.have.property('type');
+        doc.proof.type.should.be.a('string');
+      }
     });
 
-    it.skip('key MUST NOT be suspended, revoked, or expired', async function() {
-    });
-
-    it.skip('key MUST NOT be suspended, revoked, or expired (negative)', async function() {
-    });
-
-    it.skip('proofPurpose MUST exist and be "credentialIssuance"', async function() {
+    it('MUST include type property (negative - missing proof type)', async function() {
+      await expect(util.generate(
+        'example-5-bad-proof-missing-type.jsonld', generatorOptions))
+        .to.be.rejectedWith(Error);
     });
   });
 });
