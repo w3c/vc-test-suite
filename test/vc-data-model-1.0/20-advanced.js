@@ -25,22 +25,6 @@ describe('Advanced Documents', function() {
     }
   });
 
-  // https://w3c.github.io/vc-data-model/#semantic-interoperability
-  describe('Extensibility - Semantic Interoperability', function() {
-
-    describe('JSON-based processor', function() {
-      // TODO: https://github.com/w3c/vc-data-model/issues/371
-      it.skip('MUST process the `@context` property; ensure credential `type` value exists', async function() {});
-      it.skip('expected `type` values MUST be in expected order', async function() {});
-      it.skip('expected order MUST be defined by human-readable extension specification', async function() {});
-    });
-
-    describe ('JSON-LD-based processor', function() {
-      // TODO: currently, JSON-LD processors would not trigger this error; needs discussion
-      it.skip('MUST produce an error when a JSON-LD context redefines any term in the active context.', async function() {});
-    });
-  });
-
   // https://w3c.github.io/vc-data-model/#data-schemas
   describe('Data Schemas', function() {
     it('`credentialSchema` MUST provide one or more data schemas', async function() {

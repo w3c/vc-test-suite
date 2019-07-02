@@ -9,8 +9,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const config = require('../config.json');
-
 // extract the results from all of the test files
 const implementations = [];
 const dirContents = fs.readdirSync(__dirname);
@@ -29,6 +27,16 @@ const skipSections = [];
 const noTestsSections = [];
 
 const deprecatedTests = [
+  'Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists',
+  'Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order',
+  'Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification',
+  'Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.',
+  'Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary',
+  'Linked Data Proofs (optional) Linked Data Signature MUST verify',
+  'Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)',
+  'Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired',
+  'Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)',
+  'Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be "credentialIssuance"',
   'Terms of Use (optional) MUST support prohibiting Archival',
   'Terms of Use (optional) MUST support prohibiting non-subject Presentation',
   'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation'
@@ -60,6 +68,7 @@ files.forEach((file) => {
 
     let testResult;
     const fullTitle = test.fullTitle;
+
     const section = sectionName(fullTitle);
     const sectionId = sections[section];
 
@@ -71,6 +80,7 @@ files.forEach((file) => {
     // Temporary hack, will remove once all reports are re-run
     const noTests = noTestsSections.includes(sectionId);
     const skipTests = fullTitle.includes('Extensibility - Semantic Interoperability') ||
+      deprecatedTests.includes(fullTitle) ||
       fullTitle.endsWith('value of `type` MUST be defined in the active context / term dictionary') ||
       fullTitle.endsWith('MUST NOT leak information') ||
       fullTitle.startsWith('Basic Documents `proof` property MUST be present (negative - missing)');
