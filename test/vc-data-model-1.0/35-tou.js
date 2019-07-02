@@ -23,13 +23,27 @@ describe('Terms of Use (optional)', function() {
     }
   });
 
-  it.skip('MUST support prohibiting Archival', async function() {
+  // `termsOfUse` is optional, so these should only be run if that term is present
+  it('`termsOfUse` MUST provide one or more ToU objects', async function() {
+    // test that `termsOfUse` is either an array or an object
+    const doc = await util.generate('example-012.jsonld', generatorOptions);
+    const isArray = Array.isArray(doc.termsOfUse) &&
+      doc.termsOfUse.length > 0;
+    const isObject = doc.termsOfUse && typeof doc.termsOfUse.id === 'string';
+    expect(isArray || isObject).to.be.true;
   });
 
-  it.skip('MUST support prohibiting non-subject Presentation', async function() {
-  });
+  describe('each object within `termsOfUse`...', function() {
+    // if there are multiple objects, loop these tests
+    it('MUST specify a `type` property with a valid value', async function () {
+      // test for `type` property existence
+      const doc = await util.generate('example-012.jsonld', generatorOptions);
+      const tous = [].concat(doc.termsOfUse);
 
-  it.skip('MUST support prohibiting 3rd Party Correlation', async function() {
+      for (let tou of tous) {
+        expect(tou.type).to.be.a('string');
+      }
+    });
   });
 
 });
