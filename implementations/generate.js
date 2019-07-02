@@ -17,8 +17,10 @@ const files = dirContents.filter(
 
 const sections = {
   'Basic Documents': 'basic',
+  'Credential Status (optional)': 'status',
   'Advanced Documents': 'advanced',
   'Linked Data Proofs (optional)': 'ldp',
+  'Credential Schema (optional)': 'schema',
   'Refresh Service (optional)': 'refresh',
   'Terms of Use (optional)': 'tou',
   'Evidence (optional)': 'evidence',
