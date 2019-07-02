@@ -59,7 +59,7 @@
     "issueValid": true
   }, {
     "name": "expires (date invalid)",
-    "spectext": "Expires MUST be an ISO8601 date",
+    "spectext": "Expires MUST be an RFC3339 date",
     "extend": "default",
     "file": "tests-1.0/expires-date-invalid.jsonld",
     "issueValid": false

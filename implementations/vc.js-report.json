@@ -1,96 +1,96 @@
 {
   "stats": {
-    "suites": 31,
-    "tests": 78,
-    "passes": 50,
-    "pending": 28,
+    "suites": 33,
+    "tests": 90,
+    "passes": 49,
+    "pending": 41,
     "failures": 0,
-    "start": "2019-05-07T03:21:45.004Z",
-    "end": "2019-05-07T03:22:09.269Z",
-    "duration": 24265
+    "start": "2019-07-02T12:16:15.664Z",
+    "end": "2019-07-02T12:16:39.812Z",
+    "duration": 24148
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 733,
+      "duration": 689,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 460,
+      "duration": 452,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 497,
+      "duration": 513,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 462,
+      "duration": 438,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 518,
+      "duration": 523,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 511,
+      "duration": 509,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 471,
+      "duration": 463,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 505,
+      "duration": 510,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 450,
+      "duration": 439,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 488,
+      "duration": 512,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 456,
+      "duration": 442,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 514,
+      "duration": 521,
       "currentRetry": 0,
       "err": {}
     },
@@ -104,379 +104,396 @@
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 447,
+      "duration": 438,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 499,
+      "duration": 513,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 441,
+      "duration": 436,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 509,
+      "duration": 518,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 472,
+      "duration": 442,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 449,
+      "duration": 444,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 512,
+      "duration": 527,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 447,
+      "duration": 427,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
-      "duration": 503,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 499,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 453,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 430,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 446,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 436,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `proof` property MUST be present",
-      "duration": 492,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 498,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be present (negative - missing)",
-      "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
-      "duration": 450,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 459,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST include specific method using the type property",
-      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
-      "duration": 490,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include type property (negative - missing proof type)",
-      "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 447,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
-      "duration": 501,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 443,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 443,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type`",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
-      "duration": 505,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `id`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 448,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `type`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 449,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 437,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 496,
+      "duration": 526,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 496,
+      "duration": 544,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 451,
+      "duration": 435,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 441,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST process the `@context` property; ensure credential `type` value exists",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "expected `type` values MUST be in expected order",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "expected order MUST be defined by human-readable extension specification",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST produce an error when a JSON-LD context redefines any term in the active context.",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "duration": 433,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
-      "duration": 503,
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "duration": 533,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 492,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 584,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 495,
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 537,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 492,
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 504,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
-      "duration": 492,
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "duration": 505,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 484,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 518,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
-      "duration": 483,
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
+      "duration": 504,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 498,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 507,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 501,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 510,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
-      "duration": 486,
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "duration": 517,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 500,
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 520,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
+      "duration": 534,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting Archival",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting Archival",
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "duration": 432,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting non-subject Presentation",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting non-subject Presentation",
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "duration": 429,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting 3rd Party Correlation",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting 3rd Party Correlation",
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 533,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST verify",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify",
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 522,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST verify (negative)",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)",
+      "title": "MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
+      "duration": 503,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "key MUST NOT be suspended, revoked, or expired",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired",
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
+      "duration": 513,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "key MUST NOT be suspended, revoked, or expired (negative)",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)",
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 453,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "proofPurpose MUST exist and be \"credentialIssuance\"",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be \"credentialIssuance\"",
+      "title": "vc MUST be present in a JWT verifiable credential.",
+      "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "`vc` MUST be present in a JWT verifiable credential",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential",
+      "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "`vp` MUST be present in a JWT verifiable presentation",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation",
+      "title": "if typ is present, it MUST be set to JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST contain a credential definition",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credential definition",
+      "title": "If no JWS is present, a proof property MUST be provided.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "iss MUST represent the issuer property.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of the verifiable credential, or verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "sub MUST represent the id property contained in the verifiable credential subject.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "aud MUST represent the subject of the consumer of the verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... aud MUST represent the subject of the consumer of the verifiable presentation.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Add the content from the vc property to the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "vp MUST be present in a JWT verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
       "currentRetry": 0,
       "err": {}
     },
@@ -487,166 +504,244 @@
       "err": {}
     },
     {
-      "title": "All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.",
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.",
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage",
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be a valid `VerifiablePresentation`",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be a valid `VerifiablePresentation`",
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST have a `verifiableCredential` member",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a `verifiableCredential` member",
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "the `verifiableCredential` MUST have a `proof` member",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... the `verifiableCredential` MUST have a `proof` member",
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST have a direct `proof` member (on the presenation)",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a direct `proof` member (on the presenation)",
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST NOT leak information",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
       "currentRetry": 0,
       "err": {}
     }
   ],
   "pending": [
     {
-      "title": "MUST process the `@context` property; ensure credential `type` value exists",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor MUST process the `@context` property; ensure credential `type` value exists",
+      "title": "vc MUST be present in a JWT verifiable credential.",
+      "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "expected `type` values MUST be in expected order",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected `type` values MUST be in expected order",
+      "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "expected order MUST be defined by human-readable extension specification",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-based processor expected order MUST be defined by human-readable extension specification",
+      "title": "if typ is present, it MUST be set to JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST produce an error when a JSON-LD context redefines any term in the active context.",
-      "fullTitle": "Advanced Documents Extensibility - Semantic Interoperability JSON-LD-based processor MUST produce an error when a JSON-LD context redefines any term in the active context.",
+      "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "title": "If no JWS is present, a proof property MUST be provided.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting Archival",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting Archival",
+      "title": "iss MUST represent the issuer property.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting non-subject Presentation",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting non-subject Presentation",
+      "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST support prohibiting 3rd Party Correlation",
-      "fullTitle": "Terms of Use (optional) MUST support prohibiting 3rd Party Correlation",
+      "title": "jti MUST represent the id property of the verifiable credential, or verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST verify",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify",
+      "title": "jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST verify (negative)",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature MUST verify (negative)",
+      "title": "sub MUST represent the id property contained in the verifiable credential subject.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "key MUST NOT be suspended, revoked, or expired",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired",
+      "title": "aud MUST represent the subject of the consumer of the verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... aud MUST represent the subject of the consumer of the verifiable presentation.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "key MUST NOT be suspended, revoked, or expired (negative)",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature key MUST NOT be suspended, revoked, or expired (negative)",
+      "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "proofPurpose MUST exist and be \"credentialIssuance\"",
-      "fullTitle": "Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be \"credentialIssuance\"",
+      "title": "Add the content from the vc property to the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "`vc` MUST be present in a JWT verifiable credential",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vc` MUST be present in a JWT verifiable credential",
+      "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "`vp` MUST be present in a JWT verifiable presentation",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) `vp` MUST be present in a JWT verifiable presentation",
+      "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
-      "fullTitle": "JWT (optional) JSON Web Token (storing Verifiable Credentials/Presentations) MUST be encoded as standard JOSE header parameters, JWT registered claim names, or contained in the JWS signature part",
+      "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST contain a credential definition",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credential definition",
+      "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "vp MUST be present in a JWT verifiable presentation.",
+      "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation.",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
       "currentRetry": 0,
       "err": {}
     },
@@ -657,44 +752,98 @@
       "err": {}
     },
     {
-      "title": "All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... All derived verifiable credentials MUST contain a reference to the credential definition used to generate the derived proof.",
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... All derived proofs in verifiable credentials MUST NOT leak information that would enable the verifier to correlate the holder presenting the credential.",
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST contain a proof enabling verification that all credentials were issued by the same holder (without PII leakage",
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be a valid `VerifiablePresentation`",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be a valid `VerifiablePresentation`",
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST have a `verifiableCredential` member",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a `verifiableCredential` member",
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "the `verifiableCredential` MUST have a `proof` member",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... the `verifiableCredential` MUST have a `proof` member",
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST have a direct `proof` member (on the presenation)",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST have a direct `proof` member (on the presenation)",
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST NOT leak information",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
       "currentRetry": 0,
       "err": {}
     }
@@ -704,84 +853,84 @@
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 733,
+      "duration": 689,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 460,
+      "duration": 452,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 497,
+      "duration": 513,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 462,
+      "duration": 438,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 518,
+      "duration": 523,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 511,
+      "duration": 509,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 471,
+      "duration": 463,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 505,
+      "duration": 510,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 450,
+      "duration": 439,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 488,
+      "duration": 512,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 456,
+      "duration": 442,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 514,
+      "duration": 521,
       "currentRetry": 0,
       "err": {}
     },
@@ -795,259 +944,252 @@
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 447,
+      "duration": 438,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 499,
+      "duration": 513,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 441,
+      "duration": 436,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 509,
+      "duration": 518,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 472,
+      "duration": 442,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 449,
+      "duration": 444,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 512,
+      "duration": 527,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 447,
+      "duration": 427,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
-      "duration": 503,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 499,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 453,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 430,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 446,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 436,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `proof` property MUST be present",
-      "duration": 492,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 498,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be present (negative - missing)",
-      "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
-      "duration": 450,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 459,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST include specific method using the type property",
-      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
-      "duration": 490,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include type property (negative - missing proof type)",
-      "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 447,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
-      "duration": 501,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 443,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 443,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type`",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
-      "duration": 505,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `id`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 448,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `type`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 449,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 437,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 496,
+      "duration": 526,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 496,
+      "duration": 544,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 451,
+      "duration": 435,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 441,
+      "duration": 433,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
-      "duration": 503,
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "duration": 533,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 492,
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 584,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 495,
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 537,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 492,
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 504,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
-      "duration": 492,
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "duration": 505,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 484,
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 518,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
-      "duration": 483,
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
+      "duration": 504,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 498,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 507,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 501,
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 510,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
-      "duration": 486,
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "duration": 517,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 500,
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 520,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
+      "duration": 534,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "duration": 432,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "duration": 429,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 533,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 522,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
+      "duration": 503,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
+      "duration": 513,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 453,
       "currentRetry": 0,
       "err": {}
     }

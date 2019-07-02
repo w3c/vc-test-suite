@@ -2,277 +2,277 @@
   "stats": {
     "suites": 34,
     "tests": 88,
-    "passes": 60,
+    "passes": 68,
     "pending": 20,
-    "failures": 8,
-    "start": "2019-06-06T20:56:50.208Z",
-    "end": "2019-06-06T20:56:53.551Z",
-    "duration": 3343
+    "failures": 0,
+    "start": "2019-06-12T05:33:39.296Z",
+    "end": "2019-06-12T05:37:08.955Z",
+    "duration": 209659
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 70,
+      "duration": 3104,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 9,
+      "duration": 2073,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 64,
+      "duration": 2964,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 9,
+      "duration": 2947,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 68,
+      "duration": 3037,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 66,
+      "duration": 3081,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 8,
+      "duration": 3167,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 66,
+      "duration": 2988,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 8,
+      "duration": 3106,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 68,
+      "duration": 2987,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 8,
+      "duration": 3015,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 64,
+      "duration": 3055,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 64,
+      "duration": 3414,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 8,
+      "duration": 3022,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 64,
+      "duration": 3078,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 8,
+      "duration": 3132,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 64,
+      "duration": 3275,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 30,
+      "duration": 3049,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 8,
+      "duration": 3114,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 66,
+      "duration": 4043,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 9,
+      "duration": 3075,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
-      "duration": 63,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 3057,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 64,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 3460,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 8,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 2969,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `proof` property MUST be present",
-      "duration": 56,
+      "duration": 3231,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing)",
       "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
-      "duration": 9,
+      "duration": 3190,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
-      "duration": 54,
+      "duration": 3076,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 55,
+      "duration": 3023,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
-      "duration": 75,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 3010,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 69,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 4172,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 8,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 3278,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
-      "duration": 64,
+      "duration": 3116,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 65,
+      "duration": 3123,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 65,
+      "duration": 3056,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 63,
+      "duration": 3072,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 64,
+      "duration": 3185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 7,
+      "duration": 2957,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 7,
+      "duration": 3450,
       "currentRetry": 0,
       "err": {}
     },
@@ -303,14 +303,14 @@
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
-      "duration": 68,
+      "duration": 3111,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 67,
+      "duration": 3088,
       "currentRetry": 0,
       "err": {}
     },
@@ -323,38 +323,30 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 67,
+      "duration": 3052,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 68,
+      "duration": 2928,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
-      "duration": 64,
+      "duration": 3004,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:96:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 66,
+      "duration": 3156,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:107:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
+      "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
@@ -365,44 +357,30 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
-      "duration": 68,
+      "duration": 3071,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'id' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:121:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'id' of undefined"
-      }
+      "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 66,
+      "duration": 2996,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'id' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:132:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'id' of undefined"
-      }
+      "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 66,
+      "duration": 3058,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:150:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 66,
+      "duration": 4258,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:161:22)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
+      "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
@@ -413,24 +391,16 @@
     {
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
-      "duration": 64,
+      "duration": 3082,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:182:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 67,
+      "duration": 2965,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:193:30)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
+      "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
@@ -507,98 +477,98 @@
     {
       "title": "MUST contain a credentialSchema",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
-      "duration": 66,
+      "duration": 3152,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 62,
+      "duration": 3009,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
-      "duration": 63,
+      "duration": 3008,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof (negative - missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
-      "duration": 10,
+      "duration": 3052,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
-      "duration": 63,
+      "duration": 3006,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type (negative - type missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
-      "duration": 64,
+      "duration": 3506,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
-      "duration": 64,
+      "duration": 4081,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property (negative - `id` missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
-      "duration": 64,
+      "duration": 5091,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
-      "duration": 63,
+      "duration": 3006,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
-      "duration": 64,
+      "duration": 4443,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "proof MUST include type property (negative - missing proof type)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
-      "duration": 62,
+      "duration": 2972,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
-      "duration": 61,
+      "duration": 3102,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "duration": 63,
+      "duration": 3160,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
-      "duration": 6,
+      "duration": 715,
       "currentRetry": 0,
       "err": {}
     },
@@ -611,28 +581,28 @@
     {
       "title": "MUST include `proof`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
-      "duration": 61,
+      "duration": 2942,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `proof` (negative - missing `proof`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
-      "duration": 7,
+      "duration": 719,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST have a `credentialSchema` member",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
-      "duration": 63,
+      "duration": 3050,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 9,
+      "duration": 702,
       "currentRetry": 0,
       "err": {}
     }
@@ -759,512 +729,481 @@
       "err": {}
     }
   ],
-  "failures": [
-    {
-      "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
-      "duration": 64,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:96:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 66,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:107:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
-    },
-    {
-      "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
-      "duration": 68,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'id' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:121:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'id' of undefined"
-      }
-    },
-    {
-      "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 66,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'id' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:132:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'id' of undefined"
-      }
-    },
-    {
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 66,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:150:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 66,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:161:22)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
-    },
-    {
-      "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
-      "duration": 64,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "stack": "AssertionError: expected undefined to be true\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:182:40)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 67,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read property 'type' of undefined\n    at Context.it (test/vc-data-model-1.0/20-advanced.js:193:30)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
-        "message": "Cannot read property 'type' of undefined"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 70,
+      "duration": 3104,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 9,
+      "duration": 2073,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 64,
+      "duration": 2964,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 9,
+      "duration": 2947,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 68,
+      "duration": 3037,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 66,
+      "duration": 3081,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 8,
+      "duration": 3167,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 66,
+      "duration": 2988,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 8,
+      "duration": 3106,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 68,
+      "duration": 2987,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 8,
+      "duration": 3015,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 64,
+      "duration": 3055,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 64,
+      "duration": 3414,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 8,
+      "duration": 3022,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 64,
+      "duration": 3078,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 8,
+      "duration": 3132,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 64,
+      "duration": 3275,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 30,
+      "duration": 3049,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 8,
+      "duration": 3114,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 66,
+      "duration": 4043,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 9,
+      "duration": 3075,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime",
-      "duration": 63,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 3057,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 64,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 3460,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 8,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 2969,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `proof` property MUST be present",
-      "duration": 56,
+      "duration": 3231,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing)",
       "fullTitle": "Basic Documents `proof` property MUST be present (negative - missing)",
-      "duration": 9,
+      "duration": 3190,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
-      "duration": 54,
+      "duration": 3076,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 55,
+      "duration": 3023,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime",
-      "duration": 75,
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 3010,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - ISO8601)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - ISO8601)",
-      "duration": 69,
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 4172,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "MUST be an ISO8601 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an ISO8601 datetime (negative - Array)",
-      "duration": 8,
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 3278,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
-      "duration": 64,
+      "duration": 3116,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 65,
+      "duration": 3123,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 65,
+      "duration": 3056,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 63,
+      "duration": 3072,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 64,
+      "duration": 3185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 7,
+      "duration": 2957,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 7,
+      "duration": 3450,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
-      "duration": 68,
+      "duration": 3111,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 67,
+      "duration": 3088,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 67,
+      "duration": 3052,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 68,
+      "duration": 2928,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
+      "duration": 3004,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 3156,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
+      "duration": 3071,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 2996,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 3058,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 4258,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
+      "duration": 3082,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 2965,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
-      "duration": 66,
+      "duration": 3152,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 62,
+      "duration": 3009,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
-      "duration": 63,
+      "duration": 3008,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof (negative - missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
-      "duration": 10,
+      "duration": 3052,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
-      "duration": 63,
+      "duration": 3006,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type (negative - type missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
-      "duration": 64,
+      "duration": 3506,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
-      "duration": 64,
+      "duration": 4081,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property (negative - `id` missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
-      "duration": 64,
+      "duration": 5091,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
-      "duration": 63,
+      "duration": 3006,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
-      "duration": 64,
+      "duration": 4443,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "proof MUST include type property (negative - missing proof type)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
-      "duration": 62,
+      "duration": 2972,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
-      "duration": 61,
+      "duration": 3102,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "duration": 63,
+      "duration": 3160,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
-      "duration": 6,
+      "duration": 715,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `proof`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
-      "duration": 61,
+      "duration": 2942,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `proof` (negative - missing `proof`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
-      "duration": 7,
+      "duration": 719,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST have a `credentialSchema` member",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
-      "duration": 63,
+      "duration": 3050,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 9,
+      "duration": 702,
       "currentRetry": 0,
       "err": {}
     }
