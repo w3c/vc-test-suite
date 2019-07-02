@@ -21,6 +21,25 @@ ensure conformance with the specification.
 3. Modify `config.json` for your run.
 4. `npm test`
 
+### Troubleshooting the Test Suite
+
+#### Test Timeouts
+
+If your tests are timing out (for example, it takes a long time to generate 
+needed keys), you can use the `--timeout` parameter in mocha, and pass in a 
+higher timeout (in milliseconds). For example, to increase the timeout for
+each test to 10 seconds, you would:
+
+```bash
+npm test -- --timeout 10000
+```
+
+or when generating the report:
+
+```bash
+mocha --recursive --timeout 10000 test/vc-data-model-1.0/ -R json > implementations/report.json
+```
+
 #### JWT Test Configuration
 
 The following are the command line parameters that JWT generators have to expect (in addition to the filename/path):
@@ -69,7 +88,7 @@ JWT configuration.
 1. `npm install`
 2. `cp config.json.example config.json`
 3. Modify `config.json` for your run.
-4. `mocha --recursive test/vc-data-model-1.0/ -R json > implementations/report.json`
+4. `mocha --recursive --timeout 10000 test/vc-data-model-1.0/ -R json > implementations/report.json`
 5. `mv implementations/report.json implementations/{YOUR_IMPLEMENTATION}-report.json`
 6. `git add implementations/{YOUR_IMPLEMENTATION}-report.json` 
 7. `node implementations/generate.js`
