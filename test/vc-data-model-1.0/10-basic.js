@@ -211,27 +211,6 @@ describe('Basic Documents', function() {
     });
   });
 
-  describe('`credentialStatus` property', function() {
-
-    it('MUST include `id` and `type`', async function() {
-      const doc = await util.generate('example-7.jsonld', generatorOptions);
-      doc.credentialStatus.id.should.be.a('string');
-      should.exist(doc.credentialStatus.type);
-    });
-
-    it('MUST include `id` and `type` (negative - missing `id`)', async function() {
-      await expect(util.generate(
-        'example-7-bad-missing-id.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-    });
-
-    it('MUST include `id` and `type` (negative - missing `type`)', async function() {
-      await expect(util.generate(
-        'example-7-bad-missing-type.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-    });
-  });
-
   describe('Presentations', function() {
 
     it('MUST be of type `VerifiablePresentation`', async function() {
