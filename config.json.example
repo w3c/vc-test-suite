@@ -24,6 +24,11 @@
    // The arguments that should be passed to the VC generator.
    "generatorOptions":"",
 
+   // Add section features you are explicitly not supporting
+   // For example, to exclude all features, you would:
+   // "sectionsNotSupported": ["basic", ""schema", "refresh", "evidence", "status", "tou", "ldp", "jwt", "zkp"]
+   "sectionsNotSupported": [],
+
    // The following JSON object is used to configure JWT test cases. The test cases will derive the following
    // parameters from the JSON object:
    // --jwt <base64-encoded-keys> ... generators can choose between RS256 and ES256K private keys to generate JWS
