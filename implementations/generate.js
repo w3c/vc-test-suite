@@ -152,7 +152,7 @@ sectionNames.forEach((name) => {
       }
 
       conformanceTable += `
-      <td class="${status}">${statusMark}</td>
+      <td class="${status}" aria-label="${status}">${statusMark}</td>
     `;
     });
     conformanceTable += `
