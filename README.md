@@ -18,7 +18,7 @@ ensure conformance with the specification.
 
 1. `npm install`
 2. `cp config.json.example config.json`
-3. Modify `config.json` for your run.
+3. Modify `config.json` for your run (be sure to remove all comments)
 4. `npm test`
 
 ### Troubleshooting the Test Suite
@@ -50,9 +50,9 @@ TypeError: Cannot read property 'es256kPrivateKeyJwk' of undefined
 
 This means that you need to do one of:
 
-a. Configure the JWT keys (see the [JWT Test Configuration](#jwt-test-configuration)
+* Configure the JWT keys (see the [JWT Test Configuration](#jwt-test-configuration)
   section below)
-b. Mark the JWT section as not supported, by adding 
+* Mark the JWT section as not supported, by adding 
   `"sectionsNotSupported": ["jwt"]` to `your config.json`.
 
 ### Configuring the Test Suite
