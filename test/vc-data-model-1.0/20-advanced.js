@@ -66,10 +66,6 @@ describe('Advanced Documents', function() {
         }
       });
 
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
-        // test for `type`'s value existence in the active context / term dictionary
-      });
-
       it('MUST specify an `id` property', async function() {
         // test for `id` property existence
         const doc = await util.generate('example-010.jsonld', generatorOptions);
@@ -118,10 +114,6 @@ describe('Advanced Documents', function() {
         }
       });
 
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
-        // test for `type`'s value existence in the active context / term dictionary
-      });
-
       it('MUST specify an `id` property', async function() {
         // test for `serviceEndpoint` property existence
         const doc = await util.generate('example-011.jsonld', generatorOptions);
@@ -142,41 +134,6 @@ describe('Advanced Documents', function() {
           expect(service.id).to.match(uriRegex);
         }
       });
-    });
-  });
-
-  // Mode of Operation is non-normative; so skipping
-  // https://w3c.github.io/vc-data-model/#mode-of-operation
-
-  // https://w3c.github.io/vc-data-model/#terms-of-use
-  describe('Terms of Use', function() {
-    // `termsOfUse` is optional, so these should only be run if that term is present
-    it('`termsOfUse` MUST provide one or more ToU objects', async function() {
-      // test that `termsOfUse` is either an array or an object
-      const doc = await util.generate('example-012.jsonld', generatorOptions);
-      const isArray = Array.isArray(doc.termsOfUse) &&
-        doc.termsOfUse.length > 0;
-      const isObject = doc.termsOfUse && typeof doc.termsOfUse.id === 'string';
-      expect(isArray || isObject).to.be.true;
-    });
-
-    describe('each object within `termsOfUse`...', function() {
-      // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async function() {
-        // test for `type` property existence
-        const doc = await util.generate('example-012.jsonld', generatorOptions);
-        const tous = [].concat(doc.termsOfUse);
-
-        for(let tou of tous) {
-          expect(tou.type).to.be.a('string');
-        }
-      });
-      // TODO: this requirement is not expressed inline here, but inherits from
-      // the general definition mechanism of `type` throughout the document
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
-        // test for `type`'s value existence in the active context / term dictionary
-      });
-      // TODO: contents of a `termsOfUse` member is untestable because it is undefined
     });
   });
 
@@ -204,11 +161,6 @@ describe('Advanced Documents', function() {
         }
       });
 
-      // TODO: this requirement is not expressed inline here, but inherits from
-      // the general definition mechanism of `type` throughout the document
-      it.skip('value of `type` MUST be defined in the active context / term dictionary', async function() {
-        // test for `type`'s value existence in the active context / term dictionary
-      });
       // TODO: contents of a `evidence` are yet to be defined: https://w3c.github.io/vc-data-model/#h-issue-6
     });
   });

@@ -21,12 +21,18 @@ const sections = {
   'Basic Documents': 'basic',
   'Advanced Documents': 'advanced',
   'Terms of Use (optional)': 'tou',
-  // 'Linked Data Proofs (optional)': 'ldp',
+  'Linked Data Proofs (optional)': 'ldp',
   'JWT (optional)': 'jwt',
   'Zero-Knowledge Proofs (optional)': 'zkp'
 }
-const skipSections = ['ldp'];
-const noTestsSections = ['tou'];
+const skipSections = [];
+const noTestsSections = [];
+
+const deprecatedTests = [
+  'Terms of Use (optional) MUST support prohibiting Archival',
+  'Terms of Use (optional) MUST support prohibiting non-subject Presentation',
+  'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation'
+];
 
 const sectionNames = Object.keys(sections);
 function sectionName(fullTitle) {
