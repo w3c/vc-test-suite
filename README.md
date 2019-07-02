@@ -40,6 +40,47 @@ or when generating the report:
 mocha --recursive --timeout 10000 test/vc-data-model-1.0/ -R json > implementations/report.json
 ```
 
+#### JWT Key Error
+
+If your tests fail with the following error:
+
+```
+TypeError: Cannot read property 'es256kPrivateKeyJwk' of undefined
+```
+
+This means that you need to do one of:
+
+a. Configure the JWT keys (see the [JWT Test Configuration](#jwt-test-configuration)
+  section below)
+b. Mark the JWT section as not supported, by adding 
+  `"sectionsNotSupported": ["jwt"]` to `your config.json`.
+
+### Configuring the Test Suite
+
+#### Basic Configuration
+
+For example, the config for the [`vc-js`](https://github.com/digitalbazaar/vc-js)
+implementation is below:
+
+```json
+{
+  "generator": "../vc-js/bin/vc-js test-issue < ",
+  "presentationGenerator": "../vc-js/bin/vc-js test-presentation <",
+  "generatorOptions": "",
+  "sectionsNotSupported": ["jwt", "zkp"]
+}
+``` 
+
+This tells the test harness several things:
+
+* Use the `../vc-js/` implementation directory (you should substitute the path 
+  to your own)
+* Exclude the JWT and ZKP sections (since this particular implementation does
+  not yet have support for those)
+
+For a more in-depth discussion of how the test suite works, see
+this [comment on issue #14](https://github.com/w3c/vc-test-suite/issues/14#issuecomment-487795533).
+
 #### JWT Test Configuration
 
 The following are the command line parameters that JWT generators have to expect (in addition to the filename/path):
