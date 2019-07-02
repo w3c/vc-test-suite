@@ -18,9 +18,10 @@ const files = dirContents.filter(
 const sections = {
   'Basic Documents': 'basic',
   'Advanced Documents': 'advanced',
+  'Linked Data Proofs (optional)': 'ldp',
   'Refresh Service (optional)': 'refresh',
   'Terms of Use (optional)': 'tou',
-  'Linked Data Proofs (optional)': 'ldp',
+  'Evidence (optional)': 'evidence',
   'JWT (optional)': 'jwt',
   'Zero-Knowledge Proofs (optional)': 'zkp'
 }

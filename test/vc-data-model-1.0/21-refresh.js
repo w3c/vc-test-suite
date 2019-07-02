@@ -14,7 +14,6 @@ const uriRegex = /\w+:(\/?\/?)[^\s]+/;
 
 const generatorOptions = config;
 
-// https://w3c.github.io/vc-data-model/#terms-of-use
 describe('Refresh Service (optional)', function() {
 
   before(function() {

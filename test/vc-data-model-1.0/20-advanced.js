@@ -75,32 +75,4 @@ describe('Advanced Documents', function() {
     });
   });
 
-  // https://w3c.github.io/vc-data-model/#evidence
-  describe('Evidence', function() {
-    // `evidence` is optional, so these should only be run if that term is present
-    it('`evidence` MUST provide one or more evidence objects', async function() {
-      // test that `evidence` is either an array or an object
-      const doc = await util.generate('example-013.jsonld', generatorOptions);
-      const isArray = Array.isArray(doc.evidence) &&
-        doc.evidence.length > 0;
-      const isObject = doc.evidence && typeof doc.evidence.id === 'string';
-      expect(isArray || isObject).to.be.true;
-    });
-
-    describe('each object within `evidence`...', function() {
-      // if there are multiple objects, loop these tests
-      it('MUST specify a `type` property with a valid value', async function() {
-        // test for `type` property existence
-        const doc = await util.generate('example-013.jsonld', generatorOptions);
-        const evidence = [].concat(doc.evidence);
-
-        for(let e of evidence) {
-          expect([].concat(e.type).length > 0).to.be.true;
-        }
-      });
-
-      // TODO: contents of a `evidence` are yet to be defined: https://w3c.github.io/vc-data-model/#h-issue-6
-    });
-  });
-
 });
