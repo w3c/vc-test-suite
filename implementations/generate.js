@@ -18,6 +18,7 @@ const files = dirContents.filter(
 const sections = {
   'Basic Documents': 'basic',
   'Advanced Documents': 'advanced',
+  'Refresh Service (optional)': 'refresh',
   'Terms of Use (optional)': 'tou',
   'Linked Data Proofs (optional)': 'ldp',
   'JWT (optional)': 'jwt',
