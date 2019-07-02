@@ -69,11 +69,11 @@ JWT configuration.
 1. `npm install`
 2. `cp config.json.example config.json`
 3. Modify `config.json` for your run.
-4. `npm run report`
+4. `mocha --recursive test/vc-data-model-1.0/ -R json > implementations/report.json`
 5. `mv implementations/report.json implementations/{YOUR_IMPLEMENTATION}-report.json`
 6. `git add implementations/{YOUR_IMPLEMENTATION}-report.json` 
-7. Submit a pull request for your implementation.
-8. `cd implementations/ && node generate.js`
+7. `node implementations/generate.js`
+8. Submit a pull request for your implementation.
 
 ## Contributing
 
