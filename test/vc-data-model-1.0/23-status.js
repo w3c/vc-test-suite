@@ -8,6 +8,7 @@ const {expect} = chai;
 const util = require('./util');
 
 // configure chai
+const should = chai.should();
 chai.use(require('chai-as-promised'));
 
 const uriRegex = /\w+:(\/?\/?)[^\s]+/;
