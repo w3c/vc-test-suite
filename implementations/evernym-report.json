@@ -1,0 +1,612 @@
+{
+  "stats": {
+    "suites": 24,
+    "tests": 57,
+    "passes": 56,
+    "pending": 1,
+    "failures": 5,
+    "start": "2019-07-03T16:37:23.769Z",
+    "end": "2019-07-03T16:37:26.684Z",
+    "duration": 2915
+  },
+  "tests": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "duration": 32
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "duration": 84
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 26
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "duration": 84
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 27
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 26
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "duration": 25
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
+      "duration": 85
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 26
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present (negative - missing issuer)",
+      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "duration": 25
+    },
+    {
+      "title": "MUST be a single URI (negative - not URI)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be a single URI (negative - Array)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "duration": 26
+    },
+    {
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 26
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 25
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "duration": 25
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "duration": 25
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "duration": 83
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "duration": 84
+    },
+    {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "duration": 25
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 26
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 26
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 26
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
+      "duration": 26
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 84
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "duration": 26
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 84
+    },
+    {
+      "title": "MUST contain a proof",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
+      "duration": 25
+    },
+    {
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
+      "duration": 85
+    },
+    {
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
+      "duration": 25
+    },
+    {
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
+      "duration": 87
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
+      "duration": 26
+    },
+    {
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+      "duration": 85
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+      "duration": 26
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "duration": 25
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "duration": 85
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "duration": 84
+    },
+    {
+      "title": "MUST NOT leak information",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information"
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "duration": 84
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "duration": 26
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 85
+    }
+  ],
+  "failures": [
+    {
+      "title": "\"before all\" hook",
+      "fullTitle": "Refresh Service (optional) \"before all\" hook",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "\"before all\" hook",
+      "fullTitle": "Evidence (optional) \"before all\" hook",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "\"before all\" hook",
+      "fullTitle": "Credential Status (optional) \"before all\" hook",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "\"before all\" hook",
+      "fullTitle": "Terms of Use (optional) \"before all\" hook",
+      "duration": 0,
+      "err": {}
+    },
+    {
+      "title": "\"before all\" hook",
+      "fullTitle": "JWT (optional) \"before all\" hook",
+      "duration": 0,
+      "err": {}
+    }
+  ],
+  "passes": [
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "duration": 32
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "duration": 84
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 26
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "duration": 84
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 27
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 26
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "duration": 25
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
+      "duration": 85
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 26
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST be present (negative - missing issuer)",
+      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "duration": 25
+    },
+    {
+      "title": "MUST be a single URI (negative - not URI)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be a single URI (negative - Array)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "duration": 26
+    },
+    {
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 26
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 25
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 84
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 83
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "duration": 25
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "duration": 25
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "duration": 83
+    },
+    {
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "duration": 84
+    },
+    {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "duration": 25
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 26
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 26
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 26
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
+      "duration": 25
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
+      "duration": 26
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
+      "duration": 84
+    },
+    {
+      "title": "MUST contain a credentialSchema",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
+      "duration": 26
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 84
+    },
+    {
+      "title": "MUST contain a proof",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
+      "duration": 25
+    },
+    {
+      "title": "MUST contain a proof (negative - missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
+      "duration": 85
+    },
+    {
+      "title": "MUST specify a type",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
+      "duration": 25
+    },
+    {
+      "title": "MUST specify a type (negative - type missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
+      "duration": 87
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property",
+      "duration": 26
+    },
+    {
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+      "duration": 85
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+      "duration": 26
+    },
+    {
+      "title": "MUST include specific method using the type property",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
+      "duration": 25
+    },
+    {
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
+      "duration": 85
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `verifiableCredential`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "duration": 84
+    },
+    {
+      "title": "MUST include `proof`",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
+      "duration": 26
+    },
+    {
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "duration": 84
+    },
+    {
+      "title": "MUST have a `credentialSchema` member",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
+      "duration": 26
+    },
+    {
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 85
+    }
+  ]
+}
