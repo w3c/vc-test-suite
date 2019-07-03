@@ -19,7 +19,7 @@ describe('Credential Status (optional)', function() {
 
   before(function() {
     const notSupported = generatorOptions.sectionsNotSupported || [];
-    if(notSupported.includes('refresh')) {
+    if(notSupported.includes('status')) {
       this.skip();
     }
   });
