@@ -198,7 +198,7 @@ describe('JWT (optional)', function() {
        expect(payload.nbf).to.equal(new Date('2010-01-01T19:23:24Z').getTime() / 1000);
      });
 
-     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation.', async function() {
+     it('jti MUST represent the id property of the verifiable credential.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -208,7 +208,7 @@ describe('JWT (optional)', function() {
        expect(payload.jti).to.equal('http://example.edu/credentials/58473');
      });
 
-     it('jti MUST represent the id property of the verifiable credential, or verifiable presentation -- negative, no jti expected', async function() {
+     it('jti MUST represent the id property of the verifiable credential -- negative, no jti expected', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt-no-jti.jsonld', getGeneratorOptions());
        const jwtResult = cryptoFactory.constructJws(jwtBase64);
        expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -235,16 +235,6 @@ describe('JWT (optional)', function() {
 //       const payload = jwtResult.getPayload();
 //       expect(payload.sub === null).to.be.true;
 //     });
-
-     it('aud MUST represent the subject of the consumer of the verifiable presentation.', async function() {
-       const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
-       const jwtResult = cryptoFactory.constructJws(jwtBase64);
-       expect(jwtResult.isContentWellFormedToken()).to.be.true;
-
-       const payload = JSON.parse(jwtResult.getPayload());
-       expect(payload.aud !== null && payload.aud !== undefined).to.be.true;
-       expect(payload.aud).to.equal(aud);
-     });
 
      it('Additional claims MUST be added to the credentialSubject property of the JWT.', async function() {
        const jwtBase64 = await util.generateJwt('example-016-jwt.jsonld', getGeneratorOptions());
@@ -306,12 +296,62 @@ describe('JWT (optional)', function() {
 
   describe('A verifiable presentation ...', function() {
     it('vp MUST be present in a JWT verifiable presentation.', async function() {
-      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
+      const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
       const payload = JSON.parse(jwtResult.getPayload());
       expect(payload.vp !== null && payload.vp !== undefined).to.be.true;
+      expect(payload.vp.type !== null && payload.vp !== undefined).to.be.true;
+      expect(payload.vp.verifiableCredential !== null && payload.vp !== undefined).to.be.true;
+    });    
+
+    it('aud MUST represent the subject of the consumer of the verifiable presentation.', async function() {
+      const jwtBase64 = await util.generateJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions());
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.aud !== null && payload.aud !== undefined).to.be.true;
+      expect(payload.aud).to.equal(aud);
+    });
+
+    it('jti MUST represent the id property of [...] the verifiable presentation.', async function() {
+      const jwtBase64 = await util.generateJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions());
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.jti !== null && payload.jti !== undefined).to.be.true;
+      expect(payload.jti).to.equal('urn:uuid:3978344f-8596-4c3a-a978-8fcaba3903c5');
+    });
+
+    it('jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected', async function() {
+      const jwtBase64 = await util.generateJwt('example-016-jwt-presentation-no-jti.jsonld', getGeneratorOptions());
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.jti === null || typeof payload.jti === 'undefined').to.be.true;
+    });
+
+    it('iss MUST represent the issuer property of [...] the holder property of a verifiable presentation.', async function() {
+      const jwtBase64 = await util.generateJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions());
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.jti !== null && payload.jti !== undefined).to.be.true;
+      expect(payload.jti).to.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
+    });
+
+    it('iss MUST represent the issuer property of [...] the holder property of a verifiable presentation. -- negative, no jti expected', async function() {
+      const jwtBase64 = await util.generateJwt('example-016-jwt-presentation-no-iss.jsonld', getGeneratorOptions());
+      const jwtResult = cryptoFactory.constructJws(jwtBase64);
+      expect(jwtResult.isContentWellFormedToken()).to.be.true;
+
+      const payload = JSON.parse(jwtResult.getPayload());
+      expect(payload.iss === null || typeof payload.iss === 'undefined').to.be.true;
     });
   });
 });
