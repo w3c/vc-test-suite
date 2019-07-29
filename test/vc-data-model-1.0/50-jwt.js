@@ -296,7 +296,7 @@ describe('JWT (optional)', function() {
 
   describe('A verifiable presentation ...', function() {    
 
-    it('vp MUST be present in a JWT verifiable presentation.', async function() {
+    it('vp MUST be present in a JWT verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -307,7 +307,7 @@ describe('JWT (optional)', function() {
       expect(payload.vp.verifiableCredential !== null && payload.vp !== undefined).to.be.true;
     });    
 
-    it('aud MUST represent the subject of the consumer of the verifiable presentation.', async function() {
+    it('aud MUST represent the subject of the consumer of the verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -317,7 +317,7 @@ describe('JWT (optional)', function() {
       expect(payload.aud).to.equal(aud);
     });
 
-    it('jti MUST represent the id property of [...] the verifiable presentation.', async function() {
+    it('jti MUST represent the id property of [...] the verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
@@ -335,8 +335,8 @@ describe('JWT (optional)', function() {
       const payload = JSON.parse(jwtResult.getPayload());
       expect(payload.jti === null || typeof payload.jti === 'undefined').to.be.true;
     });
-
-    it('iss MUST represent the issuer property of [...] the holder property of a verifiable presentation.', async function() {
+        
+    it('iss MUST represent the issuer property of [...] the holder property of a verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
