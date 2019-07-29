@@ -341,8 +341,8 @@ describe('JWT (optional)', function() {
       expect(jwtResult.isContentWellFormedToken()).to.be.true;
 
       const payload = JSON.parse(jwtResult.getPayload());
-      expect(payload.jti !== null && payload.jti !== undefined).to.be.true;
-      expect(payload.jti).to.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
+      expect(payload.iss !== null && payload.iss !== undefined).to.be.true;
+      expect(payload.iss).to.equal('did:example:ebfeb1f712ebc6f1c276e12ec21');
     });
 
     it('iss MUST represent the issuer property of [...] the holder property of a verifiable presentation. -- negative, no jti expected', async function() {
