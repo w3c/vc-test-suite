@@ -2,18 +2,18 @@
   "stats": {
     "suites": 33,
     "tests": 94,
-    "passes": 50,
+    "passes": 53,
     "pending": 1,
-    "failures": 43,
-    "start": "2019-08-01T14:36:57.736Z",
-    "end": "2019-08-01T14:37:16.352Z",
-    "duration": 18616
+    "failures": 40,
+    "start": "2019-08-13T15:22:10.140Z",
+    "end": "2019-08-13T15:22:28.246Z",
+    "duration": 18106
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 229,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)",
@@ -23,14 +23,14 @@
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 192,
+      "duration": 189,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 199,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -47,7 +47,7 @@
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 183,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -57,7 +57,7 @@
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 188,
+      "duration": 194,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -67,14 +67,14 @@
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 185,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 185,
+      "duration": 184,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -84,14 +84,14 @@
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 181,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 182,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -101,14 +101,14 @@
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 182,
+      "duration": 198,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 182,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -118,7 +118,7 @@
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 181,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -128,14 +128,14 @@
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 181,
+      "duration": 244,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 180,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -145,14 +145,14 @@
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 182,
+      "duration": 198,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 181,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -162,21 +162,21 @@
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 182,
+      "duration": 181,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 182,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 183,
+      "duration": 191,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -193,7 +193,7 @@
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "duration": 179,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -203,21 +203,21 @@
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 180,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 184,
+      "duration": 181,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 185,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -227,21 +227,21 @@
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 198,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 200,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 207,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -251,7 +251,7 @@
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 218,
+      "duration": 184,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -261,21 +261,21 @@
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 206,
+      "duration": 184,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 188,
+      "duration": 178,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 187,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -285,7 +285,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 195,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -295,7 +295,7 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 219,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -305,7 +305,7 @@
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 197,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -315,7 +315,7 @@
     {
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 208,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -325,7 +325,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 224,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -335,7 +335,7 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 219,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -345,7 +345,7 @@
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 224,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -355,7 +355,7 @@
     {
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 209,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -365,7 +365,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 208,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -375,7 +375,7 @@
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 194,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -385,21 +385,21 @@
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 181,
+      "duration": 179,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 186,
+      "duration": 183,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 185,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -409,7 +409,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 186,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -419,7 +419,7 @@
     {
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
-      "duration": 188,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -429,227 +429,206 @@
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
-      "duration": 182,
+      "duration": 185,
       "currentRetry": 0,
       "err": {
-        "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)",
         "message": "Unexpected end of JSON input"
       }
     },
     {
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 187,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "vc MUST be present in a JWT verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
-      "duration": 223,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
-      "duration": 218,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "if typ is present, it MUST be set to JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
-      "duration": 213,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
-      "duration": 207,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If no JWS is present, a proof property MUST be provided.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
-      "duration": 198,
+      "duration": 182,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n\n    at ChildProcess.exithandler (child_process.js:294:12)\n    at maybeClose (internal/child_process.js:962:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)",
-        "message": "Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld",
-        "stdout": "",
-        "stderr": "/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n"
-      }
+      "err": {}
     },
     {
       "title": "If only the proof attribute is used, the alg header MUST be set to none.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
-      "duration": 187,
+      "duration": 196,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n\n    at ChildProcess.exithandler (child_process.js:294:12)\n    at maybeClose (internal/child_process.js:962:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)",
-        "message": "Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld",
-        "stdout": "",
-        "stderr": "/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n"
-      }
+      "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
-      "duration": 204,
+      "duration": 212,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
-      "duration": 217,
+      "duration": 206,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "iss MUST represent the issuer property.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
-      "duration": 224,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
-      "duration": 232,
+      "duration": 201,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
-      "duration": 226,
+      "duration": 209,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
-      "duration": 232,
+      "duration": 206,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "sub MUST represent the id property contained in the verifiable credential subject.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
-      "duration": 210,
+      "duration": 221,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
-      "duration": 215,
+      "duration": 223,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Add the content from the vc property to the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
-      "duration": 190,
+      "duration": 194,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
-      "duration": 222,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
-      "duration": 197,
+      "duration": 185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
-      "duration": 184,
+      "duration": 183,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
-      "duration": 194,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
-      "duration": 187,
+      "duration": 185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "vp MUST be present in a JWT verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
-      "duration": 234,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
-      "duration": 213,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
-      "duration": 215,
+      "duration": 202,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
-      "duration": 215,
+      "duration": 208,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "iss MUST represent [...] the holder property of a verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
-      "duration": 207,
+      "duration": 209,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
-      "duration": 195,
+      "duration": 206,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: (node:18153) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18153) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18153) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentationJwt (test/vc-data-model-1.0/util.js:54:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18153) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18153) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18153) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
-      }
+      "err": {}
     },
     {
       "title": "MUST contain a credentialSchema",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
-      "duration": 215,
+      "duration": 209,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -659,14 +638,14 @@
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 213,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
-      "duration": 203,
+      "duration": 205,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -676,14 +655,14 @@
     {
       "title": "MUST contain a proof (negative - missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
-      "duration": 210,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
-      "duration": 213,
+      "duration": 204,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -693,7 +672,7 @@
     {
       "title": "MUST specify a type (negative - type missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
-      "duration": 213,
+      "duration": 203,
       "currentRetry": 0,
       "err": {}
     },
@@ -710,14 +689,14 @@
     {
       "title": "MUST specify an `id` property (negative - `id` missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
-      "duration": 222,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
-      "duration": 206,
+      "duration": 204,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -727,7 +706,7 @@
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
-      "duration": 214,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -737,28 +716,28 @@
     {
       "title": "proof MUST include type property (negative - missing proof type)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
-      "duration": 215,
+      "duration": 212,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
-      "duration": 201,
+      "duration": 213,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18165) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18165) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18165) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18165) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18165) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18165) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST include `verifiableCredential`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "duration": 195,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18166) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18166) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18166) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18166) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18166) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18166) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
@@ -777,34 +756,34 @@
     {
       "title": "MUST include `proof`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
-      "duration": 192,
+      "duration": 210,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18168) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18168) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18168) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18168) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18168) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18168) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST include `proof` (negative - missing `proof`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
-      "duration": 195,
+      "duration": 217,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST have a `credentialSchema` member",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
-      "duration": 188,
+      "duration": 214,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18170) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18170) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18170) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18170) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18170) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18170) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 189,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     }
@@ -821,7 +800,7 @@
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 229,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)",
@@ -831,7 +810,7 @@
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 199,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -841,7 +820,7 @@
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 183,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -851,7 +830,7 @@
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 188,
+      "duration": 194,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -861,7 +840,7 @@
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 185,
+      "duration": 184,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -871,7 +850,7 @@
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 182,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -881,7 +860,7 @@
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 182,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -891,7 +870,7 @@
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 181,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -901,7 +880,7 @@
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 180,
+      "duration": 198,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -911,7 +890,7 @@
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 181,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -921,7 +900,7 @@
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 183,
+      "duration": 191,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -931,7 +910,7 @@
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "duration": 179,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -941,7 +920,7 @@
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 185,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -951,7 +930,7 @@
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 207,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -961,7 +940,7 @@
     {
       "title": "MUST include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "duration": 218,
+      "duration": 184,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -971,7 +950,7 @@
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 187,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -981,7 +960,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 195,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -991,7 +970,7 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 219,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1001,7 +980,7 @@
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 197,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1011,7 +990,7 @@
     {
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 208,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1021,7 +1000,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 224,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1031,7 +1010,7 @@
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 219,
+      "duration": 183,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1041,7 +1020,7 @@
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 224,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1051,7 +1030,7 @@
     {
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 209,
+      "duration": 181,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1061,7 +1040,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 208,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1071,7 +1050,7 @@
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 194,
+      "duration": 179,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1081,7 +1060,7 @@
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 185,
+      "duration": 182,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1091,7 +1070,7 @@
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 186,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1101,7 +1080,7 @@
     {
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
-      "duration": 188,
+      "duration": 180,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1111,59 +1090,17 @@
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
-      "duration": 182,
+      "duration": 185,
       "currentRetry": 0,
       "err": {
-        "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "stack": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)",
         "message": "Unexpected end of JSON input"
-      }
-    },
-    {
-      "title": "If no JWS is present, a proof property MUST be provided.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
-      "duration": 198,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n\n    at ChildProcess.exithandler (child_process.js:294:12)\n    at maybeClose (internal/child_process.js:962:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)",
-        "message": "Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld",
-        "stdout": "",
-        "stderr": "/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n"
-      }
-    },
-    {
-      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
-      "duration": 187,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n\n    at ChildProcess.exithandler (child_process.js:294:12)\n    at maybeClose (internal/child_process.js:962:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)",
-        "message": "Command failed: node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld\n/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "node ../uport-vc-driver/index.js  --jwt eyJlczI1NmtQcml2YXRlS2V5SndrIjp7Imt0eSI6IkVDIiwia2lkIjoiZGlkOmV4YW1wbGU6MHhhYiN2ZXJpa2V5LTEiLCJjcnYiOiJQLTI1NksiLCJ4IjoiN0tFS1phNXhKUGg3V1ZxSEp5VXBiMk1nRWUzbkE4Ums3ZVVsWHNtQmwtTSIsInkiOiIzeklnbF9tbDRSaGFweUVtNUo3bHZVLTRmNWppQnZacjRLZ3hVakVobDlvIiwia2V5X29wcyI6WyJzaWduIiwidmVyaWZ5Il0sImQiOiJJUWt4c3JaSUNGdmhZRWU2ZnQzd2stTElTVVVrY0ZqNXVTY1ZRQVVHaXpvIn19 --jwt-aud did:example:0xcafe --jwt-no-jws /Users/mxu/code/vc-test-suite/test/vc-data-model-1.0/input/example-016-jwt-with-embedded-proof.jsonld",
-        "stdout": "",
-        "stderr": "/Users/mxu/code/uport-vc-driver/index.js:43\n      console.log(createUnsignedJWT(jwtPayload))\n                  ^\n\nTypeError: createUnsignedJWT is not a function\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/index.js:43:19)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n"
-      }
-    },
-    {
-      "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
-      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
-      "duration": 195,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: (node:18153) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18153) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18153) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentationJwt (test/vc-data-model-1.0/util.js:54:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18153) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18153) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18153) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
       }
     },
     {
       "title": "MUST contain a credentialSchema",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
-      "duration": 215,
+      "duration": 209,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1173,7 +1110,7 @@
     {
       "title": "MUST contain a proof",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof",
-      "duration": 203,
+      "duration": 205,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1183,7 +1120,7 @@
     {
       "title": "MUST specify a type",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type",
-      "duration": 213,
+      "duration": 204,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1203,7 +1140,7 @@
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
-      "duration": 206,
+      "duration": 204,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1213,7 +1150,7 @@
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... MUST include specific method using the type property",
-      "duration": 214,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
         "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generate (test/vc-data-model-1.0/util.js:19:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
@@ -1223,41 +1160,41 @@
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
-      "duration": 201,
+      "duration": 213,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18165) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18165) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18165) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18165) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18165) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18165) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST include `verifiableCredential`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "duration": 195,
+      "duration": 207,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18166) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18166) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18166) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18166) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18166) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18166) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST include `proof`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`",
-      "duration": 192,
+      "duration": 210,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18168) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18168) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18168) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18168) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18168) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18168) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     },
     {
       "title": "MUST have a `credentialSchema` member",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member",
-      "duration": 188,
+      "duration": 214,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: (node:18170) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18170) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18170) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:42:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
-        "message": "(node:18170) UnhandledPromiseRejectionWarning: Error: No issuing DID has been configured\n    at exports.createJWT (/Users/mxu/code/uport-vc-driver/node_modules/did-jwt/lib/index.js:1:5867)\n    at Object.<anonymous> (/Users/mxu/code/uport-vc-driver/presentation.js:22:3)\n    at Module._compile (internal/modules/cjs/loader.js:689:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\n    at Module.load (internal/modules/cjs/loader.js:599:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)\n    at startup (internal/bootstrap/node.js:283:19)\n    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)\n(node:18170) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)\n(node:18170) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.\n"
+        "stack": "SyntaxError: Unexpected token e in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Object.generatePresentation (test/vc-data-model-1.0/util.js:45:15)",
+        "message": "Unexpected token e in JSON at position 0"
       }
     }
   ],
@@ -1265,7 +1202,7 @@
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 192,
+      "duration": 189,
       "currentRetry": 0,
       "err": {}
     },
@@ -1279,49 +1216,49 @@
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 185,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 181,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 182,
+      "duration": 198,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 181,
+      "duration": 244,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 182,
+      "duration": 198,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 182,
+      "duration": 181,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 182,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
@@ -1335,259 +1272,280 @@
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 180,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 184,
+      "duration": 181,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 198,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 200,
+      "duration": 180,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 206,
+      "duration": 184,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 188,
+      "duration": 178,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 181,
+      "duration": 179,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 186,
+      "duration": 183,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 187,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "vc MUST be present in a JWT verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
-      "duration": 223,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
-      "duration": 218,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "if typ is present, it MUST be set to JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
-      "duration": 213,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
-      "duration": 207,
+      "duration": 204,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If no JWS is present, a proof property MUST be provided.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
+      "duration": 182,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
+      "duration": 196,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
-      "duration": 204,
+      "duration": 212,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
-      "duration": 217,
+      "duration": 206,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "iss MUST represent the issuer property.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
-      "duration": 224,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
-      "duration": 232,
+      "duration": 201,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
-      "duration": 226,
+      "duration": 209,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
-      "duration": 232,
+      "duration": 206,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "sub MUST represent the id property contained in the verifiable credential subject.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
-      "duration": 210,
+      "duration": 221,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
-      "duration": 215,
+      "duration": 223,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "Add the content from the vc property to the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
-      "duration": 190,
+      "duration": 194,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
-      "duration": 222,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
-      "duration": 197,
+      "duration": 185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
-      "duration": 184,
+      "duration": 183,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
-      "duration": 194,
+      "duration": 182,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
-      "duration": 187,
+      "duration": 185,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "vp MUST be present in a JWT verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
-      "duration": 234,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
-      "duration": 213,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
-      "duration": 215,
+      "duration": 202,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
-      "duration": 215,
+      "duration": 208,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "iss MUST represent [...] the holder property of a verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
-      "duration": 207,
+      "duration": 209,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "duration": 206,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 213,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a proof (negative - missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a proof (negative - missing)",
-      "duration": 210,
+      "duration": 204,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a type (negative - type missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)",
-      "duration": 213,
+      "duration": 203,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property (negative - `id` missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
-      "duration": 222,
+      "duration": 205,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "proof MUST include type property (negative - missing proof type)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... Each proof... proof MUST include type property (negative - missing proof type)",
-      "duration": 215,
+      "duration": 212,
       "currentRetry": 0,
       "err": {}
     },
@@ -1601,14 +1559,14 @@
     {
       "title": "MUST include `proof` (negative - missing `proof`)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
-      "duration": 195,
+      "duration": 217,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
-      "duration": 189,
+      "duration": 188,
       "currentRetry": 0,
       "err": {}
     }
