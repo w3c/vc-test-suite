@@ -119,7 +119,7 @@ sectionNames.forEach((name) => {
   const sectionResults = allResults.get(sectionId);
 
   conformanceTable += `
-<h4>${name}</h4>
+<h2>${name}</h2>
 
 <table class="simple">
   <thead>
