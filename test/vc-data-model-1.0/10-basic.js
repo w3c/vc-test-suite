@@ -33,7 +33,7 @@ describe('Basic Documents', function() {
       const doc = await util.generate('example-1.jsonld', generatorOptions);
       doc.should.have.property('@context');
       doc['@context'].should.be.a('Array');
-      doc['@context'].should.have.length.greaterThan(1);
+      doc['@context'].should.have.length.greaterThan(0);
     });
 
     it('MUST be one or more URIs (negative)', async function() {
