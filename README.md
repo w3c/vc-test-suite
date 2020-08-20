@@ -87,7 +87,7 @@ The following are the command line parameters that JWT generators have to expect
 
 | Cmd Line Parameter             | Description  
 | ------------------------------ | -----------
-| `--jwt <base64-encoded-keys>`  | Generators can choose between RS256 and ES256K private keys to generate JWS for verifiable credentials and presentations. <base6e-encoded-keys> contains a base64encoded JSON object containing es256kPrivateKeyJwk and rs256PrivateKeyJwk.
+| `--jwt <base64-encoded-keys>`  | Generators can choose between RS256 and ES256K private keys to generate JWS for verifiable credentials and presentations. <base64-encoded-keys> contains a base64encoded JSON object containing es256kPrivateKeyJwk and rs256PrivateKeyJwk.
 | `--jwt-aud <aud>`              | Generators have to use &lt;aud&gt; as the aud attribute in all JWTs
 | `--jwt-no-jws`                 | Generators have to suppress the JWS although keys are present
 | `--jwt-presentation`           | Generators have to generate a verifiable presentation
