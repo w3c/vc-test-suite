@@ -65,9 +65,10 @@ function getGeneratorOptions(additionalOptions = '') {
     + ' ' + OPTIONS.JWT_AUD + ' ' + options.jwt.aud
     + ' ' + additionalOptions;
 
-  options.generatorOptions = allOptions;
-
-  return options;
+  return {
+    ...options,
+    generatorOptions: allOptions
+  };
 }
 
 describe('JWT (optional)', function() {
