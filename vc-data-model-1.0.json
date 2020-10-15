@@ -1,6 +1,6 @@
 {
-  "name": "Verifiable Claims 1.0 Data Model Test Suite",
-  "description": "Test Suite for Verifiable Claims 1.0 Data Model",
+  "name": "Verifiable Credentials 1.0 Data Model Test Suite",
+  "description": "Test Suite for Verifiable Credentials 1.0 Data Model",
   "base": {
     "default": {
       "issuerUrl": "https://example.com/issuer/keys/1",
