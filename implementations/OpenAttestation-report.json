@@ -2,317 +2,200 @@
   "stats": {
     "suites": 33,
     "tests": 94,
-    "passes": 18,
+    "passes": 44,
     "pending": 48,
-    "failures": 28,
-    "start": "2021-02-22T09:07:43.926Z",
-    "end": "2021-02-22T09:08:18.738Z",
-    "duration": 34812
+    "failures": 2,
+    "start": "2021-02-24T03:01:13.920Z",
+    "end": "2021-02-24T03:02:27.323Z",
+    "duration": 73403
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 734,
+      "duration": 2348,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 783,
+      "duration": 1590,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 786,
+      "duration": 2353,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 734,
+      "duration": 799,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 788,
+      "duration": 2371,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 764,
+      "duration": 2396,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 793,
+      "duration": 738,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 750,
+      "duration": 2363,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 791,
+      "duration": 766,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 791,
+      "duration": 2313,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 784,
+      "duration": 722,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 770,
+      "duration": 2357,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 766,
+      "duration": 2316,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 753,
+      "duration": 741,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 753,
+      "duration": 2334,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 830,
+      "duration": 737,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 748,
+      "duration": 2326,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 745,
+      "duration": 732,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 771,
+      "duration": 719,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 841,
+      "duration": 2364,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 839,
+      "duration": 733,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "duration": 867,
+      "duration": 2307,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 871,
+      "duration": 737,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 853,
+      "duration": 721,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 822,
+      "duration": 2329,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 807,
+      "duration": 721,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 941,
+      "duration": 717,
       "currentRetry": 0,
       "err": {}
     },
@@ -322,7 +205,7 @@
       "duration": 6,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
+        "stack": "Error: Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
         "message": "Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n",
         "killed": false,
         "code": 1,
@@ -351,238 +234,121 @@
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 5,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 6,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 1157,
+      "duration": 2288,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 1068,
+      "duration": 2320,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 919,
+      "duration": 2314,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 807,
+      "duration": 2333,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 800,
+      "duration": 2342,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 810,
+      "duration": 2358,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 849,
+      "duration": 2341,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 814,
+      "duration": 2296,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 826,
+      "duration": 2340,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 885,
+      "duration": 2325,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 881,
+      "duration": 2367,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 841,
+      "duration": 719,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 891,
+      "duration": 729,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 838,
+      "duration": 2324,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 900,
+      "duration": 2319,
       "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
+      "err": {}
     },
     {
       "title": "MUST be present",
@@ -1165,220 +931,12 @@
   ],
   "failures": [
     {
-      "title": "MUST be one or more URIs",
-      "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 734,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
-      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 786,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "subsequent items can be objects that express context information",
-      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 788,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1-object-context.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be a single URI",
-      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 764,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-2.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be one or more URIs",
-      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 750,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
-      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 791,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-3.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 770,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-1.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be present, may be a set of objects",
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 766,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-014-credential-subjects.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 753,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be a single URI",
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "duration": 748,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 841,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "duration": 867,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-4.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 822,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-6.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
       "duration": 6,
       "currentRetry": 0,
       "err": {
-        "stack": "Error: Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
+        "stack": "Error: Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
         "message": "Command failed: /bin/cat --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n",
         "killed": false,
         "code": 1,
@@ -1403,340 +961,314 @@
         "stdout": "",
         "stderr": "/bin/cat: unrecognized option '--document-store'\nTry '/bin/cat --help' for more information.\n"
       }
-    },
-    {
-      "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 1157,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-009.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 1068,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify an `id` property",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 919,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 807,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-010.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 800,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 810,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify an `id` property",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 849,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 814,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-011.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 826,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 885,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-013.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST include `id` and `type`",
-      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 881,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Socket.<anonymous> (internal/child_process.js:430:11)\n    at Pipe.<anonymous> (net.js:659:12)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-7.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 838,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 900,
-      "currentRetry": 0,
-      "err": {
-        "stack": "Error: Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n\n    at ChildProcess.exithandler (child_process.js:295:12)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)",
-        "message": "Command failed: ./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld\n",
-        "killed": false,
-        "code": 1,
-        "signal": null,
-        "cmd": "./node_modules/.bin/open-attestation wrap --document-store 0xabcd --template-url https://some.org --dns-txt example.com --oav3 true --silent true /home/raymond/Desktop/govtech/oa/vc-test-suite/test/vc-data-model-1.0/input/example-012.jsonld",
-        "stdout": "",
-        "stderr": ""
-      }
     }
   ],
   "passes": [
     {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "duration": 2348,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 783,
+      "duration": 1590,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 2353,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 734,
+      "duration": 799,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 2371,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 2396,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 793,
+      "duration": 738,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "duration": 2363,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 791,
+      "duration": 766,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 2313,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 784,
+      "duration": 722,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 2357,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 2316,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 753,
+      "duration": 741,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "duration": 2334,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 830,
+      "duration": 737,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "duration": 2326,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 745,
+      "duration": 732,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 771,
+      "duration": 719,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "duration": 2364,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 839,
+      "duration": 733,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 2307,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 871,
+      "duration": 737,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 853,
+      "duration": 721,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 2329,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 807,
+      "duration": 721,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 941,
+      "duration": 717,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 5,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 6,
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "duration": 2288,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "duration": 2320,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "duration": 2314,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "duration": 2333,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "duration": 2342,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "duration": 2358,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
+      "duration": 2341,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 2296,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "duration": 2340,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
+      "duration": 2325,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
+      "duration": 2367,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 841,
+      "duration": 719,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 891,
+      "duration": 729,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "duration": 2324,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "duration": 2319,
       "currentRetry": 0,
       "err": {}
     }
