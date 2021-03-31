@@ -1,17 +1,17 @@
-# W3C Verifiable Claims Working Group Test Suite
+# W3C Verifiable Credentials Working Group Test Suite
 
 This repository contains the W3C
-[Verifiable Claims Working Group](https://www.w3.org/2017/vc/WG/) test suite.
+[Verifiable Credentials Working Group](https://www.w3.org/2017/vc/WG/) test suite.
 Any conforming implementation MUST pass all tests in the test suite.
 
 There are multiple test suites, each of which is detailed below.
 
 You can review [the current draft implementation report](https://w3c.github.io/vc-test-suite/implementations/).
 
-## Verifiable Claims Data Model 1.0 Test Suite
+## Verifiable Credentials Data Model 1.0 Test Suite
 
 This test suite will check any application that generates [Verifiable Credential
-Data Model](https://www.w3.org/TR/verifiable-claims-data-model/) documents to
+Data Model](https://www.w3.org/TR/vc-data-model/) documents to
 ensure conformance with the specification.
 
 ### Running the Test Suite
@@ -87,7 +87,7 @@ The following are the command line parameters that JWT generators have to expect
 
 | Cmd Line Parameter             | Description  
 | ------------------------------ | -----------
-| `--jwt <base64-encoded-keys>`  | Generators can choose between RS256 and ES256K private keys to generate JWS for verifiable credentials and presentations. <base6e-encoded-keys> contains a base64encoded JSON object containing es256kPrivateKeyJwk and rs256PrivateKeyJwk.
+| `--jwt <base64-encoded-keys>`  | Generators can choose between RS256 and ES256K private keys to generate JWS for verifiable credentials and presentations. <base64-encoded-keys> contains a base64encoded JSON object containing es256kPrivateKeyJwk and rs256PrivateKeyJwk.
 | `--jwt-aud <aud>`              | Generators have to use &lt;aud&gt; as the aud attribute in all JWTs
 | `--jwt-no-jws`                 | Generators have to suppress the JWS although keys are present
 | `--jwt-presentation`           | Generators have to generate a verifiable presentation
@@ -141,7 +141,7 @@ You may contribute to this test suite by submitting pull requests here:
 
 https://github.com/w3c/vc-test-suite/
 
-## Other Verifiable Claims github repos
+## Other Verifiable Credentials github repos
 * [Data Model](https://github.com/w3c/vc-data-model)
 * [Implementation Guideline](https://github.com/w3c/vc-imp-guide)
 * [Use Cases](https://github.com/w3c/vc-use-cases)

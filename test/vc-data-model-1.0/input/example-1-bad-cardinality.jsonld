@@ -1,6 +1,5 @@
 {
   "@context": [
-    "https://www.w3.org/2018/credentials/v1"
   ],
   "id": "http://example.edu/credentials/58473",
   "type": ["VerifiableCredential", "AlumniCredential"],
