@@ -43,7 +43,12 @@ const deprecatedTests = [
   'Linked Data Proofs (optional) Linked Data Signature proofPurpose MUST exist and be "credentialIssuance"',
   'Terms of Use (optional) MUST support prohibiting Archival',
   'Terms of Use (optional) MUST support prohibiting non-subject Presentation',
-  'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation'
+  'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof`',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
 ];
 
 const sectionNames = Object.keys(sections);

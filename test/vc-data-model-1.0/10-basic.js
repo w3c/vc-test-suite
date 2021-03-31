@@ -218,22 +218,22 @@ describe('Basic Documents', function() {
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
 
-    it('MUST include `verifiableCredential` and `proof`', async function() {
+    it('MAY include `verifiableCredential` and `proof`', async function() {
       const doc = await util.generatePresentation('example-8.jsonld', generatorOptions);
       should.exist(doc.verifiableCredential);
       should.exist(doc.proof);
     });
 
-    it('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)', async function() {
+    it('`proof`, if present, MUST include `type` property (negative)', async function() {
       await expect(util.generatePresentation(
-        'example-8-bad-missing-verifiableCredential.jsonld', generatorOptions))
+        'example-8-bad-missing-proof-type.jsonld', generatorOptions))
         .to.be.rejectedWith(Error);
     });
 
-    it('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)', async function() {
-      await expect(util.generatePresentation(
-        'example-8-bad-missing-proof.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
+    it('MAY omit `verifiableCredential`', async function() {
+      const doc = await util.generatePresentation(
+        'example-017-missing-verifiableCredential.jsonld', generatorOptions);
+      should.exist(doc.proof);
     });
   });
 
