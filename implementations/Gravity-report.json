@@ -1,20 +1,20 @@
 {
   "stats": {
     "suites": 33,
-    "tests": 94,
-    "passes": 48,
-    "pending": 45,
-    "failures": 1,
-    "start": "2021-03-28T14:10:26.544Z",
-    "end": "2021-03-28T14:10:39.740Z",
-    "duration": 13196
+    "tests": 92,
+    "passes": 75,
+    "pending": 17,
+    "failures": 0,
+    "start": "2021-05-10T20:08:50.729Z",
+    "end": "2021-05-10T20:09:13.766Z",
+    "duration": 23037
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 1649,
+      "duration": 325,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -23,44 +23,16 @@
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 236,
+      "duration": 310,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": "https://www.w3.org/2018/credentials/v1",
-          "type": [
-            "VerifiableCredential",
-            "AlumniCredential"
-          ],
-          "proof": {
-            "type": "Ed25519Signature2018",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "did:tz:controller_identifier#key-1",
-            "created": "2021-03-28T14:10:28Z",
-            "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..rF7yAoK7XgjgBHN1pOQ0Gc6BB4NvG6h1Tru4vXaRs_5rNixWCV8Fzt0eMpRUFB1uhDjAoR-Ighl99hJyRGSGAA"
-          },
-          "id": "http://example.edu/credentials/58473",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "alumniOf": "Example University"
-          },
-          "issuer": "https://example.edu/issuers/14",
-          "issued": "2010-01-01T19:23:24Z",
-          "validFrom": "2010-01-01T19:23:24Z",
-          "issuanceDate": "2010-01-01T19:23:24Z"
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
-      }
+      "speed": "slow",
+      "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 323,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -69,7 +41,7 @@
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 250,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -78,7 +50,7 @@
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -87,7 +59,7 @@
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 259,
+      "duration": 326,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -96,7 +68,7 @@
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 223,
+      "duration": 308,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -105,7 +77,7 @@
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -114,7 +86,7 @@
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 308,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -123,7 +95,7 @@
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 246,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -132,7 +104,7 @@
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 232,
+      "duration": 311,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -141,7 +113,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 246,
+      "duration": 329,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -150,7 +122,7 @@
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 249,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -159,7 +131,7 @@
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 200,
+      "duration": 249,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -168,7 +140,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 252,
+      "duration": 337,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -177,7 +149,7 @@
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 197,
+      "duration": 244,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -186,7 +158,7 @@
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 239,
+      "duration": 329,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -195,7 +167,7 @@
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 227,
+      "duration": 319,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -204,7 +176,7 @@
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 194,
+      "duration": 250,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -213,7 +185,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 248,
+      "duration": 320,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -222,7 +194,7 @@
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 313,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -231,7 +203,7 @@
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 248,
+      "duration": 326,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -240,7 +212,7 @@
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 241,
+      "duration": 319,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -249,7 +221,7 @@
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 241,
+      "duration": 315,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -258,7 +230,7 @@
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 250,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -267,7 +239,7 @@
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -276,7 +248,7 @@
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 323,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -285,34 +257,34 @@
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 262,
+      "duration": 352,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof`",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "title": "MAY include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MAY include `verifiableCredential` and `proof`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 263,
+      "duration": 343,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "title": "`proof`, if present, MUST include `type` property (negative)",
+      "fullTitle": "Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 199,
+      "duration": 325,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "title": "MAY omit `verifiableCredential`",
+      "fullTitle": "Basic Documents Presentations MAY omit `verifiableCredential`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 314,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -321,7 +293,7 @@
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 240,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -330,7 +302,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 242,
+      "duration": 332,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -339,7 +311,7 @@
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 241,
+      "duration": 325,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -348,7 +320,7 @@
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 251,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -357,7 +329,7 @@
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 254,
+      "duration": 334,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -366,7 +338,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 244,
+      "duration": 335,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -375,7 +347,7 @@
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 254,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -384,7 +356,7 @@
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 252,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -393,7 +365,7 @@
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/22-evidence.js",
-      "duration": 239,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -402,7 +374,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/22-evidence.js",
-      "duration": 252,
+      "duration": 331,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -411,7 +383,7 @@
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 253,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -420,7 +392,7 @@
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 235,
+      "duration": 302,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -429,7 +401,7 @@
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 246,
+      "duration": 247,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -438,7 +410,7 @@
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/35-tou.js",
-      "duration": 238,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -447,7 +419,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/35-tou.js",
-      "duration": 251,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -456,7 +428,7 @@
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 245,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -465,7 +437,7 @@
       "title": "MUST include specific method using the type property",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 242,
+      "duration": 333,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -474,7 +446,7 @@
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 194,
+      "duration": 246,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -483,182 +455,234 @@
       "title": "vc MUST be present in a JWT verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "if typ is present, it MUST be set to JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If no JWS is present, a proof property MUST be provided.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 289,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If only the proof attribute is used, the alg header MUST be set to none.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 289,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "iss MUST represent the issuer property.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "sub MUST represent the id property contained in the verifiable credential subject.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 292,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
       "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 283,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "Add the content from the vc property to the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 281,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 280,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
       "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "vp MUST be present in a JWT verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 288,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 291,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "iss MUST represent [...] the holder property of a verifiable presentation",
       "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
       "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
       "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
       "currentRetry": 0,
+      "speed": "slow",
       "err": {}
     },
     {
@@ -741,20 +765,6 @@
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST be of type `VerifiablePresentation`",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `verifiableCredential`",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
       "currentRetry": 0,
       "err": {}
@@ -797,188 +807,6 @@
   ],
   "pending": [
     {
-      "title": "vc MUST be present in a JWT verifiable credential.",
-      "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "if typ is present, it MUST be set to JWT.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If no JWS is present, a proof property MUST be provided.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "iss MUST represent the issuer property.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "jti MUST represent the id property of the verifiable credential.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "sub MUST represent the id property contained in the verifiable credential subject.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
-      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "Add the content from the vc property to the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
-      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "vp MUST be present in a JWT verifiable presentation",
-      "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
-      "fullTitle": "JWT (optional) A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "jti MUST represent the id property of [...] the verifiable presentation",
-      "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
-      "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "iss MUST represent [...] the holder property of a verifiable presentation",
-      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
-      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
       "title": "MUST contain a credentialSchema",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
@@ -1063,20 +891,6 @@
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential`",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
-      "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
       "title": "MUST NOT leak information",
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable presentation... MUST NOT leak information",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/60-zkp.js",
@@ -1112,51 +926,22 @@
       "err": {}
     }
   ],
-  "failures": [
-    {
-      "title": "MUST be one or more URIs (negative)",
-      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 236,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": "https://www.w3.org/2018/credentials/v1",
-          "type": [
-            "VerifiableCredential",
-            "AlumniCredential"
-          ],
-          "proof": {
-            "type": "Ed25519Signature2018",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "did:tz:controller_identifier#key-1",
-            "created": "2021-03-28T14:10:28Z",
-            "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..rF7yAoK7XgjgBHN1pOQ0Gc6BB4NvG6h1Tru4vXaRs_5rNixWCV8Fzt0eMpRUFB1uhDjAoR-Ighl99hJyRGSGAA"
-          },
-          "id": "http://example.edu/credentials/58473",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "alumniOf": "Example University"
-          },
-          "issuer": "https://example.edu/issuers/14",
-          "issued": "2010-01-01T19:23:24Z",
-          "validFrom": "2010-01-01T19:23:24Z",
-          "issuanceDate": "2010-01-01T19:23:24Z"
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 1649,
+      "duration": 325,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
+      "duration": 310,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1165,7 +950,7 @@
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 323,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1174,7 +959,7 @@
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 250,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1183,7 +968,7 @@
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1192,7 +977,7 @@
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 259,
+      "duration": 326,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1201,7 +986,7 @@
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 223,
+      "duration": 308,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1210,7 +995,7 @@
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1219,7 +1004,7 @@
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 308,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1228,7 +1013,7 @@
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 246,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1237,7 +1022,7 @@
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 232,
+      "duration": 311,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1246,7 +1031,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 246,
+      "duration": 329,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1255,7 +1040,7 @@
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 249,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1264,7 +1049,7 @@
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 200,
+      "duration": 249,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1273,7 +1058,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 252,
+      "duration": 337,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1282,7 +1067,7 @@
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 197,
+      "duration": 244,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1291,7 +1076,7 @@
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 239,
+      "duration": 329,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1300,7 +1085,7 @@
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 227,
+      "duration": 319,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1309,7 +1094,7 @@
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 194,
+      "duration": 250,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1318,7 +1103,7 @@
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 248,
+      "duration": 320,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1327,7 +1112,7 @@
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 313,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1336,7 +1121,7 @@
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 248,
+      "duration": 326,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1345,7 +1130,7 @@
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 241,
+      "duration": 319,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1354,7 +1139,7 @@
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 241,
+      "duration": 315,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1363,7 +1148,7 @@
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 250,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1372,7 +1157,7 @@
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 242,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1381,7 +1166,7 @@
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 323,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1390,34 +1175,34 @@
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 262,
+      "duration": 352,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof`",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "title": "MAY include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MAY include `verifiableCredential` and `proof`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 263,
+      "duration": 343,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "title": "`proof`, if present, MUST include `type` property (negative)",
+      "fullTitle": "Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 199,
+      "duration": 325,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
     },
     {
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "title": "MAY omit `verifiableCredential`",
+      "fullTitle": "Basic Documents Presentations MAY omit `verifiableCredential`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/10-basic.js",
-      "duration": 247,
+      "duration": 314,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1426,7 +1211,7 @@
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 240,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1435,7 +1220,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 242,
+      "duration": 332,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1444,7 +1229,7 @@
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 241,
+      "duration": 325,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1453,7 +1238,7 @@
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/20-schema.js",
-      "duration": 251,
+      "duration": 327,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1462,7 +1247,7 @@
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 254,
+      "duration": 334,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1471,7 +1256,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 244,
+      "duration": 335,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1480,7 +1265,7 @@
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 254,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1489,7 +1274,7 @@
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/21-refresh.js",
-      "duration": 252,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1498,7 +1283,7 @@
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/22-evidence.js",
-      "duration": 239,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1507,7 +1292,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/22-evidence.js",
-      "duration": 252,
+      "duration": 331,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1516,7 +1301,7 @@
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 253,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1525,7 +1310,7 @@
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 235,
+      "duration": 302,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1534,7 +1319,7 @@
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/23-status.js",
-      "duration": 246,
+      "duration": 247,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1543,7 +1328,7 @@
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/35-tou.js",
-      "duration": 238,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1552,7 +1337,7 @@
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/35-tou.js",
-      "duration": 251,
+      "duration": 328,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1561,7 +1346,7 @@
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 245,
+      "duration": 330,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1570,7 +1355,7 @@
       "title": "MUST include specific method using the type property",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 242,
+      "duration": 333,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -1579,7 +1364,241 @@
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
       "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/40-ldp.js",
-      "duration": 194,
+      "duration": 246,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "vc MUST be present in a JWT verifiable credential.",
+      "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "if typ is present, it MUST be set to JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If no JWS is present, a proof property MUST be provided.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 289,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 289,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "iss MUST represent the issuer property.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 286,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of the verifiable credential.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "sub MUST represent the id property contained in the verifiable credential subject.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 292,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "fullTitle": "JWT (optional) A verifiable credential ... To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 283,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "Add the content from the vc property to the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 281,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 280,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 284,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "fullTitle": "JWT (optional) To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "vp MUST be present in a JWT verifiable presentation",
+      "fullTitle": "JWT (optional) A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 287,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
+      "fullTitle": "JWT (optional) A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 288,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of [...] the verifiable presentation",
+      "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 285,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 291,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "iss MUST represent [...] the holder property of a verifiable presentation",
+      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "fullTitle": "JWT (optional) A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "file": "/home/francois/Documents/Gravity/vc-test-suite/test/vc-data-model-1.0/50-jwt.js",
+      "duration": 290,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
