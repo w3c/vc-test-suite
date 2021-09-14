@@ -54,9 +54,8 @@ describe('Refresh Service (optional)', function() {
       }
     });
 
-    it('value of `id` MUST be a URL identifying a service endpoint', async function() {
-      // test that the `id`'s value is a valid URL
-      // (possibly) attempt to dereference the service endpoint to validate it's "locator-ness" (i.e. URL vs. URI)
+    it('value of `id` MUST be a URI identifying a service endpoint', async function() {
+      // test that the `id`'s value is a valid URI
       const doc = await util.generate('example-011.jsonld', generatorOptions);
       const services = [].concat(doc.refreshService);
 
