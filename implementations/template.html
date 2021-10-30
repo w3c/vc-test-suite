@@ -8,9 +8,10 @@
       For the three scripts below, if your spec resides on dev.w3 you can check them
       out in the same tree and use relative links so that they'll work offline,
      -->
-    <script src='https://www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' class='remove'></script>
     <script type="text/javascript" class="remove">
       var respecConfig = {
+        group: "vc",
         // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
         specStatus: "ED",
 
@@ -54,21 +55,6 @@
           { name: "Manu Sporny", url: "http://digitalbazaar.com/",
             company: "Digital Bazaar", companyURL: "http://digitalbazaar.com/" }
         ],
-        // name of the WG
-        wg:           "Verifiable Credentials Working Group",
-
-        // URI of the public WG page
-        wgURI:        "https://www.w3.org/2017/vc/",
-
-        // name (with the @w3c.org) of the public mailing to which comments are due
-        wgPublicList: "public-vc-comments",
-
-        // URI of the patent status for this WG, for Rec-track documents
-        // !!!! IMPORTANT !!!!
-        // This is important for Rec-track documents, do not copy a patent URI from a random
-        // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-        // Team Contact.
-        wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/98922/status",
         maxTocLevel: 2,
         inlineCSS: true
       };
@@ -146,9 +132,12 @@ conformant to the feature being tested.
 
       </section>
 
+      <section id="conformance"></section>
+
     </section>
 
     <section class="informative">
+
       <h1>Conformance Testing Results</h1>
 
       <h3>Key</h3>
