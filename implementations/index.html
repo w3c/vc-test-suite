@@ -8,9 +8,10 @@
       For the three scripts below, if your spec resides on dev.w3 you can check them
       out in the same tree and use relative links so that they'll work offline,
      -->
-    <script src='https://www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' class='remove'></script>
     <script type="text/javascript" class="remove">
       var respecConfig = {
+        group: "vc",
         // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
         specStatus: "ED",
 
@@ -54,21 +55,6 @@
           { name: "Manu Sporny", url: "http://digitalbazaar.com/",
             company: "Digital Bazaar", companyURL: "http://digitalbazaar.com/" }
         ],
-        // name of the WG
-        wg:           "Verifiable Credentials Working Group",
-
-        // URI of the public WG page
-        wgURI:        "https://www.w3.org/2017/vc/",
-
-        // name (with the @w3c.org) of the public mailing to which comments are due
-        wgPublicList: "public-vc-comments",
-
-        // URI of the patent status for this WG, for Rec-track documents
-        // !!!! IMPORTANT !!!!
-        // This is important for Rec-track documents, do not copy a patent URI from a random
-        // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-        // Team Contact.
-        wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/98922/status",
         maxTocLevel: 2,
         inlineCSS: true
       };
@@ -146,9 +132,12 @@ conformant to the feature being tested.
 
       </section>
 
+      <section id="conformance"></section>
+
     </section>
 
     <section class="informative">
+
       <h1>Conformance Testing Results</h1>
 
       <h3>Key</h3>
@@ -165,6 +154,7 @@ The results of the conformance testing are shown below:
       </p>
 
       
+<section>
 <h2>Basic Documents</h2>
 
 <table class="simple">
@@ -1098,306 +1088,11 @@ The results of the conformance testing are shown below:
     
     </tr>
   
-    <tr>
-      <td>`proof` property MUST be present</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`proof` property MUST include specific method using the type property</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`proof` property MUST include type property (negative - missing proof type)</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="failure" aria-label="failure">❌</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`credentialStatus` property MUST include `id` and `type`</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`credentialStatus` property MUST include `id` and `type` (negative - missing `id`)</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="failure" aria-label="failure">❌</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>`credentialStatus` property MUST include `id` and `type` (negative - missing `type`)</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="failure" aria-label="failure">❌</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Presentations MAY include `verifiableCredential` and `proof`</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Presentations `proof`, if present, MUST include `type` property (negative)</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Presentations MAY omit `verifiableCredential`</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Credential Status (optional)</h2>
 
 <table class="simple">
@@ -1420,7 +1115,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -1453,7 +1148,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="failure" aria-label="failure">❌</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -1486,7 +1181,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="failure" aria-label="failure">❌</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -1508,415 +1203,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
-<h2>Advanced Documents</h2>
-
-<table class="simple">
-  <thead>
-    <th width="80%">Test</th>
-<th>BrightLink</th><th>Credly</th><th>Evernym</th><th>Factom-Harmony-Integrate</th><th>Gravity</th><th>Guillaume-Daumas</th><th>OpenAttestation</th><th>Sovrin-Ken_Ebert</th><th>Spruce</th><th>Toulouse-Kent</th><th>uPort-kotlin</th><th>uPort</th><th>vc.js</th><th>verifiable-credentials-java</th>
-  </thead>
-  <tbody>
-
-    <tr>
-      <td>Data Schemas `credentialSchema` MUST provide one or more data schemas</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Data Schemas each object within `credentialSchema`... MUST specify an `id` property</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Refreshing `refreshService` MUST provide one or more refresh services</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Refreshing each object within `refreshService`... MUST specify an `id` property</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Terms of Use `termsOfUse` MUST provide one or more ToU objects</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Evidence `evidence` MUST provide one or more evidence objects</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-    <tr>
-      <td>Evidence each object within `evidence`... MUST specify a `type` property with a valid value</td>
-  
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="success" aria-label="success">✓</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-      <td class="untested" aria-label="untested">untested</td>
-    
-    </tr>
-  
-  </tbody>
-</table>
-
+<section>
 <h2>Linked Data Proofs (optional)</h2>
 
 <table class="simple">
@@ -1939,7 +1228,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="no support" aria-label="no support">no support</td>
     
@@ -1972,7 +1261,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="no support" aria-label="no support">no support</td>
     
@@ -2005,7 +1294,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="failure" aria-label="failure">❌</td>
     
       <td class="no support" aria-label="no support">no support</td>
     
@@ -2027,7 +1316,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Credential Schema (optional)</h2>
 
 <table class="simple">
@@ -2050,7 +1341,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2083,7 +1374,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2116,7 +1407,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2149,7 +1440,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2171,7 +1462,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Refresh Service (optional)</h2>
 
 <table class="simple">
@@ -2194,7 +1487,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2227,7 +1520,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2260,7 +1553,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2293,7 +1586,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2315,7 +1608,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Terms of Use (optional)</h2>
 
 <table class="simple">
@@ -2338,7 +1633,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2371,7 +1666,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2393,7 +1688,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Evidence (optional)</h2>
 
 <table class="simple">
@@ -2416,7 +1713,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2449,7 +1746,7 @@ The results of the conformance testing are shown below:
     
       <td class="success" aria-label="success">✓</td>
     
-      <td class="untested" aria-label="untested">untested</td>
+      <td class="success" aria-label="success">✓</td>
     
       <td class="success" aria-label="success">✓</td>
     
@@ -2471,7 +1768,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>JWT (optional)</h2>
 
 <table class="simple">
@@ -3473,7 +2772,9 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
+<section>
 <h2>Zero-Knowledge Proofs (optional)</h2>
 
 <table class="simple">
@@ -4013,6 +3314,7 @@ The results of the conformance testing are shown below:
   
   </tbody>
 </table>
+</section>
 
 
     </section>
