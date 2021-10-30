@@ -51,6 +51,12 @@ const deprecatedTests = [
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
 ];
 
+const invalidTests = [
+  'Basic Documents Presentations MAY include `verifiableCredential` and `proof`',
+  'Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)',
+  'Basic Documents Presentations MAY omit `verifiableCredential`'
+];
+
 const sectionNames = Object.keys(sections);
 function sectionName(fullTitle) {
   return sectionNames.find(section => fullTitle.startsWith(section))
@@ -90,6 +96,7 @@ files.forEach((file) => {
     const noTests = noTestsSections.includes(sectionId);
     const skipTests = fullTitle.includes('Extensibility - Semantic Interoperability') ||
       deprecatedTests.includes(fullTitle) ||
+      invalidTests.includes(fullTitle) ||
       fullTitle.endsWith('value of `type` MUST be defined in the active context / term dictionary') ||
       fullTitle.endsWith('MUST NOT leak information') ||
       fullTitle.startsWith('Basic Documents `proof` property MUST be present (negative - missing)');
