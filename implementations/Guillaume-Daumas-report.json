@@ -430,21 +430,21 @@
     },
     {
       "title": "MUST be present",
-      "fullTitle": "Basic Documents `proof` property MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
       "duration": 254,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
-      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
       "duration": 260,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include type property (negative - missing proof type)",
-      "fullTitle": "Basic Documents `proof` property MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
       "duration": 532,
       "currentRetry": 0,
       "err": {
@@ -564,14 +564,14 @@
     },
     {
       "title": "MUST include `id` and `type`",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type`",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
       "duration": 262,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
       "duration": 259,
       "currentRetry": 0,
       "err": {
@@ -609,7 +609,7 @@
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
-      "fullTitle": "Basic Documents `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
       "duration": 266,
       "currentRetry": 0,
       "err": {
@@ -699,109 +699,109 @@
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
       "duration": 264,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
       "duration": 262,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
       "duration": 258,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
       "duration": 261,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
       "duration": 259,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
       "duration": 261,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
       "duration": 260,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
       "duration": 327,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
       "duration": 259,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
       "duration": 258,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
       "duration": 268,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
       "duration": 262,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Evidence (optional) each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
@@ -1269,25 +1269,25 @@
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `type` MUST be defined in the active context / term dictionary",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
+      "fullTitle": "Evidence (optional) each object within `evidence`... value of `type` MUST be defined in the active context / term dictionary",
       "currentRetry": 0,
       "err": {}
     },
@@ -2144,21 +2144,21 @@
     },
     {
       "title": "MUST be present",
-      "fullTitle": "Basic Documents `proof` property MUST be present",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
       "duration": 254,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
-      "fullTitle": "Basic Documents `proof` property MUST include specific method using the type property",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
       "duration": 260,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "fullTitle": "Linked Data Proofs (optional) `expirationDate` property MUST be an RFC3339 datetime",
       "duration": 261,
       "currentRetry": 0,
       "err": {}
@@ -2200,84 +2200,84 @@
     },
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Advanced Documents Data Schemas `credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
       "duration": 264,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
       "duration": 262,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
       "duration": 258,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Advanced Documents Data Schemas each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
       "duration": 261,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Advanced Documents Refreshing `refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
       "duration": 259,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
       "duration": 261,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify an `id` property",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... MUST specify an `id` property",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
       "duration": 260,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Advanced Documents Refreshing each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
       "duration": 327,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Advanced Documents Terms of Use `termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
       "duration": 259,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Terms of Use each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
       "duration": 258,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Advanced Documents Evidence `evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
       "duration": 268,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Advanced Documents Evidence each object within `evidence`... MUST specify a `type` property with a valid value",
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
       "duration": 262,
       "currentRetry": 0,
       "err": {}

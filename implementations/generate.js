@@ -18,7 +18,6 @@ const files = dirContents.filter(
 const sections = {
   'Basic Documents': 'basic',
   'Credential Status (optional)': 'status',
-  'Advanced Documents': 'advanced',
   'LD-Proofs (optional)': 'ldp',
   'Credential Schema (optional)': 'schema',
   'Refresh Service (optional)': 'refresh',
@@ -43,7 +42,18 @@ const deprecatedTests = [
   'LD-Proofs (optional) LD-Signature proofPurpose MUST exist and be "credentialIssuance"',
   'Terms of Use (optional) MUST support prohibiting Archival',
   'Terms of Use (optional) MUST support prohibiting non-subject Presentation',
-  'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation'
+  'Terms of Use (optional) MUST support prohibiting 3rd Party Correlation',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof`',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)',
+  'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
+];
+
+const invalidTests = [
+  'Basic Documents Presentations MAY include `verifiableCredential` and `proof`',
+  'Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)',
+  'Basic Documents Presentations MAY omit `verifiableCredential`'
 ];
 
 const sectionNames = Object.keys(sections);
@@ -85,6 +95,7 @@ files.forEach((file) => {
     const noTests = noTestsSections.includes(sectionId);
     const skipTests = fullTitle.includes('Extensibility - Semantic Interoperability') ||
       deprecatedTests.includes(fullTitle) ||
+      invalidTests.includes(fullTitle) ||
       fullTitle.endsWith('value of `type` MUST be defined in the active context / term dictionary') ||
       fullTitle.endsWith('MUST NOT leak information') ||
       fullTitle.startsWith('Basic Documents `proof` property MUST be present (negative - missing)');
@@ -119,7 +130,8 @@ sectionNames.forEach((name) => {
   const sectionResults = allResults.get(sectionId);
 
   conformanceTable += `
-<h4>${name}</h4>
+<section>
+<h2>${name}</h2>
 
 <table class="simple">
   <thead>
@@ -163,6 +175,7 @@ sectionNames.forEach((name) => {
   conformanceTable += `
   </tbody>
 </table>
+</section>
 `;
 });
 

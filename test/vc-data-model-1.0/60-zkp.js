@@ -128,17 +128,6 @@ describe('Zero-Knowledge Proofs (optional)', function() {
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
 
-    it('MUST include `verifiableCredential`', async function() {
-      const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
-      should.exist(doc.verifiableCredential);
-    });
-
-    it('MUST include `verifiableCredential` (negative - missing `verifiableCredential`)', async function() {
-      await expect(util.generatePresentation(
-        'example-015-zkp-vp-bad-missing-verifiableCredential.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-    });
-
     describe('Each verifiable credential...', function() {
       it('MUST have a `credentialSchema` member', async function() {
         const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);

@@ -24,5 +24,7 @@
     "proof": [{
       "type": "RsaSignature2018"
     }]
+  }],
+  "proof": [{
   }]
 }
