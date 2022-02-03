@@ -48,6 +48,7 @@ const deprecatedTests = [
   'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
+  'Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint',
 ];
 
 const invalidTests = [
