@@ -18,7 +18,6 @@ const files = dirContents.filter(
 const sections = {
   'Basic Documents': 'basic',
   'Credential Status (optional)': 'status',
-  'Advanced Documents': 'advanced',
   'Linked Data Proofs (optional)': 'ldp',
   'Credential Schema (optional)': 'schema',
   'Refresh Service (optional)': 'refresh',
@@ -49,6 +48,12 @@ const deprecatedTests = [
   'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
+];
+
+const invalidTests = [
+  'Basic Documents Presentations MAY include `verifiableCredential` and `proof`',
+  'Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)',
+  'Basic Documents Presentations MAY omit `verifiableCredential`'
 ];
 
 const sectionNames = Object.keys(sections);
@@ -90,6 +95,7 @@ files.forEach((file) => {
     const noTests = noTestsSections.includes(sectionId);
     const skipTests = fullTitle.includes('Extensibility - Semantic Interoperability') ||
       deprecatedTests.includes(fullTitle) ||
+      invalidTests.includes(fullTitle) ||
       fullTitle.endsWith('value of `type` MUST be defined in the active context / term dictionary') ||
       fullTitle.endsWith('MUST NOT leak information') ||
       fullTitle.startsWith('Basic Documents `proof` property MUST be present (negative - missing)');
@@ -124,6 +130,7 @@ sectionNames.forEach((name) => {
   const sectionResults = allResults.get(sectionId);
 
   conformanceTable += `
+<section>
 <h2>${name}</h2>
 
 <table class="simple">
@@ -168,6 +175,7 @@ sectionNames.forEach((name) => {
   conformanceTable += `
   </tbody>
 </table>
+</section>
 `;
 });
 
