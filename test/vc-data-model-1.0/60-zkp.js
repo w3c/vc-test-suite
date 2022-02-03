@@ -27,63 +27,13 @@ describe('Zero-Knowledge Proofs (optional)', function() {
   });
 
   describe('A verifiable credential...', function() {
-    it('MUST contain a credentialSchema', async function() {
-      const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
-      const isArray = Array.isArray(doc.credentialSchema) &&
-        doc.credentialSchema.length > 0;
-      const isObject = doc.credentialSchema && typeof doc.credentialSchema.id === 'string';
-      expect(isArray || isObject).to.be.true;
+    it.skip('derived verifiable credential MUST contain all information necessary to verify', async function() {
+    /*Each derived verifiable credential within a verifiable presentation MUST
+     contain all information necessary to verify the verifiable credential,
+     either by including it directly within the credential, or by referencing
+     the necessary information.*/
     });
-    it('MUST contain a credentialSchema (negative - credentialSchema missing)', async function() {
-      await expect(util.generate(
-        'example-015-zkp-bad-no-credential-schema.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-    });
-    describe('Each credentialSchema...', function() {
-      it('MUST specify a type', async function() {
-        const doc = await util.generate('example-015-zkp-credential-schema-array.jsonld',
-        generatorOptions);
-        should.exist(doc.credentialSchema);
-        let schemas = [].concat(doc.credentialSchema);
-        expect(schemas.length > 0).to.be.true;
 
-        for(let schema of schemas) {
-          schema.type.should.be.a('string');
-        }
-      });
-       it('MUST specify a type (negative - type missing)', async function() {
-      await expect(util.generate(
-        'example-015-zkp-bad-no-credential-schema-type.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-      });
-      it('MUST specify an `id` property', async function() {
-        // test for `id` property existence
-        const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
-        should.exist(doc.credentialSchema.id);
-        let schemas = [].concat(doc.credentialSchema);
-        expect(schemas.length > 0).to.be.true;
-
-        for(let schema of schemas) {
-          schema.id.should.be.a('string');
-        }
-      });
-      it('MUST specify an `id` property (negative - `id` missing)', async function() {
-      await expect(util.generate(
-        'example-015-zkp-bad-no-credential-schema-id.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error);
-      });
-
-      it('value of `id` MUST be a URI identifying a schema file', async function() {
-        // test that `id`'s value is a valid URI
-        // TODO: https://github.com/w3c/vc-data-model/issues/381
-        const doc = await util.generate('example-015-zkp.jsonld', generatorOptions);
-        const schemas = [].concat(doc.credentialSchema);
-
-        for(let schema of schemas) {
-          expect(schema.id).to.match(uriRegex);
-        }
-      });
-    });
     // all verifiable credentials need to have a proof,
     // so these tests feel redundant
     it('MUST contain a proof', async function() {
@@ -128,28 +78,11 @@ describe('Zero-Knowledge Proofs (optional)', function() {
       expect(hasType(doc, 'VerifiablePresentation')).to.be.true;
     });
 
-    describe('Each verifiable credential...', function() {
-      it('MUST have a `credentialSchema` member', async function() {
-        const doc = await util.generatePresentation('example-015-zkp-vp.jsonld', generatorOptions);
-        if (Array.isArray(doc.verifiableCredential)) {
-          let creds = [].concat(doc.verifiableCredential)
-          for(let cred of creds){
-            const isArray = Array.isArray(cred.credentialSchema) && cred.credentialSchema.length > 0;
-            const isObject = cred.credentialSchema && typeof cred.credentialSchema.id === 'string';
-            expect(isArray || isObject).to.be.true;
-          }
-        } else {
-          // only one credential
-          const isArray = Array.isArray(doc.verifiableCredential.credentialSchema) && doc.verifiableCredential.credentialSchema.length > 0;
-          const isObject = doc.verifiableCredential.credentialSchema && typeof doc.verifiableCredential.credentialSchema.id === 'string';
-          expect(isArray || isObject).to.be.true;
-        }
-      });
-      it('MUST contain a credentialSchema (negative - credentialSchema missing)', async function() {
-        await expect(util.generate(
-          'example-015-zkp-vp-bad-no-credential-schema.jsonld', generatorOptions))
-          .to.be.rejectedWith(Error);
-      });
+    it.skip('credential definition MUST be defined in credentialSchema', async function() {
+    /*If a credential definition is being used, the credential
+    definition MUST be defined in the credentialSchema property,
+    so that it can be used by all parties to perform various cryptographic
+    operations in zero-knowledge.*/
     });
 
     it.skip('MUST NOT leak information', async function() {

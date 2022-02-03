@@ -46,8 +46,19 @@ const deprecatedTests = [
   'Basic Documents Presentations MUST include `verifiableCredential` and `proof`',
   'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)',
   'Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify a type (negative - type missing)',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... MUST specify an `id` property (negative - `id` missing)',
+  'Zero-Knowledge Proofs (optional) A verifiable credential... Each credentialSchema... value of `id` MUST be a URI identifying a schema file',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential`',
   'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof`',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... MUST include `proof` (negative - missing `proof`)',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST have a `credentialSchema` member',
+  'Zero-Knowledge Proofs (optional) A verifiable presentation... Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)'
 ];
 
 const invalidTests = [
