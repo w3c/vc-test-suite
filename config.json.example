@@ -24,6 +24,23 @@
    // The arguments that should be passed to the VC generator.
    "generatorOptions":"",
 
+   // This section overrides the above binary settings in favor of a
+   // REST API for credential issuance and presentation
+   "restapi": {
+      // URL of REST API
+      "base_url": "https://example.com",
+      // Issuance endpoint
+      "generator": "/credentials/issue",
+      // Presentation endpoint
+      "presentationGenerator": "/presentations/prove",
+      // Options to be based in request body
+      "generatorOptions": {},
+      // Authorization token type
+      "oauth_token_type": "Bearer",
+      // Authorization token
+      "oauth_token": ""
+   },
+
    // Add section features you are explicitly not supporting
    // For example, to exclude all features, you would:
    // "sectionsNotSupported": ["basic", ""schema", "refresh", "evidence", "status", "tou", "ldp", "jwt", "zkp"]
