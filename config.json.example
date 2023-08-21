@@ -28,7 +28,7 @@
    // REST API for credential issuance and presentation
    "restapi": {
       // URL of REST API
-      "base_url": "https://example.com",
+      "baseUrl": "https://example.com",
       // Issuance endpoint
       "generator": "/credentials/issue",
       // Presentation endpoint
@@ -36,9 +36,9 @@
       // Options to be based in request body
       "generatorOptions": {},
       // Authorization token type
-      "oauth_token_type": "Bearer",
+      "oauthTokenType": "Bearer",
       // Authorization token
-      "oauth_token": ""
+      "oauthToken": ""
    },
 
    // Add section features you are explicitly not supporting

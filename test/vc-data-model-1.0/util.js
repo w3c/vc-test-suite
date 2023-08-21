@@ -11,32 +11,32 @@ const exec = util.promisify(require('child_process').exec);
 
 async function generate(file, options) {
   if (options.restapi) {
-    return await generate_from_restapi(file, options.restapi);
+    return await generateFromRestapi(file, options.restapi);
   } else {
-    return await generate_from_binary(file, options);
+    return await generateFromBinary(file, options);
   }
 }
 
-async function generate_from_restapi(file, options) {
-  const url = `${options.base_url}${options.generator}`;
-  const file_content = fs.readFileSync(path.join(__dirname, 'input', file), 'utf8');
-  const data_to_issue = create_issuance_data(file_content, options.generatorOptions);
-  const axios_options = {
+async function generateFromRestapi(file, options) {
+  const url = `${options.baseUrl}${options.generator}`;
+  const fileContent = fs.readFileSync(path.join(__dirname, 'input', file), 'utf8');
+  const dataToIssue = createIssuanceData(fileContent, options.generatorOptions);
+  const axiosOptions = {
     timeout: 2000,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `${options.oauth_token_type} ${options.oauth_token}`
+      'Authorization': `${options.oauthTokenType} ${options.oauthToken}`
     }
   }
   try {
-    const response = await axios.post(url, data_to_issue, axios_options);
+    const response = await axios.post(url, dataToIssue, axiosOptions);
     return response.data?.verifiableCredential ? response.data.verifiableCredential : {};
   } catch (error) {
     throw error;
   }
 }
 
-async function generate_from_binary(file, options) {
+async function generateFromBinary(file, options) {
   options = options || {};
   const {stdout, stderr} = await exec(options.generator + ' ' +
     options.generatorOptions + ' ' + path.join(__dirname, 'input', file));
@@ -63,31 +63,31 @@ async function generateJwt(file, options) {
 
 async function generatePresentation(file, options) {
   if (options.restapi) {
-    return await generatePresentation_from_restapi(file, options.restapi);
+    return await generatePresentationFromRestapi(file, options.restapi);
   } else {
-    return await generatePresentation_from_binary(file, options);
+    return await generatePresentationFromBinary(file, options);
   }
 }
 
-async function generatePresentation_from_restapi(file, options) {
-  const file_content = fs.readFileSync(path.join(__dirname, 'input', file), 'utf8');
-  const url = `${options.base_url}${options.presentationGenerator}`;
-  const axios_options = {
+async function generatePresentationFromRestapi(file, options) {
+  const fileContent = fs.readFileSync(path.join(__dirname, 'input', file), 'utf8');
+  const url = `${options.baseUrl}${options.presentationGenerator}`;
+  const axiosOptions = {
     timeout: 2000,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `${options.oauth_token_type} ${options.oauth_token}`
+      'Authorization': `${options.oauthTokenType} ${options.oauthToken}`
     }
   }
   try {
-    const response = await axios.post(url, file_content, axios_options);
+    const response = await axios.post(url, fileContent, axiosOptions);
     return response.data?.verifiableCredential ? response.data.verifiableCredential : {};
   } catch (error) {
     throw error;
   }
 }
 
-async function generatePresentation_from_binary(file, options) {
+async function generatePresentationFromBinary(file, options) {
   options = options || {};
   const {stdout, stderr} = await exec(options.presentationGenerator + ' ' +
     options.generatorOptions + ' ' + path.join(__dirname, 'input', file));
@@ -137,7 +137,7 @@ const RFC3339regex = new RegExp('^(\\d{4})-(0[1-9]|1[0-2])-' +
  * @param {String} unsigned_jsonld A string of an unsigend jsonld
  * @returns {String} A jsonld to be used against REST APIs
  */
-function create_issuance_data(unsigned_jsonld, options) {
+function createIssuanceData(unsigned_jsonld, options) {
   return JSON.stringify({ credential: JSON.parse(unsigned_jsonld), options: options });
 }
 
