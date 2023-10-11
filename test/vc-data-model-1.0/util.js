@@ -32,7 +32,7 @@ async function generateFromRestapi(file, options) {
     const response = await axios.post(url, dataToIssue, axiosOptions);
     return response.data?.verifiableCredential ? response.data.verifiableCredential : {};
   } catch (error) {
-    throw error;
+    throw new Error('Failed to get valid response');
   }
 }
 
@@ -84,7 +84,7 @@ async function generatePresentationFromRestapi(file, options) {
     const response = await axios.post(url, dataToIssue, axiosOptions);
     return response.data?.verifiablePresentation ? response.data.verifiablePresentation : {};
   } catch (error) {
-    throw error;
+    throw new Error('Failed to get valid response');
   }
 }
 
