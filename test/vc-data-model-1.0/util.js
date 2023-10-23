@@ -134,20 +134,20 @@ const RFC3339regex = new RegExp('^(\\d{4})-(0[1-9]|1[0-2])-' +
   '([0-5][0-9]))$', 'i');
 
 /**
- * Transform a test input jsonld file to a payload for a REST credentials/issue
- * @param {String} unsigned_jsonld A string of an unsigned credential jsonld
+ * Transform a test input JSON-LD file to a payload for a REST credentials/issue
+ * @param {String} unsigned_jsonld A string of an unsigned credential JSON-LD
  * @param {Object} options The arguments that should be passed to the VC generator
- * @returns {String} A jsonld to be used against REST APIs
+ * @returns {String} A JSON-LD string to be used against REST APIs
  */
 function createIssuanceData(unsigned_jsonld, options) {
   return JSON.stringify({ credential: JSON.parse(unsigned_jsonld), options });
 }
 
 /**
- * Transform a test input jsonld file to a payload for a REST presentation/prove
- * @param {String} unsigned_jsonld A string of an unsigned presentation jsonld
+ * Transform a test input JSON-LD file to a payload for a REST presentation/prove
+ * @param {String} unsigned_jsonld A string of an unsigned presentation JSON-LD
  * @param {String} options The arguments that should be passed to the VP generator
- * @returns {String} A jsonld to be used against REST APIs
+ * @returns {String} A JSON-LD string to be used against REST APIs
  */
 function createPresentationData(unsigned_jsonld, options) {
   return JSON.stringify({ presentation: JSON.parse(unsigned_jsonld), options });
