@@ -6,6 +6,7 @@
     "@decentralized-identity/did-auth-jose": "^0.1.13"
   },
   "devDependencies": {
+    "axios": "^1.5.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "mocha": "^6.1.4"
